@@ -14,7 +14,7 @@
         {
           "id": "fe93adf2-2f3a-4ec4-9f68-5422f1b87c01",
           "name": "Pazu",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg",
+          "img": "https://i.pinimg.com/564x/9a/63/fc/9a63fca8ceec694114686943f4c48408.jpg",
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -24,7 +24,7 @@
         {
           "id": "598f7048-74ff-41e0-92ef-87dc1ad980a9",
           "name": "Lusheeta Toel Ul Laputa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg",
+          "img": "https://i.pinimg.com/564x/07/9f/01/079f01efab39a90a2d6f34cb6c7be7d5.jpg",
           "gender": "Female",
           "age": "13",
           "eye_color": "Black",
@@ -34,7 +34,7 @@
         {
           "id": "3bc0b41e-3569-4d20-ae73-2da329bf0786",
           "name": "Dola",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png",
+          "img": "https://i.pinimg.com/564x/4d/fd/bb/4dfdbb1f2daa307d72aac6da8e7341ea.jpg",
           "gender": "Female",
           "age": "60",
           "eye_color": "Black",
@@ -44,7 +44,7 @@
         {
           "id": "abe886e7-30c8-4c19-aaa5-d666e60d14de",
           "name": "Romska Palo Ul Laputa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg",
+          "img": "https://i.pinimg.com/564x/7f/ee/23/7fee23454fb6f7c72259d7348275f376.jpg",
           "gender": "Male",
           "age": "33",
           "eye_color": "Black",
@@ -54,7 +54,7 @@
         {
           "id": "e08880d0-6938-44f3-b179-81947e7873fc",
           "name": "Uncle Pom",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png",
+          "img": "https://i.pinimg.com/564x/57/55/db/5755dba75ef96e501843512acac33c72.jpg",
           "gender": "Male",
           "age": "Unspecified/Elderly",
           "eye_color": "Black",
@@ -216,7 +216,7 @@
         {
           "id": "986faac6-67e3-4fb8-a9ee-bad077c2e7fe",
           "name": "Satsuki Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg",
+          "img": "https://i.pinimg.com/564x/a5/b8/d1/a5b8d13d3c11d0f1ceb6a46bd2355079.jpg",
           "gender": "Female",
           "age": "11",
           "eye_color": "Dark Brown/Black",
@@ -226,7 +226,7 @@
         {
           "id": "d5df3c04-f355-4038-833c-83bd3502b6b9",
           "name": "Mei Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/God_Jul_Mei_%C3%B6nskar_fr%C3%A5n_Tomten.jpg",
+          "img": "https://i.pinimg.com/564x/92/57/d3/9257d37c10e511574e465acda78372bd.jpg",
           "gender": "Female",
           "age": "4",
           "eye_color": "Brown",
@@ -236,7 +236,7 @@
         {
           "id": "3031caa8-eb1a-41c6-ab93-dd091b541e11",
           "name": "Tatsuo Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d6/Tatsuo_Kusakabe.jpg",
+          "img": "https://i.pinimg.com/564x/78/0d/eb/780deb1ae21ddacc9dd1451b17345c1a.jpg",
           "gender": "Male",
           "age": "37",
           "eye_color": "Brown",
@@ -246,7 +246,7 @@
         {
           "id": "87b68b97-3774-495b-bf80-495a5f3e672d",
           "name": "Yasuko Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7b/Yasuko_Kusakabe.png",
+          "img": "https://i.pinimg.com/564x/8d/ac/6b/8dac6ba9de3b195dc9529982f61923c0.jpg",
           "gender": "Female",
           "age": "36",
           "eye_color": "Brown",
@@ -256,7 +256,7 @@
         {
           "id": "08ffbce4-7f94-476a-95bc-76d3c3969c19",
           "name": "Granny",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Granny.png",
+          "img": "https://i.pinimg.com/564x/cb/1c/35/cb1c355aab6147d33b713614950efb76.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -266,7 +266,7 @@
         {
           "id": "0f8ef701-b4c7-4f15-bd15-368c7fe38d0a",
           "name": "Kanta Ogaki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Kanta.jpg",
+          "img": "https://i.pinimg.com/564x/d8/e1/f7/d8e1f784d09e5d01c4c9e836ba6914dd.jpg",
           "gender": "Male",
           "age": "11",
           "eye_color": "Brown",
@@ -276,7 +276,7 @@
         {
           "id": "d39deecb-2bd0-4770-8b45-485f26e1381f",
           "name": "Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/df/Totoro_in_the_rain.png",
+          "img": "https://i.pinimg.com/564x/ee/5e/3b/ee5e3b4fa159e76ca45a22bbac5658dd.jpg",
           "gender": "Male",
           "age": "1300",
           "eye_color": "Grey",
@@ -286,7 +286,7 @@
         {
           "id": "591524bc-04fe-4e60-8d61-2425e42ffb2a",
           "name": "Chu Totoro",
-          "img": "https://www.ghibli.jp/gallery/thumb-totoro019.png",
+          "img": "https://i.pinimg.com/564x/95/6e/6a/956e6a0c5169831684ad284035d021fd.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -296,7 +296,7 @@
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://i.pinimg.com/564x/41/dd/5d/41dd5df4a1cbf3edbc9bfa6ed50f0304.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -306,7 +306,7 @@
         {
           "id": "f467e18e-3694-409f-bdb3-be891ade1106",
           "name": "Catbus",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/30/Catbus.jpg",
+          "img": "https://i.pinimg.com/564x/0a/72/ce/0a72ced0b0da234e8b53c8fa38df2837.jpg",
           "gender": "Male",
           "age": "NA",
           "eye_color": "Yellow",
@@ -318,7 +318,7 @@
         {
           "id": "660c8c91-bd92-43db-b475-b2df6ca96fec",
           "name": "Kusakabe's House",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f3/Kusakabe_Family_House.jpg",
+          "img": "https://i.pinimg.com/564x/3b/fb/d5/3bfbd5d25926a50abffa172186b8febf.jpg",
           "climate": "Mild",
           "terrain": "River",
           "surface_water": "40",
@@ -364,7 +364,7 @@
         {
           "id": "4151abc6-1a9e-4e6a-5678-aac05ra641js",
           "name": "Kiki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/59/Kiki.jpg",
+          "img": "https://i.pinimg.com/564x/34/2a/9f/342a9fa4547c6fe7fa80138c4f65fe17.jpg",
           "gender": "Female",
           "age": "13",
           "eye_color": "Black",
@@ -374,7 +374,7 @@
         {
           "id": "7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
           "name": "Jiji",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b4/Jiji.jpg",
+          "img": "https://i.pinimg.com/564x/1a/91/8c/1a918c5f3280f57876e5347b4e565c6b.jpg",
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -384,7 +384,7 @@
         {
           "id": "6574cfr2-9w3d-2x1h-8531-gge23iu489ko",
           "name": "Ursula",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Ursula.jpg",
+          "img": "https://i.pinimg.com/564x/43/76/43/437643d8c21646baeadde2ab64b14592.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -394,7 +394,7 @@
         {
           "id": "4321dse3-6r6s-3r4d-5641-rdq19re765de",
           "name": "Tombo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6f/Tombo.jpg",
+          "img": "https://i.pinimg.com/564x/26/23/3e/26233e8678efcb44829db58e4b011b5e.jpg",
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -404,7 +404,7 @@
         {
           "id": "8252ebf6-1g8f-5t6u-1234-vvg45yd363dc",
           "name": "Osono",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3a/Osono.jpg",
+          "img": "https://i.pinimg.com/564x/c5/1e/c5/c51ec564aa9b32819c2c6ae6a1fbc76d.jpg",
           "gender": "Female",
           "age": "30",
           "eye_color": "Brown",
@@ -414,7 +414,7 @@
         {
           "id": "7654ght4-3r4t-1t5u-0987-hhj76gh432gr",
           "name": "Fukuo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/29/Fukuo.jpg",
+          "img": "https://i.pinimg.com/564x/ec/e7/38/ece738976df3748037f0ebcec516d49a.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -426,7 +426,7 @@
         {
           "id": "fb083a4e-77b2-4623-a2e0-6bbca5bfd5b2",
           "name": "Ursula's Log Cabin",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/Ursula%27s_Log_Cabin.jpg",
+          "img": "https://i.pinimg.com/564x/3a/36/12/3a3612c082b8cdf40577eb68bf903eff.jpg",
           "climate": "TODO",
           "terrain": "TODO",
           "surface_water": "40",
@@ -437,7 +437,7 @@
         {
           "id": "c57fb2cb-ea85-4d73-8808-cf5dcd28c22e",
           "name": "Koriko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/05/Koriko.jpg",
+          "img": "https://i.pinimg.com/564x/cf/29/e7/cf29e77135c900f045fedf55df99e82c.jpg",
           "climate": "Mild",
           "terrain": "Hill",
           "surface_water": "50",
@@ -448,7 +448,7 @@
         {
           "id": "62346d33-caa0-4c17-8016-0aca56f3066b",
           "name": "Karikiya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e3/Majo002.jpg",
+          "img": "https://i.pinimg.com/564x/6a/ba/98/6aba98872e0a1a08f1549d2e3f2cd0e8.jpg",
           "climate": "Mild",
           "terrain": "City",
           "surface_water": "30",
@@ -459,7 +459,7 @@
         {
           "id": "64a996aa-481e-4627-9624-ab23f59a05a9",
           "name": "Guchokipanya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0f/Gutiokipanja.jpg",
+          "img": "https://i.pinimg.com/564x/78/31/e8/7831e8f23b591935be60a8bbca59e3cf.jpg",
           "climate": "Continental",
           "terrain": "Hill",
           "surface_water": "50",
@@ -490,7 +490,7 @@
         {
           "id": "8cb959a8-1959-42f3-bb33-07d7a2e6b830",
           "name": "Seita Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/21/Seita_Yokokawa.jpg",
+          "img": "https://i.pinimg.com/564x/12/76/5f/12765f2fb85f6e56ffbebbb7572546c7.jpg",
           "gender": "Male",
           "age": "14",
           "eye_color": "Black",
@@ -500,7 +500,7 @@
         {
           "id": "c344d561-6654-4aab-b0df-a1570e7e60cb",
           "name": "Setsuko Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a8/Setsuko_Yokokawa.jpg",
+          "img": "https://i.pinimg.com/564x/12/13/d1/1213d15c570b1249dcec6dcb9f2f209a.jpg",
           "gender": "Female",
           "age": "4",
           "eye_color": "Black",
@@ -510,7 +510,7 @@
         {
           "id": "227c01a6-4e29-4582-bc4b-35106a704ab0",
           "name": "Mrs. Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/39/SeitaMother.png",
+          "img": "https://i.pinimg.com/564x/56/51/4c/56514c27182f3ca5e70a38c55a080d23.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Black",
@@ -520,7 +520,7 @@
         {
           "id": "023306e3-9fc6-4d1d-b681-d4649dcbfff9",
           "name": "Kiyoshi Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f6/SeitaFather3.jpg",
+          "img": "https://i.pinimg.com/564x/b9/70/f5/b970f5f5c2dd8d0a3f2e1a818339108f.jpg",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -530,7 +530,7 @@
         {
           "id": "0e18b23d-1f21-4a83-a6de-f01147624875",
           "name": "Seita's Aunt",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/09/SeitaAunt.jpg",
+          "img": "https://i.pinimg.com/564x/7a/d8/65/7ad8650e5d5148d0eff1067d5964015d.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -554,7 +554,7 @@
         {
           "id": "d0bb7b5f-3bf0-46c8-959d-0299b3252bd8",
           "name": "Taeko Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d4/Taeko_Okajima.png",
+          "img": "https://i.pinimg.com/564x/2a/ea/95/2aea9595ccb23fcf5df2459dc05d069f.jpg",
           "gender": "Female",
           "age": "27",
           "eye_color": "Black",
@@ -564,7 +564,7 @@
         {
           "id": "3f78eba1-f9b0-489b-8686-f4508cdf049d",
           "name": "Toshio",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5d/Toshio.jpg",
+          "img": "https://i.pinimg.com/564x/32/81/02/32810204779605ee1f3cb610c8dd4bbd.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -574,7 +574,7 @@
         {
           "id": "52ed5cad-2464-481f-9786-8533b8de95ff",
           "name": "Mr. Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/58/Mr._Okajima.png",
+          "img": "https://i.pinimg.com/564x/7b/bc/bc/7bbcbc7d01388d38546a4b1cac8d6e2b.jpg",
           "gender": "Male",
           "age": "Middle age",
           "eye_color": "Black",
@@ -584,7 +584,7 @@
         {
           "id": "87e61451-3131-4d01-a3b3-558c9ee1c451",
           "name": "Mrs. Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/18/Mrs._Okajima_%282%29.png",
+          "img": "https://i.pinimg.com/564x/ba/3b/12/ba3b12d73f4c89cb9e997a5725ff8664.jpg",
           "gender": "Female",
           "age": "Middle age",
           "eye_color": "Black",
@@ -594,7 +594,7 @@
         {
           "id": "0174e644-eddd-4cb7-8503-e0c21291d782",
           "name": "Grandmother Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0f/Grandmother_Okajima_%282%29.jpg",
+          "img": "https://i.pinimg.com/564x/84/37/d4/8437d459244a0ccc92188517596dc49b.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -604,7 +604,7 @@
         {
           "id": "a88cb7a4-fe4a-4d50-8d8b-c32449e298ba",
           "name": "Nanako Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Nanako_Okajima.png",
+          "img": "https://i.pinimg.com/564x/f7/4b/e3/f74be3b94e4a059060a1fc84a3832d68.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -615,7 +615,7 @@
           "id": "c8f02850-0c1f-499c-8b5e-d8ad16f3ecc4",
           "name": "Yaeko Okajima",
           "gender": "Female",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a8/Yaeko_Okajima.jpg",
+          "img": "https://i.pinimg.com/564x/cf/33/cc/cf33cc0d75d649a451618a1d0aad49e0.jpg",
           "age": "16",
           "eye_color": "Black",
           "hair_color": "Grey",
@@ -624,7 +624,7 @@
         {
           "id": "6e960787-5a47-4178-a040-1ef5bf5e4a6c",
           "name": "Tani Tsuneko",
-          "img": "https://www.anime-planet.com/images/characters/tani-tsuneko-100171.jpg",
+          "img": "https://i.pinimg.com/564x/2b/92/13/2b92130a4715f0f8b759e9ee5e5886ef.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -634,7 +634,7 @@
         {
           "id": "cd86aeb2-4fd7-4119-8128-7060e0a68074",
           "name": "Aiko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5d/Aiko.jpg",
+          "img": "https://i.pinimg.com/564x/ee/d6/68/eed6685990e1901f0fc10483778c865d.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -644,7 +644,7 @@
         {
           "id": "3ab1e0de-4d41-4f67-b2d0-e16d0fef2e6c",
           "name": "Toko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/af/Toko.jpg",
+          "img": "https://i.pinimg.com/564x/20/09/e4/2009e43991f04d9604800ae7c89abc8c.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -690,7 +690,7 @@
         {
           "id": "6523068d-f5a9-4150-bf5b-76abe6fb42c3",
           "name": "Porco Rosso",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/02/Porcellino%21.png",
+          "img": "https://i.pinimg.com/564x/52/ab/fa/52abfa6aee7fc5979c2cf3186a3e26c5.jpg",
           "gender": "Male",
           "age": "47",
           "eye_color": "Black",
@@ -700,7 +700,7 @@
         {
           "id": "eff43a47-e59c-41bd-bcc6-b1827d63bed5",
           "name": "Donald Curtis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/61/Donald_Curtis.jpg",
+          "img": "https://i.pinimg.com/564x/e8/0e/d3/e80ed3e6d54e11fbacd4b5b4d0012ca2.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Brown",
@@ -710,7 +710,7 @@
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/16/Fio_%282%29.jpg",
+          "img": "https://i.pinimg.com/564x/ef/5d/6e/ef5d6e72cdaf59de8710de6ffeabb7cb.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -720,7 +720,7 @@
         {
           "id": "127317b3-f6f8-4aea-b294-20452a3334f5",
           "name": "Gina",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/eb/Gina.jpg",
+          "img": "https://i.pinimg.com/564x/42/3d/78/423d78e6f323f165ae6aecf14b490a6f.jpg",
           "gender": "Female",
           "age": "circa 23-35",
           "eye_color": "Brown",
@@ -730,7 +730,7 @@
         {
           "id": "2ac81cc3-7292-40ab-9e8f-4a370a58e3c8",
           "name": "Mr. Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Mr_Piccolo.jpg",
+          "img": "https://i.pinimg.com/564x/dc/6a/7c/dc6a7c6ca2af054e7680cbdd489b60f7.jpg",
           "gender": "Male",
           "age": "Middle aged",
           "eye_color": "Brown",
@@ -740,7 +740,7 @@
         {
           "id": "a63c25f4-41a4-4f78-933f-3c14e2903a8f",
           "name": "Capo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/98/Aiuto_Gang_boss.jpg",
+          "img": "https://i.pinimg.com/564x/1d/e9/b6/1de9b671924d91f401c4902ff8da31a2.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -750,7 +750,7 @@
         {
           "id": "5fd7416f-d928-4ebc-a4fb-d9bbdf99b06a",
           "name": "Ferrari",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/be/Porco_Rosso_-_Ferrari.jpg",
+          "img": "https://i.pinimg.com/564x/ab/ca/bf/abcabf5e3337214475c63a84408334e1.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -762,7 +762,7 @@
         {
           "id": "34df8f25-8f80-4823-8f01-bf9852039987",
           "name": "Piccolo S.P.A.",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Piccolos_garage.jpg",
+          "img": "https://i.pinimg.com/564x/c1/0f/1c/c10f1c2068046b152a65620f13cbb6a4.jpg",
           "climate": "Continental",
           "terrain": "River",
           "surface_water": "40",
@@ -775,7 +775,7 @@
         {
           "id": "d8f893b5-1dd9-41a1-9918-0099c1aa2de8",
           "name": "Red Wing",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8f/Porco%27s_Plane.jpg",
+          "img": "https://i.pinimg.com/564x/9b/90/86/9b9086744997464ba69f027a7d9c6fc3.jpg",
           "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
           "vehicle_class": "Airplane",
           "length": "20",
@@ -787,7 +787,7 @@
         {
           "id": "7eb1b9cd-8153-4ef6-a0d4-1e9abd8d78da",
           "name": "Dabohaze",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/99/Aiuto_Gang.jpg",
+          "img": "https://i.pinimg.com/564x/e2/da/29/e2da291efe0a215ab8a5e07d325f9228.jpg",
           "description": "It's the Mamma Aiuto Gang's battle ship, They're an air pirate gang lead by Capo",
           "vehicle_class": "Battle ship",
           "length": "NA",

@@ -1,0 +1,272 @@
+:root {
+    /* Colores */
+    --purpura: #6078BF;
+    --purpura-oscuro: #3a4e8a;
+    --indigo: #44a3c8;
+    --indigo-claro: #d3f3ff;
+    --salmon: #F28157;
+    --rojo: #F25D50;
+    --blanco: #F2F2F2;
+    --negro: #000000;
+
+    /* Sombra */
+    --sombra: 6px 6px 12px rgba(0, 0, 0, .2),
+    -6px -6px 12px rgba(255, 255, 255, .2);
+
+    /* Sombra Botón */
+    --sombra-boton: -6px 6px 0px 0px rgba(242,93,80,1),
+    -6px 6px 0px 0px rgba(242,93,80,1),
+    -6px 6px 0px 0px rgba(242,93,80,1);
+
+    /* Fuentes */
+    --titulos: 'Yeseva One', cursive;
+    --principal: 'Josefin Sans', sans-serif;
+}
+
+/* Globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem - 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--principal);
+    font-size: 1.8rem;
+    line-height: 1.5;
+    background-color: var(--blanco);
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: var(--titulos);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 2.4rem 0;
+}
+
+.btn {
+    padding: .8rem 2.4rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: var(--salmon);
+    color: var(--blanco);
+    transition: .2s linear;
+    cursor: pointer;
+    box-shadow: var(--sombra-boton);
+    transition: all transform .3s;
+    font-size: 2rem;
+}
+
+.btn:hover {
+    transform: translate(-6px, 6px);
+    box-shadow: 0px 0px 0px 0px rgba(242,93,80,1),
+    0px 0px 0px 0px rgba(242,93,80,1),
+    0px 0px 0px 0px rgba(242,93,80,1);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.4rem 24rem;
+    box-shadow: var(--sombra);
+    padding: 2rem;
+    border-radius: 10rem;
+    background-color: var(--blanco);
+}
+
+.contenedor-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-logo img {
+    height: 8rem;
+}
+
+.contenedor-logo h1 {
+    color: var(--indigo);
+    font-size: 4rem;
+    letter-spacing: .4rem;
+}
+
+.buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.buscar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+.buscar input {
+    background-color: var(--blanco);
+    border: .1rem solid var(--indigo);
+    border-radius: 5rem;
+    padding: .8rem 2.4rem;
+    width: 32rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.texto-hero {
+    width: 50%;
+    padding: 16rem 8rem 16rem 8rem;
+}
+
+.texto-hero h2 {
+    font-size: 5.6rem;
+    line-height: 1;
+}
+
+.texto-hero p {
+    font-size: 2.4rem;
+}
+
+.contenedor-btn {
+    display: flex;
+    justify-content: center;
+    gap: 8.8rem;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--blanco);
+    padding: 2.4rem;
+    width: 30%;
+    box-shadow: var(--sombra);
+}
+
+.sidebar h2 {
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.sidebar article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar article p {
+    color: var(--purpura)
+}
+
+.btn-limpiar-filtros {
+    padding: .8rem 2.4rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: var(--purpura);
+    color: var(--blanco);
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.btn-limpiar-filtros:hover {
+    background-color: var(--purpura-oscuro);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 2rem;
+    margin: 2.4rem 0;
+    border: .1rem solid var(--purpura);
+}
+
+.campo select {
+    padding: .8rem 2.4rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Sección tarjetas */
+.seccion-tarjetas {
+    width: 68%;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.contenedor-ordenar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem;
+}
+
+.contenedor-ordenar select {
+    width: 24rem;
+    text-align: center;
+}
+
+/* Tarjetas */
+.contenedor-tarjeta {
+    padding: 2.4rem;
+}
+
+.tarjeta-pelicula {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.4rem;
+    box-shadow: var(--sombra);
+    background-color: var(--indigo-claro);
+}
+
+.tarjeta-pelicula img {
+    width: 25%;
+}
+
+.contenedor-info h3 {
+    font-size: 3.2rem;
+    font-family: var(--titulos);
+    color: var(--purpura-oscuro);
+}
+
+.contenedor-info span {
+    font-weight: 700;
+    color: var(--rojo);
+}
+
+.director-productor-fecha-puntuacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info span {
+    font-weight: 700;
+    color: var(--rojo);
+}
