@@ -1,10 +1,7 @@
 /* DESCRIPCIÓN:
 Main.js contiene la información asociada a los botones, uso del DOM y display de tarjetas
-
-
-
 */
- 
+
 //Import 
 import { obtenerPeliculas } from "./data.js";
 
@@ -13,7 +10,6 @@ const peliculas = obtenerPeliculas();
 
 //Referencias al DOM
 const seccionTarjetas =document.querySelector(".seccion-tarjetas");
-
 
 // Mostrar tarjetas
 peliculas.forEach(pelicula => {
@@ -54,7 +50,7 @@ peliculas.forEach(pelicula => {
   descripcion.textContent = pelicula.description;
   contenedorInfo.appendChild(descripcion);
 
-  //        Div para Director, productor, fecha y score
+  // Div para Director, productor, fecha y score
   const infoDiv = document.createElement("div");
   infoDiv.classList.add("director-productor-fecha-puntuacion");
 
@@ -69,6 +65,7 @@ peliculas.forEach(pelicula => {
   directorDiv.appendChild(directorSpan);
   directorDiv.appendChild(directorP);
   infoDiv.appendChild(directorDiv);
+
   // Div Productor
   const producerDiv = document.createElement("div");
   producerDiv.classList.add("info");
@@ -80,6 +77,7 @@ peliculas.forEach(pelicula => {
   producerDiv.appendChild(producerSpan);
   producerDiv.appendChild(producerP);
   infoDiv.appendChild(producerDiv);
+
   // Div Fecha
   const dateDiv = document.createElement("div");
   dateDiv.classList.add("info");
@@ -113,13 +111,13 @@ peliculas.forEach(pelicula => {
   // Boton personajes
   const botonPersonajes = document.createElement("button");
   botonPersonajes.classList.add("btn");
-  botonPersonajes.textContent = "Personajes";
+  botonPersonajes.textContent = "Characters";
   botonContenedor.appendChild(botonPersonajes);
   
   // Boton Lugares
   const botonLugares = document.createElement("button");
   botonLugares.classList.add("btn");
-  botonLugares.textContent = "Locaciones";
+  botonLugares.textContent = "Locations";
   botonContenedor.appendChild(botonLugares);
   
   contenedorInfo.appendChild(botonContenedor);
@@ -129,6 +127,7 @@ peliculas.forEach(pelicula => {
   
   // Agregar tarjetaPelicula dentro de contenedorTarjetas
   contenedorTarjetas.appendChild(tarjetaPelicula);
+
   // Agregar contenedorTarjetas dentro de seccionTarjetas
   seccionTarjetas.appendChild(contenedorTarjetas);
 
