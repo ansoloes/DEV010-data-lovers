@@ -1,9 +1,14 @@
-// estas funciones son de ejemplo
+/*¨ Descripción:
+  data.js contiene el import de data Ghibli, funciones para obtener películas y filtros
+*/
 
-export const example = () => {
-  return 'example';
-};
+import data from "./data/ghibli/ghibli.js"
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// funciones para obtener películas y filtros
+export function obtenerPeliculas() {
+  return data.films;
+}
+
+export function obtenerPeliculasPorTitulo(title) {
+  return data.films.find((pelicula) => pelicula.title === title);
+}
