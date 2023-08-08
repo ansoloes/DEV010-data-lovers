@@ -132,3 +132,20 @@ peliculas.forEach(pelicula => {
   seccionTarjetas.appendChild(contenedorTarjetas);
 
 });
+
+
+// Boton personajes:
+const btnPersonajes = document.getElementById("btn-personajes");
+const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
+const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
+// Mostrar Overlay usando boton
+btnPersonajes.addEventListener("click", () => {
+  tarjetaPelicula.classList.toggle("active");
+});
+
+// Cerrar el overlay si se hace clic fuera del contenedor
+contenedorTarjeta.addEventListener("click", (event) => {
+  if (event.target === contenedorTarjeta) {
+    tarjetaPelicula.classList.remove("active");
+  }
+});
