@@ -149,3 +149,5 @@ contenedorTarjeta.addEventListener("click", (event) => {
     tarjetaPelicula.classList.remove("active");
   }
 });
+
+//Carrusel de niño
