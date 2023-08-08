@@ -246,6 +246,7 @@ main {
     box-shadow: var(--sombra);
     background-color: var(--indigo-claro);
     height: 56rem;
+    position: relative;
 }
 
 .contenedor-img {
@@ -255,7 +256,6 @@ main {
     max-width: 32%;
     height: 100%;
     width: 32%;
-    position: relative;
     position: relative;
 }
 
@@ -371,7 +371,7 @@ footer nav:nth-child(2) a i:hover {
 
   }
   /* img tarjeta*/
-.tarjeta-personaje .contenedor-img{
+.tarjeta-personaje .contenedor-img-personaje{
     width: 50%;
     height: 100%;
     display: flex;
