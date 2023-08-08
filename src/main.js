@@ -8,38 +8,44 @@ import { obtenerPeliculas } from "./data.js";
 // Peliculas (total)
 const peliculas = obtenerPeliculas();
 
-//Referencias al DOM
+// Referencias al DOM
 const seccionTarjetas =document.querySelector(".seccion-tarjetas");
 
 // Mostrar tarjetas
 peliculas.forEach(pelicula => {
-  //Crear el Div contenedor donde estará la tarjeta
+  // Crear el Div contenedor donde estará la tarjeta
   const contenedorTarjetas = document.createElement("div");
-  contenedorTarjetas.classList.add("contenedor-tarjeta")
+  contenedorTarjetas.classList.add("contenedor-tarjeta");
   
-  // El div de la tarjeta
+  // Div de la tarjeta
   const tarjetaPelicula = document.createElement("div");
   tarjetaPelicula.classList.add("tarjeta-pelicula");
 
-  //Añadir la imagen
+  // Div contenedor imagen
+  const contenedorImagen = document.createElement("div");
+  contenedorImagen.classList.add("contenedor-img");
+  // Añadiendo el Div contenedor imagen a la tarjeta
+  tarjetaPelicula.appendChild(contenedorImagen)
+
+  // Imagen portada
   const imagen = document.createElement("img");
   imagen.src = pelicula.poster;
-  imagen.alt = "portada";
-  imagen.id="portada";
-  tarjetaPelicula.appendChild(imagen);
+  imagen.alt = "portada-película";
+  imagen.id = "portada";
+  contenedorImagen.appendChild(imagen);
 
-  // crear el DIV que contiene la información
+  // Div contenedor información
   const contenedorInfo = document.createElement("div");
   contenedorInfo.classList.add("contenedor-info");
   tarjetaPelicula.appendChild(contenedorInfo);
-  //Los siguientes elementos deben estar dentro de contenedorInfo
-
-  //titulo
+  
+  // * Elementos dentro del contenedorInfo
+  // Título película
   const titulo = document.createElement("h3");
   titulo.id="titulo";
   titulo.textContent = pelicula.title;
   contenedorInfo.appendChild(titulo);
-  //Descripcion span y p
+  // Descripción span y p
   const descripcionSpan = document.createElement("span");
   descripcionSpan.id="descripcion";
   descripcionSpan.textContent="Description";
@@ -50,10 +56,11 @@ peliculas.forEach(pelicula => {
   descripcion.textContent = pelicula.description;
   contenedorInfo.appendChild(descripcion);
 
-  // Div para Director, productor, fecha y score
+  // Div director, productor, fecha y score
   const infoDiv = document.createElement("div");
   infoDiv.classList.add("director-productor-fecha-puntuacion");
 
+  // * Elementos dentro del div director, productor, fecha y score
   // Div director
   const directorDiv = document.createElement("div");
   directorDiv.classList.add("info");
