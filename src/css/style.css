@@ -389,6 +389,12 @@ footer nav:nth-child(2) a i:hover {
     font-family: var(--titulos);
     color: var(--purpura-oscuro);
 }
+  .tarjeta-personaje .contenedor-nombre{
+    height: 20%;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+  }
 /* categorías o títulos */
 .tarjeta-personaje .span{
     font-weight: 700;
@@ -398,6 +404,7 @@ footer nav:nth-child(2) a i:hover {
 .tarjeta-personaje .info-personaje{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
 }
 .tarjeta-personaje .contenedor-info-personaje{
     padding: 1.5rem;
