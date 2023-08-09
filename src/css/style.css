@@ -265,6 +265,10 @@ main {
     object-fit: cover;
 }
 
+.contenedor-info {
+    padding-right: 2.4rem;
+}
+
 .contenedor-info h3 {
     font-size: 3.2rem;
     font-family: var(--titulos);

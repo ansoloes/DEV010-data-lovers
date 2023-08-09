@@ -28,6 +28,10 @@ botonPausar.addEventListener("click", () => {
 
 // * Mostrar tarjetas
 peliculas.forEach(pelicula => {
+  // Mostrar la cantidad de películas encontradas
+  const peliculasEncontradas = document.querySelector("#peliculas-encontradas");
+  peliculasEncontradas.textContent = peliculas.length + " movies found"
+
   // Crear el Div contenedor donde estará la tarjeta
   const contenedorTarjeta = document.createElement("article");
   contenedorTarjeta.classList.add("contenedor-tarjeta");
