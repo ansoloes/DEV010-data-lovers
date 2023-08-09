@@ -9,8 +9,12 @@ export function obtenerPeliculas() {
   return data.films;
 }
 
-export function obtenerPeliculasPorTitulo(title) {
-  return data.films.find((pelicula) => pelicula.title === title);
+export function obtenerPeliculasPorTitulo(titulo) {
+  return data.films.find((pelicula) => pelicula.title === titulo);
+}
+
+export function filtrarPeliculasPorAño(anho1, anho2) {
+  return data.films.filter((pelicula) => pelicula.release_date >= anho1 && pelicula.release_date <= anho2)
 }
 
 // * Esto es una prueba de caja blanca

@@ -156,9 +156,7 @@ peliculas.forEach(pelicula => {
 
   // Agregar contenedorTarjetas dentro de seccionTarjetas
   seccionTarjetas.appendChild(contenedorTarjeta);
-
 });
-
 
 // Boton personajes:
 const btnPersonajes = document.getElementById("btn-personajes");
