@@ -9,16 +9,31 @@ import { obtenerPeliculas } from "./data.js";
 const peliculas = obtenerPeliculas();
 
 // Referencias al DOM
-const seccionTarjetas =document.querySelector(".seccion-tarjetas");
+const seccionTarjetas = document.querySelector(".seccion-tarjetas");
+const botonReproducir = document.querySelector("#reproducir");
+const botonPausar = document.querySelector("#pausar");
+const audio = document.querySelector("#audio");
 
-// Mostrar tarjetas
+// Modular el volumen del audio
+audio.volume = 0.5;
+
+// * Reproducir Audio
+botonReproducir.addEventListener("click", () => {
+  audio.play();
+})
+
+botonPausar.addEventListener("click", () => {
+  audio.pause();
+});
+
+// * Mostrar tarjetas
 peliculas.forEach(pelicula => {
   // Crear el Div contenedor donde estará la tarjeta
-  const contenedorTarjetas = document.createElement("div");
-  contenedorTarjetas.classList.add("contenedor-tarjeta");
-  
-  // Div de la tarjeta
-  const tarjetaPelicula = document.createElement("div");
+  const contenedorTarjeta = document.createElement("article");
+  contenedorTarjeta.classList.add("contenedor-tarjeta");
+
+  // Article de la tarjeta
+  const tarjetaPelicula = document.createElement("article");
   tarjetaPelicula.classList.add("tarjeta-pelicula");
 
   // Div contenedor imagen
@@ -38,19 +53,19 @@ peliculas.forEach(pelicula => {
   const contenedorInfo = document.createElement("div");
   contenedorInfo.classList.add("contenedor-info");
   tarjetaPelicula.appendChild(contenedorInfo);
-  
+
   // * Elementos dentro del contenedorInfo
   // Título película
   const titulo = document.createElement("h3");
-  titulo.id="titulo";
+  titulo.id = "titulo";
   titulo.textContent = pelicula.title;
   contenedorInfo.appendChild(titulo);
   // Descripción span y p
   const descripcionSpan = document.createElement("span");
-  descripcionSpan.id="descripcion";
-  descripcionSpan.textContent="Description";
+  descripcionSpan.id = "descripcion";
+  descripcionSpan.textContent = "Description";
   contenedorInfo.appendChild(descripcionSpan);
-  
+
   const descripcion = document.createElement("p");
   descripcion.id = "descripcion";
   descripcion.textContent = pelicula.description;
@@ -114,29 +129,29 @@ peliculas.forEach(pelicula => {
   //Div botones
   const botonContenedor = document.createElement("div");
   botonContenedor.classList.add("contenedor-btn");
-  
+
   // Boton personajes
   const botonPersonajes = document.createElement("button");
   botonPersonajes.classList.add("btn");
   botonPersonajes.textContent = "Characters";
   botonContenedor.appendChild(botonPersonajes);
-  
+
   // Boton Lugares
   const botonLugares = document.createElement("button");
   botonLugares.classList.add("btn");
   botonLugares.textContent = "Locations";
   botonContenedor.appendChild(botonLugares);
-  
+
   contenedorInfo.appendChild(botonContenedor);
-  
+
   // Agregar contenedorinfo dentro de tarjetaPelicula
   tarjetaPelicula.appendChild(contenedorInfo);
-  
+
   // Agregar tarjetaPelicula dentro de contenedorTarjetas
-  contenedorTarjetas.appendChild(tarjetaPelicula);
+  contenedorTarjeta.appendChild(tarjetaPelicula);
 
   // Agregar contenedorTarjetas dentro de seccionTarjetas
-  seccionTarjetas.appendChild(contenedorTarjetas);
+  seccionTarjetas.appendChild(contenedorTarjeta);
 
 });
 

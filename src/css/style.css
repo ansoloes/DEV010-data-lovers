@@ -152,7 +152,7 @@ header {
 .contenedor-btn {
     display: flex;
     justify-content: center;
-    gap: 8.8rem;
+    gap: 4.8rem;
 }
 
 /* Main */
@@ -409,4 +409,3 @@ footer nav:nth-child(2) a i:hover {
 .tarjeta-personaje .contenedor-info-personaje{
     padding: 1.5rem;
 }
-

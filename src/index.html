@@ -46,7 +46,9 @@
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, est ipsam, eveniet recusandae voluptas dignissimos velit corrupti alias dolorum facilis aut earum! Repellendus delectus non rem illo temporibus similique suscipit?
         </p>
         <div class="contenedor-btn">
-          <button class="btn">Get Started</button>
+          <button id="reproducir" class="btn">Get Started</button>
+          <button id="pausar" class="btn-limpiar-filtros"><i class="fas fa-pause"></i></button>
+          <audio id="audio" src="ghibli_lofi.mp3"></audio>
         </div>
       </article>
     </section>
@@ -105,9 +107,10 @@
             </select>
           </div>
         </article>
-       
+
         <!-- ? Contenedor tarjetas películas -->
         <article class="contenedor-tarjeta">
+          <!-- ! Tarjeta película -->
           <div class="tarjeta-pelicula"> <!-- ! Tarjeta película -->
             <div class="contenedor-img">
             <img
@@ -144,8 +147,8 @@
                 <button id="btn-personajes" class="btn">Characters</button>
                 <button id="btn-lugares" class="btn">Locations</button>
               </div>
-
             </div>
+          <!-- ? Contenedor tarjetas personajes -->
             <!-- Overlay -->
             <article class="overlay-contenedor-personajes">
               <div class="carrusel-personajes">
@@ -175,7 +178,7 @@
                         <p>Bright blue</p>
                       </div>
                       <div class="info">
-                       <span>Species</span>
+                      <span>Species</span>
                         <p>Wizard</p>
                       </div>
                   </div>
@@ -247,12 +250,6 @@
                 </div>
               </div>
             </article>
-          </div> <!-- ! Fin tarjeta película -->
-
-          <!-- ? Contenedor tarjetas personajes -->
-          <article class="contenedor-tarjeta-personajes-locaciones">
-            <div class="tarjeta-personaje-locaciones"><!-- ! Tarjeta personajes-->
-            </div> <!-- !Fin tarjeta personajes -->
           </article>
         </article>
       </section>
