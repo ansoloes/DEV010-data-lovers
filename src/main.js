@@ -1,6 +1,6 @@
 /* 
   ! DESCRIPCIÓN
-  Main.js contiene la información asociada a los botones, uso del DOM y display de tarjetas
+  * Main.js contiene la información asociada a los botones, uso del DOM y display de tarjetas
  */
 
 // ! IMPORTACIONES
