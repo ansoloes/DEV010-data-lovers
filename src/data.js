@@ -1,5 +1,6 @@
-/*¨ Descripción:
-  data.js contiene el import de data Ghibli, funciones para obtener películas y filtros
+/*
+! Descripción:
+  * data.js contiene el import de data Ghibli, funciones para obtener películas y filtros
 */
 
 import data from "./data/ghibli/ghibli.js"

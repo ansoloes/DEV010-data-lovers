@@ -36,7 +36,7 @@ const peliculas = obtenerPeliculas();
 // * Función filtro por año
 botonFiltrar.addEventListener("click", () => {
   const filtroAnho = filtrarPeliculasPorAnho(inputMinimo.value, inputMaximo.value);
-  return filtroAnho;
+  alert(filtroAnho);
 })
 
 // * Función reproducir música
