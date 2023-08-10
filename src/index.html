@@ -1,192 +1,208 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Ghibli</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Ícono de buscar -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
-    <!-- Fuente títulos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
-    <!-- Fuente principal -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
-    <!-- Importar CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css"/>
-  </head>
-  <body>
-    <!-- TODO: Header -->
-    <header>
-      <div class="contenedor-logo">
-        <h1>Data Ghibli</h1>
-      </div>
-      <div class="buscar">
-        <button class="btn">
-          <span class="material-symbols-outlined">
-            search
-          </span> Search
-        </button>
-        <input type="text" placeholder="Search movie here...">
-      </div>
-    </header>
 
-    <!-- TODO: Hero -->
-    <section class="hero">
-      <article class="texto-hero">
-        <h2>«It's wonderful when you can bring sparkle into people's lives, especially under difficult circumstances.»</h2>
-        <p>
-          Welcome to the most complete Studio Ghibli data!
-        </p>
-        <p>
-          Find your favorite characters, immerse yourself in the magic of movie locations or just enjoy your favorite soundtrack in Lo-Fi mode. Yes, we have music to accompany the fantastic tour of the best of Studio Ghibli, just click the "Get Started" button, you can pause the music at any time with the "pause" button.
-        </p>
-        <div class="contenedor-btn">
-          <button id="reproducir" class="btn">Get Started</button>
-          <button id="pausar" class="btn-limpiar-filtros"><i class="fas fa-pause"></i></button>
-          <audio id="audio" src="ghibli_lofi.mp3"></audio>
+<head>
+  <meta charset="utf-8">
+  <title>Data Ghibli</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Ícono de buscar -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- Fuente títulos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+  <!-- Fuente principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap"
+    rel="stylesheet">
+  <!-- Importar CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- TODO: Header -->
+  <header>
+    <div class="contenedor-logo">
+      <h1>Data Ghibli</h1>
+    </div>
+    <div class="buscar">
+      <button class="btn">
+        <span class="material-symbols-outlined">
+          search
+        </span> Search
+      </button>
+      <input type="text" placeholder="Search movie here...">
+    </div>
+  </header>
+
+  <!-- TODO: Hero -->
+  <section class="hero">
+    <article class="texto-hero">
+      <h2>«It's wonderful when you can bring sparkle into people's lives, especially under difficult circumstances.»
+      </h2>
+      <p>
+        Welcome to the most complete Studio Ghibli data!
+      </p>
+      <p>
+        Find your favorite characters, immerse yourself in the magic of movie locations or just enjoy your favorite
+        soundtrack in Lo-Fi mode. Yes, we have music to accompany the fantastic tour of the best of Studio Ghibli, just
+        click the "Get Started" button, you can pause the music at any time with the "pause" button.
+      </p>
+      <div class="contenedor-btn">
+        <button id="reproducir" class="btn">Get Started</button>
+        <button id="pausar" class="btn-limpiar-filtros"><i class="fas fa-pause"></i></button>
+        <audio id="audio" src="ghibli_lofi.mp3"></audio>
+      </div>
+    </article>
+  </section>
+
+  <!-- TODO: Main -->
+  <main>
+    <!-- * Sidebar -->
+    <aside class="sidebar">
+      <h2>Filter Movies</h2>
+
+      <article>
+        <p id="peliculas-encontradas">No results found</p>
+        <button class="btn-limpiar-filtros" id="btn-borrar-filtros">Clear Filters</button>
+      </article>
+
+      <form class="campo rango-años">
+        <label for="">Filter by years:</label>
+        <div class="contenedor-rango">
+          <span>min</span>
+          <input type="text" id="valor-minimo">
+          <span> -- </span>
+          <input type="text" id="valor-maximo">
+          <span>max</span>
+        </div>
+      </form>
+
+      <form class="campo">
+        <label for="">Filter by Director:</label>
+        <select name="Filtro Director" id="filtro-director">
+          <option value="">Select a Director</option>
+          <option value="">Hayao Miyazaki</option>
+        </select>
+      </form>
+
+      <form class="campo">
+        <label for="">Filter by Producer:</label>
+        <select name="Filtro Productor" id="filtro-productor">
+          <option value="">Select a Producer</option>
+        </select>
+      </form>
+
+      <div class="contenedor-btn">
+        <button class="btn" id="btn-filtrar">Filter</button>
+      </div>
+    </aside>
+
+    <!-- ? Sección de tarjetas -->
+    <section class="seccion-tarjetas">
+      <!-- Ordenar por -->
+      <article class="contenedor-ordenar">
+        <form class="ordenar">
+          <label for="">Sort by:</label>
+          <select name="" id="">
+            <option value="">More recent</option>
+            <option value="">Oldest</option>
+          </select>
+        </form>
+        <div class="ordenar">
+          <label for="">Sort by:</label>
+          <select name="" id="">
+            <option value="">A - Z</option>
+            <option value="">Z - A</option>
+          </select>
         </div>
       </article>
-    </section>
 
-    <!-- TODO: Main -->
-    <main>
-      <!-- * Sidebar -->
-      <aside class="sidebar">
-        <h2>Filter Movies</h2>
-
-        <article>
-          <p id="peliculas-encontradas">No results found</p>
-          <button class="btn-limpiar-filtros">Clear Filters</button>
-        </article>
-
-        <form class="campo">
-          <label for="">Filter by years:</label>
-          <input type="range">
-        </form>
-
-        <form class="campo">
-          <label for="">Filter by Director:</label>
-          <select name="" id="">
-            <option value="">Select a Director</option>
-          </select>
-        </form>
-
-        <form class="campo">
-          <label for="">Filter by Producer:</label>
-          <select name="" id="">
-            <option value="">Select a Producer</option>
-          </select>
-        </form>
-        
-        <div class="contenedor-btn">
-          <button class="btn">Filter</button>
-        </div>
-      </aside>
-
-      <!-- ? Sección de tarjetas -->
-      <section class="seccion-tarjetas">
-        <!-- Ordenar por -->
-        <article class="contenedor-ordenar">
-          <form class="ordenar">
-            <label for="">Sort by:</label>
-            <select name="" id="">
-              <option value="">More recent</option>
-              <option value="">Oldest</option>
-            </select>
-          </form>
-          <div class="ordenar">
-            <label for="">Sort by:</label>
-            <select name="" id="">
-              <option value="">A - Z</option>
-              <option value="">Z - A</option>
-            </select>
+      <!-- ? Contenedor tarjetas películas -->
+      <article class="contenedor-tarjeta">
+        <!-- ! Tarjeta película -->
+        <div class="tarjeta-pelicula"> <!-- ! Tarjeta película -->
+          <div class="contenedor-img">
+            <img id="portada" src="https://i.pinimg.com/1200x/27/29/79/27297982b118a2375d86bba9eca37354.jpg"
+              alt="portada">
           </div>
-        </article>
-
-        <!-- ? Contenedor tarjetas películas -->
-        <article class="contenedor-tarjeta">
-          <!-- ! Tarjeta película -->
-          <div class="tarjeta-pelicula"> <!-- ! Tarjeta película -->
-            <div class="contenedor-img">
-            <img
-              id="portada"
-              src="https://i.pinimg.com/1200x/27/29/79/27297982b118a2375d86bba9eca37354.jpg" 
-              alt="portada"
-            >
-            </div>
-            <div class="contenedor-info">
-              <h3 id="titulo">Howl's Moving Castle</h3>
-              <span>Description:</span>
-              <p id="descripcion">
-                When Sophie, a shy young woman, is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking home.
-              </p>
-              <div class="director-productor-fecha-puntuacion">
-                <div class="info">
-                  <span>Director:</span>
-                  <p id="director">Hayao Miyazaki</p>
-                </div>
-                <div class="info">
-                  <span>Producer:</span>
-                  <p id="productor">Toshio Suzuki</p>
-                </div>
-                <div class="info">
-                  <span>Release Date:</span>
-                  <p id="fecha">2004</p>
-                </div>
-                <div class="info">
-                  <span>Score:</span>
-                  <p id="puntuacion">87</p>
-                </div>
+          <div class="contenedor-info">
+            <h3 id="titulo">Howl's Moving Castle</h3>
+            <span>Description:</span>
+            <p id="descripcion">
+              When Sophie, a shy young woman, is cursed with an old body by a spiteful witch, her only chance of
+              breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged,
+              walking home.
+            </p>
+            <div class="director-productor-fecha-puntuacion">
+              <div class="info">
+                <span>Director:</span>
+                <p id="director">Hayao Miyazaki</p>
               </div>
-              <div class="contenedor-btn">
-                <button id="btn-personajes" class="btn">Characters</button>
-                <button id="btn-lugares" class="btn">Locations</button>
+              <div class="info">
+                <span>Producer:</span>
+                <p id="productor">Toshio Suzuki</p>
+              </div>
+              <div class="info">
+                <span>Release Date:</span>
+                <p id="fecha">2004</p>
+              </div>
+              <div class="info">
+                <span>Score:</span>
+                <p id="puntuacion">87</p>
               </div>
             </div>
+            <div class="contenedor-btn">
+              <button id="btn-personajes" class="btn">Characters</button>
+              <button id="btn-lugares" class="btn">Locations</button>
+            </div>
+          </div>
           <!-- ? Contenedor tarjetas personajes -->
-            <!-- Overlay -->
-            <article class="overlay-contenedor-personajes">
-              <div class="carrusel-personajes">
-                <div class="tarjeta-personaje">
-                  <div class="contenedor-img-personaje">
-                  <img src="https://http2.mlstatic.com/D_NQ_NP_890451-MLC46109802831_052021-O.webp" alt="Personaje 1" />
-                  </div>
-                  <div class="contenedor-info-personaje">
-                    <div class="contenedor-nombre">
-                    <h3 id="nombre">Howl Jenkins Pendragon</h3>
-                    </div>
-                    <div class="info-personaje">
-                      <div class="info">
-                        <span>Gender</span>
-                        <p>Male</p>
-                      </div>
-                      <div class="info">
-                        <span>Age</span>
-                        <p>27</p>
-                      </div>
-                      <div class="info">
-                        <span>Eye color</span>
-                        <p>Bright blue</p>
-                      </div>
-                      <div class="info">
-                        <span>Hair color</span>
-                        <p>Bright blue</p>
-                      </div>
-                      <div class="info">
-                      <span>Species</span>
-                        <p>Wizard</p>
-                      </div>
-                  </div>
-                </div>
-                </div>
-                <div class="tarjeta-personaje">
+          <!-- Overlay -->
+          <article class="overlay-contenedor-personajes">
+            <div class="carrusel-personajes">
+              <div class="tarjeta-personaje">
                 <div class="contenedor-img-personaje">
-                  <img src="https://cdn.glitch.global/9b3ba497-81d3-4efe-8960-e5c785d8b2bf/Sophie_bob_cut.webp?v=1691443819155" alt="Personaje 1" />
+                  <img src="https://http2.mlstatic.com/D_NQ_NP_890451-MLC46109802831_052021-O.webp" alt="Personaje 1" />
+                </div>
+                <div class="contenedor-info-personaje">
+                  <div class="contenedor-nombre">
+                    <h3 id="nombre">Howl Jenkins Pendragon</h3>
+                  </div>
+                  <div class="info-personaje">
+                    <div class="info">
+                      <span>Gender</span>
+                      <p>Male</p>
+                    </div>
+                    <div class="info">
+                      <span>Age</span>
+                      <p>27</p>
+                    </div>
+                    <div class="info">
+                      <span>Eye color</span>
+                      <p>Bright blue</p>
+                    </div>
+                    <div class="info">
+                      <span>Hair color</span>
+                      <p>Bright blue</p>
+                    </div>
+                    <div class="info">
+                      <span>Species</span>
+                      <p>Wizard</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tarjeta-personaje">
+                <div class="contenedor-img-personaje">
+                  <img
+                    src="https://cdn.glitch.global/9b3ba497-81d3-4efe-8960-e5c785d8b2bf/Sophie_bob_cut.webp?v=1691443819155"
+                    alt="Personaje 1" />
                 </div>
                 <div class="contenedor-info-personaje">
                   <div class="contenedor-nombre">
@@ -215,10 +231,12 @@
                     </div>
                   </div>
                 </div>
-                </div>
-                <div class="tarjeta-personaje">
+              </div>
+              <div class="tarjeta-personaje">
                 <div class="contenedor-img-personaje">
-                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4ad08d22-fc21-409f-9236-a1e7b2860084/dfskq97-75b76734-533e-4b21-9c24-145743c64b5d.jpg/v1/fill/w_894,h_894,q_70,strp/calcifer_by_carolinebuschel_dfskq97-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzRhZDA4ZDIyLWZjMjEtNDA5Zi05MjM2LWExZTdiMjg2MDA4NFwvZGZza3E5Ny03NWI3NjczNC01MzNlLTRiMjEtOWMyNC0xNDU3NDNjNjRiNWQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oBMt7f5Ocl5KDKiTjJAUUxbhjSx2hjVWksWtjuyjtmc" alt="Personaje 1" />
+                  <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4ad08d22-fc21-409f-9236-a1e7b2860084/dfskq97-75b76734-533e-4b21-9c24-145743c64b5d.jpg/v1/fill/w_894,h_894,q_70,strp/calcifer_by_carolinebuschel_dfskq97-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzRhZDA4ZDIyLWZjMjEtNDA5Zi05MjM2LWExZTdiMjg2MDA4NFwvZGZza3E5Ny03NWI3NjczNC01MzNlLTRiMjEtOWMyNC0xNDU3NDNjNjRiNWQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oBMt7f5Ocl5KDKiTjJAUUxbhjSx2hjVWksWtjuyjtmc"
+                    alt="Personaje 1" />
                 </div>
                 <div class="contenedor-info-personaje">
                   <div class="contenedor-nombre">
@@ -247,30 +265,33 @@
                     </div>
                   </div>
                 </div>
-                </div>
               </div>
-            </article>
+            </div>
           </article>
-        </article>
-      </section>
-    </main>
+      </article>
+      </article>
+    </section>
+  </main>
 
-    <!-- TODO: Footer -->
-    <footer>
-      <img src="img/footer.gif" alt="">
-      <nav class="logo-copyright">
-        <h2>Data Ghibli</h2>
-        <p>&copy;Copyright Laboratoria DEV010 - Carolina Moreno y Sofia Lozano</p>
-      </nav>
-      <nav class="redes-sociales">
-        <a href="https://github.com/ansoloes/DEV010-data-lovers" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sofiacodifica/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.linkedin.com/in/carolina-ang%C3%A9lica-moreno-vallejos-8a9016252/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.laboratoria.la/" target="_blank"><i class="fa fa-globe"></i></a>
-        <a href="https://bootcamp.laboratoria.la/es/web-dev?utm_source=organic&utm_medium=bootcamp_landing&utm_campaign=web-dev_landing" target="_blank"><i class="fa fa-globe"></i></a>
-      </nav>
-    </footer>
-    <script src="https://kit.fontawesome.com/a90d1ac3f5.js" crossorigin="anonymous"></script>
-    <script src="main.js" type="module"></script>
-  </body>
+  <!-- TODO: Footer -->
+  <footer>
+    <img src="img/footer.gif" alt="">
+    <nav class="logo-copyright">
+      <h2>Data Ghibli</h2>
+      <p>&copy;Copyright Laboratoria DEV010 - Carolina Moreno y Sofia Lozano</p>
+    </nav>
+    <nav class="redes-sociales">
+      <a href="https://github.com/ansoloes/DEV010-data-lovers" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sofiacodifica/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/carolina-ang%C3%A9lica-moreno-vallejos-8a9016252/" target="_blank"><i
+          class="fa fa-linkedin"></i></a>
+      <a href="https://www.laboratoria.la/" target="_blank"><i class="fa fa-globe"></i></a>
+      <a href="https://bootcamp.laboratoria.la/es/web-dev?utm_source=organic&utm_medium=bootcamp_landing&utm_campaign=web-dev_landing"
+        target="_blank"><i class="fa fa-globe"></i></a>
+    </nav>
+  </footer>
+  <script src="https://kit.fontawesome.com/a90d1ac3f5.js" crossorigin="anonymous"></script>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

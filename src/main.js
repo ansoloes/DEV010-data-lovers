@@ -1,32 +1,58 @@
-/* DESCRIPCIÓN:
-Main.js contiene la información asociada a los botones, uso del DOM y display de tarjetas
-*/
+/* 
+  ! DESCRIPCIÓN
+  Main.js contiene la información asociada a los botones, uso del DOM y display de tarjetas
+ */
 
-//Import 
-import { obtenerPeliculas } from "./data.js";
+// ! IMPORTACIONES
+import { obtenerPeliculas, filtrarPeliculasPorAnho } from "./data.js";
 
-// Peliculas (total)
-const peliculas = obtenerPeliculas();
-
-// Referencias al DOM
+// ! REFERENCIAS AL DOM
+// * Sección tarjetas
 const seccionTarjetas = document.querySelector(".seccion-tarjetas");
+
+// * Música
 const botonReproducir = document.querySelector("#reproducir");
 const botonPausar = document.querySelector("#pausar");
 const audio = document.querySelector("#audio");
 
-// Modular el volumen del audio
-audio.volume = 0.5;
+// * Filtros
+const inputMinimo = document.querySelector("#valor-minimo");
+const inputMaximo = document.querySelector("#valor-maximo");
+const botonFiltrar = document.querySelector("#btn-filtrar");
 
-// * Reproducir Audio
+// * Sección personajes
+const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
+const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
+const btnPersonajes = document.getElementById("btn-personajes");
+
+// const opcionesDirectores = obtenerDirectores()
+
+// console.log(opcionesDirectores)
+
+// ! FUNCIONES
+// * Función total de películas
+const peliculas = obtenerPeliculas();
+
+// * Función filtro por año
+botonFiltrar.addEventListener("click", () => {
+  const filtroAnho = filtrarPeliculasPorAnho(inputMinimo.value, inputMaximo.value);
+  return filtroAnho;
+})
+
+// * Función reproducir música
 botonReproducir.addEventListener("click", () => {
   audio.play();
 })
 
+// * Función pausar música
 botonPausar.addEventListener("click", () => {
   audio.pause();
 });
 
-// * Mostrar tarjetas
+// * Función modular el volumen del audio
+audio.volume = 0.5;
+
+// * Función mostrar tarjetas
 peliculas.forEach(pelicula => {
   // Mostrar la cantidad de películas encontradas
   const peliculasEncontradas = document.querySelector("#peliculas-encontradas");
@@ -53,7 +79,7 @@ peliculas.forEach(pelicula => {
   imagen.id = "portada";
   contenedorImagen.appendChild(imagen);
 
-  // Div contenedor información
+  // ! Div contenedor información
   const contenedorInfo = document.createElement("div");
   contenedorInfo.classList.add("contenedor-info");
   tarjetaPelicula.appendChild(contenedorInfo);
@@ -75,7 +101,7 @@ peliculas.forEach(pelicula => {
   descripcion.textContent = pelicula.description;
   contenedorInfo.appendChild(descripcion);
 
-  // Div director, productor, fecha y score
+  // ! Div director, productor, fecha y score
   const infoDiv = document.createElement("div");
   infoDiv.classList.add("director-productor-fecha-puntuacion");
 
@@ -158,16 +184,12 @@ peliculas.forEach(pelicula => {
   seccionTarjetas.appendChild(contenedorTarjeta);
 });
 
-// Boton personajes:
-const btnPersonajes = document.getElementById("btn-personajes");
-const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
-const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
-// Mostrar Overlay usando boton
+// * Función mostrar Overlay usando boton
 btnPersonajes.addEventListener("click", () => {
   tarjetaPelicula.classList.toggle("active");
 });
 
-// Cerrar el overlay si se hace clic fuera del contenedor
+// * Función cerrar el overlay si se hace clic fuera del contenedor
 contenedorTarjeta.addEventListener("click", (event) => {
   if (event.target === contenedorTarjeta) {
     tarjetaPelicula.classList.remove("active");

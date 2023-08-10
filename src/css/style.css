@@ -168,7 +168,7 @@ main {
     padding: 2.4rem;
     width: 30%;
     box-shadow: var(--sombra);
-    height: 64rem;
+    height: 67rem;
 }
 
 .sidebar h2 {
@@ -207,6 +207,24 @@ main {
     padding: 2rem;
     margin: 2.4rem 0;
     border: .1rem solid var(--purpura);
+}
+
+.contenedor-rango {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem
+}
+
+.contenedor-rango input {
+    width: 30%;
+    padding: .8rem 0;
+    text-align: center;
+}
+
+.contenedor-rango span {
+    font-weight: 500;
+    color: var(--purpura);
 }
 
 .campo select {
