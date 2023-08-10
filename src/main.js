@@ -4,7 +4,8 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas, filtrarPeliculasPorAnho } from "./data.js";
+import { obtenerPeliculas, filtrarPeliculasPorAnho, obtenerDirectores, obtenerProductores } from "./data.js";
+
 
 // ! REFERENCIAS AL DOM
 // * Sección tarjetas
@@ -19,25 +20,23 @@ const audio = document.querySelector("#audio");
 const inputMinimo = document.querySelector("#valor-minimo");
 const inputMaximo = document.querySelector("#valor-maximo");
 const botonFiltrar = document.querySelector("#btn-filtrar");
+const selectDirector = document.querySelector("#filtro-director");
+const selectProductor = document.querySelector("#filtro-productor");
 
 // * Sección personajes
 const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
 const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
 const btnPersonajes = document.getElementById("btn-personajes");
 
-// const opcionesDirectores = obtenerDirectores()
-
-// console.log(opcionesDirectores)
-
 // ! FUNCIONES
 // * Función total de películas
 const peliculas = obtenerPeliculas();
 
-// * Función filtro por año
-botonFiltrar.addEventListener("click", () => {
-  const filtroAnho = filtrarPeliculasPorAnho(inputMinimo.value, inputMaximo.value);
-  alert(filtroAnho);
-})
+//* Función total directores
+const directores = obtenerDirectores();
+
+// * Función total productores
+const productores = obtenerProductores();
 
 // * Función reproducir música
 botonReproducir.addEventListener("click", () => {
@@ -183,6 +182,32 @@ peliculas.forEach(pelicula => {
   // Agregar contenedorTarjetas dentro de seccionTarjetas
   seccionTarjetas.appendChild(contenedorTarjeta);
 });
+
+// * Función mostrar directores
+directores.forEach(director => {
+  // Option director
+  const opcionDirector = document.createElement('option')
+  opcionDirector.textContent = director;
+
+  // Añadiendo optionDirector al select
+  selectDirector.appendChild(opcionDirector);
+})
+
+// * Función mostrar productores
+productores.forEach(productor => {
+  // Option productor
+  const opcionProductor = document.createElement('option');
+  opcionProductor.textContent = productor;
+
+  // Añadiendo optionProductor al select
+  selectProductor.appendChild(opcionProductor);
+})
+
+// * Función filtro por año
+botonFiltrar.addEventListener("click", () => {
+  const filtroAnho = filtrarPeliculasPorAnho(inputMinimo.value, inputMaximo.value);
+  alert(filtroAnho.length);
+})
 
 // * Función mostrar Overlay usando boton
 btnPersonajes.addEventListener("click", () => {
