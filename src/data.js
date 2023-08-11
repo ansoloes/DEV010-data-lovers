@@ -97,7 +97,22 @@ export function buscarTermino(termino){
   return peliculasEncontradas;
 }
 
-// * Función Mostrar:
-// export function mostrar(peliculas){
+// TODO: Función para ordenar películas por año ascendente
+export function ordenarPeliculasPorAñoAcendente(peliculas) {
+  return peliculas.sort((x, y) => x.release_date - y.release_date);
+}
 
-// }
+// TODO: Función para ordenar peliculas por año descendente
+export function ordenarPeliculasPorAñoDescendente(peliculas) {
+  return peliculas.sort((x, y) => y.release_date - x.release_date);
+}
+
+// TODO: Función para ordenar películas alfabéticamente ascendente
+export function ordenarPeliculasAZ(peliculas) {
+  return peliculas.sort((x, y) => x.title.localeCompare(y.title));
+}
+
+// TODO: Función para obtener películas alfabéticamente descendente
+export function ordenarOeliculasZA(peliculas) {
+  return peliculas.sort((x, y) => y.title.localeCompare(x.title));
+}

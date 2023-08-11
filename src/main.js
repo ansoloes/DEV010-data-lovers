@@ -6,7 +6,6 @@
 // ! IMPORTACIONES
 import { obtenerPeliculas, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino } from "./data.js";
 
-
 // ! REFERENCIAS AL DOM
 // * Sección buscar
 const btnBuscar = document.querySelector("#buscar");
@@ -21,11 +20,15 @@ const botonPausar = document.querySelector("#pausar");
 const audio = document.querySelector("#audio");
 
 // * Filtros
+const peliculasEncontradas = document.querySelector("#peliculas-encontradas");
 const inputMinimo = document.querySelector("#valor-minimo");
 const inputMaximo = document.querySelector("#valor-maximo");
 const botonFiltrar = document.querySelector("#btn-filtrar");
 const selectDirector = document.querySelector("#filtro-director");
 const selectProductor = document.querySelector("#filtro-productor");
+
+// * Ordenar
+
 
 // * Sección personajes
 const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
@@ -59,10 +62,9 @@ audio.volume = 0.5;
 const mostrarPeliculas = (peliculas) => {
   contenedorDelContenedorDeTarjetas.innerHTML = "";
   peliculas.forEach(pelicula => {
-    // Mostrar la cantidad de películas encontradas
-    const peliculasEncontradas = document.querySelector("#peliculas-encontradas");
+  // Mostrar la cantidad de películas encontradas
     peliculasEncontradas.textContent = peliculas.length + " movies found"
-  
+
     // Crear el Div contenedor donde estará la tarjeta
     const contenedorTarjeta = document.createElement("article");
     contenedorTarjeta.classList.add("contenedor-tarjeta");
@@ -195,8 +197,9 @@ mostrarPeliculas(peliculas);
 // * Función para buscar películas
 btnBuscar.addEventListener("click", () => {
   const peliculasEncontradas = buscarTermino(inputBuscar.value);
-  console.log(peliculasEncontradas);
   mostrarPeliculas(peliculasEncontradas);
+  // Vaciar el input para buscar nuevamente
+  inputBuscar.value = "";
 })
 
 // * Función mostrar directores
@@ -219,7 +222,7 @@ productores.forEach(productor => {
   selectProductor.appendChild(opcionProductor);
 })
 
-// * Función filtro por año
+// * Función filtros
 botonFiltrar.addEventListener("click", () => {
   const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value)
   mostrarPeliculas(resultadoFiltro);
