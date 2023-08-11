@@ -39,9 +39,10 @@ export function filtrarPeliculasPorAnho(anho1, anho2) {
 }
 
 // TODO: Función para filtrar películas por director
-// export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
-//   return peliculasFiltradas.filter((pelicula) => pelicula.director === director)
-// }
+export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
+  return peliculasFiltradas.filter((pelicula) => pelicula.director === director)
+}
+
 // TODO: Función para filtrar peliculas por productor
 export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
   return peliculasFiltradas.filter((pelicula) => pelicula.producer === productor);
@@ -87,4 +88,8 @@ export function buscarTermino(termino){
 
   return resultados;
 }
-//
+
+// * Función Mostrar:
+export function mostrar(peliculas){
+
+}

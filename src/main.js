@@ -4,7 +4,7 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas, filtrarPeliculasPorAnho, obtenerDirectores, obtenerProductores } from "./data.js";
+import { obtenerPeliculas, filtrarPeliculasPorAnho, obtenerDirectores, obtenerProductores, filtrarPeliculasPorDirector, filtrarPeliculasPorProductor,aplicarFiltros } from "./data.js";
 
 
 // ! REFERENCIAS AL DOM
@@ -205,8 +205,9 @@ productores.forEach(productor => {
 
 // * Función filtro por año
 botonFiltrar.addEventListener("click", () => {
-  const filtroAnho = filtrarPeliculasPorAnho(inputMinimo.value, inputMaximo.value);
-  alert(filtroAnho.length);
+
+  alert(aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value).length)
+
 })
 
 // * Función mostrar Overlay usando boton
