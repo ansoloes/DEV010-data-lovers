@@ -10,6 +10,18 @@ export function obtenerPeliculas() {
   return data.films;
 }
 
+// TODO: Función para obtener personajes
+export function obtenerPersonajes() {
+  const personajes = data.films.map( (pelicula) => pelicula.people );
+  return personajes;
+}
+
+// TODO: Función para obtener lugares
+export function obtenerLugares() {
+  const lugares = data.films.map( (pelicula) => pelicula.locations );
+  return lugares;
+}
+
 // TODO: Función para obtener directores
 export function obtenerDirectores() {
   const directores = data.films.map( (pelicula) => pelicula.director );
@@ -51,7 +63,7 @@ export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
 // TODO: Función para usar todos los filtros
 export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor){
   let peliculasFiltradas = obtenerPeliculas()
-  //Por año
+  // Por año
   if (anhoMinimo && anhoMaximo) {
     peliculasFiltradas = filtrarPeliculasPorAnho(anhoMinimo, anhoMaximo, peliculasFiltradas);
   }
@@ -74,22 +86,20 @@ export function buscarTermino(termino){
     pelicula.title.toLowerCase().includes(termino.toLowerCase())
   );
   resultados.push(peliculasEncontradas);
-
-  // termino tipo nombre personaje
-  const personajesEncontrados = obtenerPersonajes().filter(personaje =>
-    personaje.name.toLowerCase().includes(termino.toLowerCase())
-  );
-  resultados.push(personajesEncontrados);
-  // termino tipo nombre lugares
-  const lugaresEncontrados = obtenerLugares().filter(lugar =>
-    lugar.name.toLowerCase().includes(termino.toLowerCase())
-  );
-  resultados.push(lugaresEncontrados);
-
-  return resultados;
+  // // termino tipo nombre personaje
+  // const personajesEncontrados = obtenerPersonajes().filter(personaje =>
+  //   personaje.name.toLowerCase().includes(termino.toLowerCase())
+  // );
+  // resultados.push(personajesEncontrados);
+  // // termino tipo nombre lugares
+  // const lugaresEncontrados = obtenerLugares().filter(lugar =>
+  //   lugar.name.toLowerCase().includes(termino.toLowerCase())
+  // );
+  // resultados.push(lugaresEncontrados);
+  // return resultados;
 }
 
 // * Función Mostrar:
-export function mostrar(peliculas){
+// export function mostrar(peliculas){
 
-}
+// }
