@@ -42,4 +42,49 @@ export function filtrarPeliculasPorAnho(anho1, anho2) {
 // export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
 //   return peliculasFiltradas.filter((pelicula) => pelicula.director === director)
 // }
+// TODO: Función para filtrar peliculas por productor
+export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
+  return peliculasFiltradas.filter((pelicula) => pelicula.producer === productor);
+}
 
+// TODO: Función para usar todos los filtros
+export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor){
+  let peliculasFiltradas = obtenerPeliculas()
+  //Por año
+  if (anhoMinimo && anhoMaximo) {
+    peliculasFiltradas = filtrarPeliculasPorAnho(anhoMinimo, anhoMaximo, peliculasFiltradas);
+  }
+  // Por director
+  if (director) {
+    peliculasFiltradas = filtrarPeliculasPorDirector(director, peliculasFiltradas);
+  }
+  // Por productor
+  if (productor) {
+    peliculasFiltradas = filtrarPeliculasPorProductor(productor, peliculasFiltradas);
+  }
+  return peliculasFiltradas;
+}
+
+//Función para barra de búsqueda
+export function buscarTermino(termino){
+  const resultados = [];
+  //termino tipo titulo
+  const peliculasEncontradas = obtenerPeliculas().filter(pelicula =>
+    pelicula.title.toLowerCase().includes(termino.toLowerCase())
+  );
+  resultados.push(peliculasEncontradas);
+
+  // termino tipo nombre personaje
+  const personajesEncontrados = obtenerPersonajes().filter(personaje =>
+    personaje.name.toLowerCase().includes(termino.toLowerCase())
+  );
+  resultados.push(personajesEncontrados);
+  // termino tipo nombre lugares
+  const lugaresEncontrados = obtenerLugares().filter(lugar =>
+    lugar.name.toLowerCase().includes(termino.toLowerCase())
+  );
+  resultados.push(lugaresEncontrados);
+
+  return resultados;
+}
+//
