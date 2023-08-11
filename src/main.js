@@ -4,13 +4,13 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas, obtenerDirectores, obtenerProductores, aplicarFiltros /*buscarTermino*/ } from "./data.js";
+import { obtenerPeliculas, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino } from "./data.js";
 
 
 // ! REFERENCIAS AL DOM
 // * Sección buscar
-//const btnBuscar = document.querySelector("#buscar");
-//const inputBuscar = document.querySelector("#input-buscar");
+const btnBuscar = document.querySelector("#buscar");
+const inputBuscar = document.querySelector("#input-buscar");
 
 // * Super contenedor tarjeta
 const contenedorDelContenedorDeTarjetas = document.querySelector("#contenedor-del-contenedor-tarjetas")
@@ -193,11 +193,11 @@ const mostrarPeliculas = (peliculas) => {
 mostrarPeliculas(peliculas);
 
 // * Función para buscar películas
-// btnBuscar.addEventListener("click", () => {
-//   const peliculasEncontradas = buscarTermino(inputBuscar.value);
-//   // mostrarPeliculas(peliculasEncontradas);
-//   console.log(peliculasEncontradas);
-// })
+btnBuscar.addEventListener("click", () => {
+  const peliculasEncontradas = buscarTermino(inputBuscar.value);
+  console.log(peliculasEncontradas);
+  mostrarPeliculas(peliculasEncontradas);
+})
 
 // * Función mostrar directores
 directores.forEach(director => {

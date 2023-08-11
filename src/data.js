@@ -80,12 +80,10 @@ export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor){
 
 //Función para barra de búsqueda
 export function buscarTermino(termino){
-  const resultados = [];
   //termino tipo titulo
   const peliculasEncontradas = obtenerPeliculas().filter(pelicula =>
     pelicula.title.toLowerCase().includes(termino.toLowerCase())
   );
-  resultados.push(peliculasEncontradas);
   // // termino tipo nombre personaje
   // const personajesEncontrados = obtenerPersonajes().filter(personaje =>
   //   personaje.name.toLowerCase().includes(termino.toLowerCase())
@@ -96,7 +94,7 @@ export function buscarTermino(termino){
   //   lugar.name.toLowerCase().includes(termino.toLowerCase())
   // );
   // resultados.push(lugaresEncontrados);
-  // return resultados;
+  return peliculasEncontradas;
 }
 
 // * Función Mostrar:
