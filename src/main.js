@@ -4,7 +4,7 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino } from "./data.js";
+import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAcendente, ordenarPeliculasPorAñoDescendente,ordenarPeliculasAZ, ordenarPeliculasZA} from "./data.js";
 
 // ! REFERENCIAS AL DOM
 // * Sección buscar
@@ -28,7 +28,8 @@ const selectDirector = document.querySelector("#filtro-director");
 const selectProductor = document.querySelector("#filtro-productor");
 
 // * Ordenar
-
+const ordenarPorAño = document.querySelector("#ordenar-fecha");
+const ordenarPorAlfabeto = document.querySelector("#ordenar-alfabeticamente")
 
 // * Sección personajes
 const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
@@ -61,7 +62,7 @@ audio.volume = 0.5;
 
 // * Función mostrar tarjetas
 const mostrarPeliculas = (peliculas) => {
-  // contenedorDelContenedorDeTarjetas.innerHTML = "";
+  contenedorDelContenedorDeTarjetas.innerHTML = "";
   peliculas.forEach(pelicula => {
   // Mostrar la cantidad de películas encontradas
     peliculasEncontradas.textContent = peliculas.length + " movies found"
@@ -170,7 +171,8 @@ const mostrarPeliculas = (peliculas) => {
   
     // Boton personajes
     const botonPersonajes = document.createElement("button");
-    botonPersonajes.classList.add("btn","btn-personajes" );
+    botonPersonajes.classList.add("btn");
+    botonPersonajes.classList.add("btn-personajes");
     botonPersonajes.textContent = "Characters";
     botonPersonajes.id="btn-personajes";
     botonPersonajes.setAttribute("data-id", pelicula.id) // para tener contexto y poder generar los personajes
@@ -198,6 +200,36 @@ const mostrarPeliculas = (peliculas) => {
 }
 
 mostrarPeliculas(peliculas);
+
+// * Funciones Ordenar:
+//Por Año
+//  eventListener para un select. <More recent> y <Oldest>
+ordenarPorAño.addEventListener("change", () => {
+  const peliculas = obtenerPeliculas();
+  // Necesitamos que use una función para una opción y la otra para la otra
+  if (ordenarPorAño.value==="orden-descendente") {
+    const peliculasOrdenadas= ordenarPeliculasPorAñoDescendente(peliculas);
+    mostrarPeliculas(peliculasOrdenadas);
+  
+  } else if (ordenarPorAño.value==="orden-ascendente") {
+    const peliculasOrdenadas= ordenarPeliculasPorAñoAcendente(peliculas);
+    mostrarPeliculas(peliculasOrdenadas);
+  } 
+});
+//Por Letra
+//  eventListener para un select. <More recent> y <Oldest>
+ordenarPorAlfabeto.addEventListener("change", () => {
+  const peliculas = obtenerPeliculas();
+  // Necesitamos que use una función para una opción y la otra para la otra
+  if (ordenarPorAlfabeto.value==="ordenar-a-z") {
+    const peliculasOrdenadas= ordenarPeliculasAZ(peliculas);
+    mostrarPeliculas(peliculasOrdenadas);
+  
+  } else if (ordenarPorAlfabeto.value==="ordenar-z-a") {
+    const peliculasOrdenadas= ordenarPeliculasZA(peliculas);
+    mostrarPeliculas(peliculasOrdenadas);
+  } 
+});
 
 // * Función para buscar películas
 btnBuscar.addEventListener("click", () => {
@@ -235,10 +267,10 @@ botonFiltrar.addEventListener("click", () => {
 })
 
 // * Función mostrar Overlay usando boton
-btnPersonajes.addEventListener("click", (event) => {
-  const peliculaId = event.currentTarget.getAttribute("data-id"); // Obtener el ID de la película
-  mostrarPersonajes(peliculaId); // mostrar por ID
-});
+// btnPersonajes.addEventListener("click", (event) => {
+//   const peliculaId = event.currentTarget.getAttribute("data-id"); // Obtener el ID de la película
+//   mostrarPersonajes(peliculaId); // mostrar por ID
+// });
 
 // * Función cerrar el overlay si se hace clic fuera del contenedor
 contenedorTarjeta.addEventListener("click", (event) => {
@@ -246,6 +278,9 @@ contenedorTarjeta.addEventListener("click", (event) => {
     tarjetaPelicula.classList.remove("active");
   }
 });
+
+
+
 // ! Sección POPout!
 // * Función mostrar personajes
 const mostrarPersonajes = (peliculaId) => {

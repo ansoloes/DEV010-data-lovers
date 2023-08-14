@@ -32,7 +32,7 @@ export function obtenerDirectores() {
 }
 // TODO: Función obtener PeliculasPorId
 export function obtenerPeliculaPorId() {
-  const peliculaPorId = data.films.find((pelicula) => pelicula.id === peliculaId);
+  const peliculaPorId = data.films.find((pelicula) => pelicula.id === peliculaPorId);
   return peliculaPorId;
 }
 
@@ -119,6 +119,6 @@ export function ordenarPeliculasAZ(peliculas) {
 }
 
 // TODO: Función para obtener películas alfabéticamente descendente
-export function ordenarOeliculasZA(peliculas) {
+export function ordenarPeliculasZA(peliculas) {
   return peliculas.sort((x, y) => y.title.localeCompare(x.title));
 }
