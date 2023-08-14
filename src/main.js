@@ -50,6 +50,7 @@ const productores = obtenerProductores();
 // * Función reproducir música
 botonReproducir.addEventListener("click", () => {
   audio.play();
+  window.scrollTo(0, 1000);
 })
 
 // * Función pausar música
@@ -237,6 +238,7 @@ btnBuscar.addEventListener("click", () => {
   mostrarPeliculas(peliculasEncontradas);
   // Vaciar el input para buscar nuevamente
   inputBuscar.value = "";
+  window.scrollTo(0, 1000);
 })
 
 // * Función mostrar directores
