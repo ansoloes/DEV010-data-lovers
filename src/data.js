@@ -27,42 +27,42 @@ export function obtenerDirectores() {
   const directores = data.films.map( (pelicula) => pelicula.director );
   const directoresFiltrados = directores.filter((director, indice) => {
     return directores.indexOf(director) === indice;
-  })
+  } )
   return directoresFiltrados;
 }
 // TODO: Función obtener PeliculasPorId
 export function obtenerPeliculaPorId() {
-  const peliculaPorId = data.films.find((pelicula) => pelicula.id === peliculaPorId);
+  const peliculaPorId = data.films.find( (pelicula) => pelicula.id === peliculaPorId );
   return peliculaPorId;
 }
 
 // TODO: Función para obtener productores
 export function obtenerProductores() {
   const productores = data.films.map( (pelicula) => pelicula.producer );
-  const productoresFiltrados = productores.filter((productor, indice) => {
+  const productoresFiltrados = productores.filter( (productor, indice) => {
     return productores.indexOf(productor) === indice;
-  })
+  } )
   return productoresFiltrados;
 }
 
 // TODO: Función para encontrar películas por título
 export function obtenerPeliculasPorTitulo(titulo) {
-  return data.films.find((pelicula) => pelicula.title === titulo);
+  return data.films.find( (pelicula) => pelicula.title === titulo );
 }
 
 // TODO: Función para filtrar películas por año
 export function filtrarPeliculasPorAnho(anho1, anho2) {
-  return data.films.filter((pelicula) => pelicula.release_date >= anho1 && pelicula.release_date <= anho2)
+  return data.films.filter( (pelicula) => pelicula.release_date >= anho1 && pelicula.release_date <= anho2 )
 }
 
 // TODO: Función para filtrar películas por director
 export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
-  return peliculasFiltradas.filter((pelicula) => pelicula.director === director)
+  return peliculasFiltradas.filter( (pelicula) => pelicula.director === director )
 }
 
 // TODO: Función para filtrar peliculas por productor
 export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
-  return peliculasFiltradas.filter((pelicula) => pelicula.producer === productor);
+  return peliculasFiltradas.filter( (pelicula) => pelicula.producer === productor );
 }
 
 // TODO: Función para usar todos los filtros
@@ -87,7 +87,7 @@ export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor){
 export function buscarTermino(termino){
   //termino tipo titulo
   const peliculasEncontradas = obtenerPeliculas().filter(pelicula =>
-    pelicula.title.toLowerCase().includes(termino.toLowerCase())
+    pelicula.title.toLowerCase().includes( termino.toLowerCase() )
   );
   //* Buscar por términos adicionales (ej. personajes) (OPCIONAL)
   // // termino tipo nombre personaje
@@ -104,21 +104,21 @@ export function buscarTermino(termino){
 }
 
 // TODO: Función para ordenar películas por año ascendente
-export function ordenarPeliculasPorAñoAcendente(peliculas) {
-  return peliculas.sort((x, y) => x.release_date - y.release_date);
+export function ordenarPeliculasPorAñoAscendente(peliculas) {
+  return peliculas.sort( (x, y) => x.release_date - y.release_date );
 }
 
 // TODO: Función para ordenar peliculas por año descendente
 export function ordenarPeliculasPorAñoDescendente(peliculas) {
-  return peliculas.sort((x, y) => y.release_date - x.release_date);
+  return peliculas.sort( (x, y) => y.release_date - x.release_date );
 }
 
 // TODO: Función para ordenar películas alfabéticamente ascendente
 export function ordenarPeliculasAZ(peliculas) {
-  return peliculas.sort((x, y) => x.title.localeCompare(y.title));
+  return peliculas.sort( (x, y) => x.title.localeCompare(y.title) );
 }
 
 // TODO: Función para obtener películas alfabéticamente descendente
 export function ordenarPeliculasZA(peliculas) {
-  return peliculas.sort((x, y) => y.title.localeCompare(x.title));
+  return peliculas.sort( (x, y) => y.title.localeCompare(x.title) );
 }

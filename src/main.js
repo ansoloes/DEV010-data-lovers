@@ -4,7 +4,7 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAcendente, ordenarPeliculasPorAñoDescendente,ordenarPeliculasAZ, ordenarPeliculasZA} from "./data.js";
+import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAscendente, ordenarPeliculasPorAñoDescendente, ordenarPeliculasAZ, ordenarPeliculasZA } from "./data.js";
 
 // ! REFERENCIAS AL DOM
 // * Sección buscar
@@ -202,30 +202,31 @@ const mostrarPeliculas = (peliculas) => {
 mostrarPeliculas(peliculas);
 
 // * Funciones Ordenar:
-//Por Año
+// Por Año
 //  eventListener para un select. <More recent> y <Oldest>
 ordenarPorAño.addEventListener("change", () => {
   const peliculas = obtenerPeliculas();
   // Necesitamos que use una función para una opción y la otra para la otra
-  if (ordenarPorAño.value==="orden-descendente") {
+  if (ordenarPorAño.value === "orden-descendente") {
     const peliculasOrdenadas= ordenarPeliculasPorAñoDescendente(peliculas);
     mostrarPeliculas(peliculasOrdenadas);
   
-  } else if (ordenarPorAño.value==="orden-ascendente") {
-    const peliculasOrdenadas= ordenarPeliculasPorAñoAcendente(peliculas);
+  } else if (ordenarPorAño.value === "orden-ascendente") {
+    const peliculasOrdenadas= ordenarPeliculasPorAñoAscendente(peliculas);
     mostrarPeliculas(peliculasOrdenadas);
   } 
 });
-//Por Letra
+
+// Por Letra
 //  eventListener para un select. <More recent> y <Oldest>
 ordenarPorAlfabeto.addEventListener("change", () => {
   const peliculas = obtenerPeliculas();
   // Necesitamos que use una función para una opción y la otra para la otra
-  if (ordenarPorAlfabeto.value==="ordenar-a-z") {
+  if (ordenarPorAlfabeto.value === "ordenar-a-z") {
     const peliculasOrdenadas= ordenarPeliculasAZ(peliculas);
     mostrarPeliculas(peliculasOrdenadas);
   
-  } else if (ordenarPorAlfabeto.value==="ordenar-z-a") {
+  } else if (ordenarPorAlfabeto.value === "ordenar-z-a") {
     const peliculasOrdenadas= ordenarPeliculasZA(peliculas);
     mostrarPeliculas(peliculasOrdenadas);
   } 
