@@ -4,7 +4,7 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino } from "./data.js";
+import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino } from "./data.js";
 
 // ! REFERENCIAS AL DOM
 // * Sección buscar
@@ -33,7 +33,8 @@ const selectProductor = document.querySelector("#filtro-productor");
 // * Sección personajes
 const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
 const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
-const btnPersonajes = document.getElementById("btn-personajes");
+const btnPersonajes = document.querySelectorAll(".btn-personajes"); // para poder utilizar todos los botones personaje...
+console.log(btnPersonajes)
 
 // ! FUNCIONES
 // * Función total de películas
@@ -60,7 +61,7 @@ audio.volume = 0.5;
 
 // * Función mostrar tarjetas
 const mostrarPeliculas = (peliculas) => {
-  contenedorDelContenedorDeTarjetas.innerHTML = "";
+  // contenedorDelContenedorDeTarjetas.innerHTML = "";
   peliculas.forEach(pelicula => {
   // Mostrar la cantidad de películas encontradas
     peliculasEncontradas.textContent = peliculas.length + " movies found"
@@ -169,14 +170,18 @@ const mostrarPeliculas = (peliculas) => {
   
     // Boton personajes
     const botonPersonajes = document.createElement("button");
-    botonPersonajes.classList.add("btn");
+    botonPersonajes.classList.add("btn","btn-personajes" );
     botonPersonajes.textContent = "Characters";
+    botonPersonajes.id="btn-personajes";
+    botonPersonajes.setAttribute("data-id", pelicula.id) // para tener contexto y poder generar los personajes
     botonContenedor.appendChild(botonPersonajes);
   
     // Boton Lugares
     const botonLugares = document.createElement("button");
     botonLugares.classList.add("btn");
     botonLugares.textContent = "Locations";
+    botonLugares.id="btn-lugares";
+    botonLugares.setAttribute("data-id", pelicula.id) // para tener contexto y poder generar los personajes
     botonContenedor.appendChild(botonLugares);
   
     contenedorInfo.appendChild(botonContenedor);
@@ -223,14 +228,16 @@ productores.forEach(productor => {
 })
 
 // * Función filtros
+// Agregar el desplazamiento por scroll
 botonFiltrar.addEventListener("click", () => {
   const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value)
   mostrarPeliculas(resultadoFiltro);
 })
 
 // * Función mostrar Overlay usando boton
-btnPersonajes.addEventListener("click", () => {
-  tarjetaPelicula.classList.toggle("active");
+btnPersonajes.addEventListener("click", (event) => {
+  const peliculaId = event.currentTarget.getAttribute("data-id"); // Obtener el ID de la película
+  mostrarPersonajes(peliculaId); // mostrar por ID
 });
 
 // * Función cerrar el overlay si se hace clic fuera del contenedor
@@ -239,5 +246,100 @@ contenedorTarjeta.addEventListener("click", (event) => {
     tarjetaPelicula.classList.remove("active");
   }
 });
+// ! Sección POPout!
+// * Función mostrar personajes
+const mostrarPersonajes = (peliculaId) => {
+  const pelicula = obtenerPeliculaPorId(peliculaId)
+  //* Agregar elementos HTML
+  //div contenedor de tarjetas de personajes
+  const contenedorPersonajes = document.createElement("div");
+  contenedorPersonajes.classList.add("overlay-contenedor-personajes");
+  
+  pelicula.people.forEach(personaje =>{
+    // Div tarjeta de personaje
+    const tarjetaPersonaje = document.createElement("div");
+    tarjetaPersonaje.classList.add("tarjeta-personaje");
 
-//Carrusel de niño
+    // Div contenedor de la imagen del personaje
+    const contenedorImgPersonaje = document.createElement("div");
+    contenedorImgPersonaje.classList.add("contenedor-img-personaje");
+    tarjetaPersonaje.appendChild(contenedorImgPersonaje);
+
+    // Imagen del personaje
+    const imgPersonaje = document.createElement("img");
+    imgPersonaje.src = personaje.image;
+    imgPersonaje.alt = personaje.name;
+    contenedorImgPersonaje.appendChild(imgPersonaje);
+
+    // Div contenedor de la información del personaje
+    const contenedorInfoPersonaje = document.createElement("div");
+    contenedorInfoPersonaje.classList.add("contenedor-info-personaje");
+    tarjetaPersonaje.appendChild(contenedorInfoPersonaje);
+
+    // Div contenedor del nombre del personaje
+    const contenedorNombre = document.createElement("div");
+    contenedorNombre.classList.add("contenedor-nombre");
+    contenedorInfoPersonaje.appendChild(contenedorNombre);
+
+    // Nombre del personaje
+    const nombrePersonaje = document.createElement("h3");
+    nombrePersonaje.id = "nombre";
+    nombrePersonaje.textContent = personaje.name;
+    contenedorNombre.appendChild(nombrePersonaje);
+
+    // Div contenedor de la información del personaje
+    const infoPersonaje = document.createElement("div");
+    infoPersonaje.classList.add("info-personaje");
+    contenedorInfoPersonaje.appendChild(infoPersonaje);
+
+    // Crear elementos de información del personaje 
+    const infoElements = [
+      { label: "Gender", value: personaje.gender },
+      { label: "Age", value: personaje.age },
+      { label: "Eye color", value: personaje.eye_color },
+      { label: "Hair color", value: personaje.hair_color },
+      { label: "Species", value: personaje.species }
+    ];
+
+    // Agregar información del personaje al div infoPersonaje
+    infoElements.forEach(info => {
+      const infoDiv = document.createElement("div");
+      infoDiv.classList.add("info");
+
+      const infoSpan = document.createElement("span");
+      infoSpan.textContent = info.label;
+
+      const infoP = document.createElement("p");
+      infoP.textContent = info.value;
+
+      infoDiv.appendChild(infoSpan);
+      infoDiv.appendChild(infoP);
+      infoPersonaje.appendChild(infoDiv);
+      contenedorPersonajes.appendChild(tarjetaPersonaje);
+    }); 
+    contenedorPersonajes.classList.add("active");
+  })
+
+
+  // Mostrar la tarjeta de personaje en el overlay
+  // Puedes adjuntar tarjetaPersonaje al elemento correspondiente en el DOM
+  // por ejemplo, contenedorTarjeta.appendChild(tarjetaPersonaje);
+};
+
+// para eso debo hacer una función (dataPersonajes())
+// que sea capaz de extraer la información de personajes de la película específica
+// Luego generar los Divs según la maqueta. 
+// Mi duda era sobre cómo ibamos a generar la tarjeta de personajes por película, pero
+// si utilizamos la información (ID de película) sería facil!
+
+// * Función generar Lugares:
+
+// * FUnción Generar Vehículos:
+
+// * Función Carrucel 
+
+// * Botón limpiar filtros 
+//-> hacer que los input vuelvan a 0
+//-> Usar función mostrarPeliculas() con toda la data
+
+

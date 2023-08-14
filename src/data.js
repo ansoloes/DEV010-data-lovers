@@ -30,6 +30,11 @@ export function obtenerDirectores() {
   })
   return directoresFiltrados;
 }
+// TODO: Función obtener PeliculasPorId
+export function obtenerPeliculaPorId() {
+  const peliculaPorId = data.films.find((pelicula) => pelicula.id === peliculaId);
+  return peliculaPorId;
+}
 
 // TODO: Función para obtener productores
 export function obtenerProductores() {
@@ -84,6 +89,7 @@ export function buscarTermino(termino){
   const peliculasEncontradas = obtenerPeliculas().filter(pelicula =>
     pelicula.title.toLowerCase().includes(termino.toLowerCase())
   );
+  //* Buscar por términos adicionales (ej. personajes) (OPCIONAL)
   // // termino tipo nombre personaje
   // const personajesEncontrados = obtenerPersonajes().filter(personaje =>
   //   personaje.name.toLowerCase().includes(termino.toLowerCase())
