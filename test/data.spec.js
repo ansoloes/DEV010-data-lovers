@@ -1,23 +1,27 @@
-import { example, anotherExample } from '../src/data.js';
+import { obtenerPeliculas } from '../src/data.js';
+// Datos de prueba: simular objeto con data
+//Data películas:
+
+//Data Personajes
+
+//Data Lugares
+
+//Data Vehículos
 
 
-describe('example', () => {
+
+describe('obtenerPeliculas', () => {
+  // Es una función ?? 
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof obtenerPeliculas).toBe('function');
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  // Devuelve un arreglo??
+  it('should return  `obtenerPeliculas`', () => {
+    expect(obtenerPeliculas()).toBe();
   });
-});
+  // El arreglo tiene el número de películas que pusimos??
 
+  // Los títulos coinciden con el contenido? 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+  // Si 
 });

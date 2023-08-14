@@ -31,11 +31,13 @@ const selectProductor = document.querySelector("#filtro-productor");
 const ordenarPorAño = document.querySelector("#ordenar-fecha");
 const ordenarPorAlfabeto = document.querySelector("#ordenar-alfabeticamente")
 
+// * Resultados 
+let resultados = [...obtenerPeliculas()]
+
 // * Sección personajes
 const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
 const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
-const btnPersonajes = document.querySelectorAll(".btn-personajes"); // para poder utilizar todos los botones personaje...
-console.log(btnPersonajes)
+
 
 // ! FUNCIONES
 // * Función total de películas
@@ -63,7 +65,7 @@ audio.volume = 0.5;
 
 // * Función mostrar tarjetas
 const mostrarPeliculas = (peliculas) => {
-  contenedorDelContenedorDeTarjetas.innerHTML = "";
+  // contenedorDelContenedorDeTarjetas.innerHTML = "";
   peliculas.forEach(pelicula => {
   // Mostrar la cantidad de películas encontradas
     peliculasEncontradas.textContent = peliculas.length + " movies found"
@@ -197,23 +199,31 @@ const mostrarPeliculas = (peliculas) => {
   
     // Agregar contenedorTarjetas dentro de seccionTarjetas
     contenedorDelContenedorDeTarjetas.appendChild(contenedorTarjeta);
+
   });
+  obtenerBotonesPersonajes()
+}
+function obtenerBotonesPersonajes (){
+  const btnPersonajes = document.querySelectorAll(".btn-personajes"); // para poder utilizar todos los botones personaje...
+  console.log(btnPersonajes)
 }
 
 mostrarPeliculas(peliculas);
+
+
 
 // * Funciones Ordenar:
 // Por Año
 //  eventListener para un select. <More recent> y <Oldest>
 ordenarPorAño.addEventListener("change", () => {
-  const peliculas = obtenerPeliculas();
+  // const peliculas = obtenerPeliculas();
   // Necesitamos que use una función para una opción y la otra para la otra
   if (ordenarPorAño.value === "orden-descendente") {
-    const peliculasOrdenadas= ordenarPeliculasPorAñoDescendente(peliculas);
+    const peliculasOrdenadas= ordenarPeliculasPorAñoDescendente(resultados);
     mostrarPeliculas(peliculasOrdenadas);
   
   } else if (ordenarPorAño.value === "orden-ascendente") {
-    const peliculasOrdenadas= ordenarPeliculasPorAñoAscendente(peliculas);
+    const peliculasOrdenadas= ordenarPeliculasPorAñoAscendente(resultados);
     mostrarPeliculas(peliculasOrdenadas);
   } 
 });
@@ -221,14 +231,14 @@ ordenarPorAño.addEventListener("change", () => {
 // Por Letra
 //  eventListener para un select. <More recent> y <Oldest>
 ordenarPorAlfabeto.addEventListener("change", () => {
-  const peliculas = obtenerPeliculas();
+  // const peliculas = obtenerPeliculas();
   // Necesitamos que use una función para una opción y la otra para la otra
   if (ordenarPorAlfabeto.value === "ordenar-a-z") {
-    const peliculasOrdenadas= ordenarPeliculasAZ(peliculas);
+    const peliculasOrdenadas= ordenarPeliculasAZ(resultados);
     mostrarPeliculas(peliculasOrdenadas);
   
   } else if (ordenarPorAlfabeto.value === "ordenar-z-a") {
-    const peliculasOrdenadas= ordenarPeliculasZA(peliculas);
+    const peliculasOrdenadas= ordenarPeliculasZA(resultados);
     mostrarPeliculas(peliculasOrdenadas);
   } 
 });
@@ -265,7 +275,8 @@ productores.forEach(productor => {
 // * Función filtros
 // Agregar el desplazamiento por scroll
 botonFiltrar.addEventListener("click", () => {
-  const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value)
+  const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value);
+  resultados=[...resultadoFiltro];
   mostrarPeliculas(resultadoFiltro);
 })
 
