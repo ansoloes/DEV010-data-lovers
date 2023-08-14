@@ -4,7 +4,7 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAscendente, ordenarPeliculasPorAñoDescendente, ordenarPeliculasAZ, ordenarPeliculasZA } from "./data.js";
+import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAscendente, ordenarPeliculasPorAñoDescendente, ordenarPeliculasAZ, ordenarPeliculasZA,calcularPromedioScore } from "./data.js";
 
 // ! REFERENCIAS AL DOM
 // * Sección buscar
@@ -284,6 +284,7 @@ botonFiltrar.addEventListener("click", () => {
   const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value);
   resultados=[...resultadoFiltro];
   mostrarPeliculas(resultadoFiltro);
+  // console.log(calcularPromedioScore(resultados)) // ? esto fue para probar el cálculo de promedios
 })
 
 // * Función mostrar Overlay usando boton
@@ -303,6 +304,7 @@ contenedorTarjeta.addEventListener("click", (event) => {
 
 // ! Sección POPout!
 // * Función mostrar personajes
+
 const mostrarPersonajes = (peliculaId) => {
   const pelicula = obtenerPeliculaPorId(peliculaId)
   //* Agregar elementos HTML
