@@ -108,16 +108,18 @@
       <article class="contenedor-ordenar">
         <form class="ordenar">
           <label for="">Sort by:</label>
-          <select name="" id="">
-            <option value="">More recent</option>
-            <option value="">Oldest</option>
+          <select name="" id="ordenar-fecha">
+            <option class="default">Date</option>
+            <option value="orden-descendente" id="orden-descendente">More recent</option>
+            <option value="orden-ascendente" id="orden-ascendente">Oldest</option>
           </select>
         </form>
         <div class="ordenar">
           <label for="">Sort by:</label>
           <select name="" id="ordenar-alfabeticamente">
-            <option id="ordenar-a-z">A - Z</option>
-            <option id="ordenar-z-a">Z - A</option>
+            <option class="default">Alphabet</option>
+            <option value="ordenar-a-z" id="ordenar-a-z">A - Z</option>
+            <option value="ordenar-z-a" id="ordenar-z-a">Z - A</option>
           </select>
         </div>
       </article>
@@ -158,7 +160,7 @@
                   </div>
                 </div>
                 <div class="contenedor-btn">
-                  <button id="btn-personajes" class="btn">Characters</button>
+                  <button id="btn-personajes" class="btn btn-personajes">Characters</button>
                   <button id="btn-lugares" class="btn">Locations</button>
                 </div>
               </div>
