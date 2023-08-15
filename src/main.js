@@ -12,6 +12,7 @@ const btnBuscar = document.querySelector("#buscar");
 const inputBuscar = document.querySelector("#input-buscar");
 
 // * Super contenedor tarjeta
+const seccionTarjetas = document.querySelector(".seccion-tarjetas")
 const contenedorDelContenedorDeTarjetas = document.querySelector("#contenedor-del-contenedor-tarjetas")
 
 // * Música
@@ -23,9 +24,10 @@ const audio = document.querySelector("#audio");
 const peliculasEncontradas = document.querySelector("#peliculas-encontradas");
 const inputMinimo = document.querySelector("#valor-minimo");
 const inputMaximo = document.querySelector("#valor-maximo");
-const botonFiltrar = document.querySelector("#btn-filtrar");
 const selectDirector = document.querySelector("#filtro-director");
 const selectProductor = document.querySelector("#filtro-productor");
+const botonFiltrar = document.querySelector("#btn-filtrar");
+const botonLimpiarFiltros = document.querySelector("#btn-limpiar-filtros");
 
 // * Ordenar
 const ordenarPorAño = document.querySelector("#ordenar-fecha");
@@ -68,6 +70,25 @@ const mostrarPeliculas = (peliculas) => {
   if (peliculas.length === 0){
     peliculasEncontradas.textContent = "0 movies found";
     contenedorDelContenedorDeTarjetas.innerHTML = ""
+    // Article no se encontraron películas
+    const noSeEncontraronPeliculas = document.createElement("article");
+    noSeEncontraronPeliculas.classList = "no-se-encontraron-peliculas";
+
+    // Imagen del indicativo
+    const imagenSonrisaTotoro = document.createElement("img");
+    imagenSonrisaTotoro.src = "img/no-movies-found-totoro.gif";
+
+    // Texto del indicativo
+    const textoNoSeEncontraronPeliculas = document.createElement("h2");
+    textoNoSeEncontraronPeliculas.textContent = "No Movies Found"
+
+    // Añadir hijos al Article
+    noSeEncontraronPeliculas.appendChild(imagenSonrisaTotoro);
+    noSeEncontraronPeliculas.appendChild(textoNoSeEncontraronPeliculas);
+
+    // Añadiendo el Article a la sección
+    seccionTarjetas.appendChild(noSeEncontraronPeliculas);
+
   } else {
     contenedorDelContenedorDeTarjetas.innerHTML = "";
     peliculas.forEach(pelicula => {
@@ -75,7 +96,7 @@ const mostrarPeliculas = (peliculas) => {
       peliculasEncontradas.textContent = peliculas.length + " movies found"
 
       // Crear el Div contenedor donde estará la tarjeta
-      const contenedorTarjeta = document.createElement("article");
+      const contenedorTarjeta = document.createElement("div");
       contenedorTarjeta.classList.add("contenedor-tarjeta");
   
       // Article de la tarjeta
@@ -208,14 +229,13 @@ const mostrarPeliculas = (peliculas) => {
   }
   obtenerBotonesPersonajes()
 }
+
 function obtenerBotonesPersonajes (){
   const btnPersonajes = document.querySelectorAll(".btn-personajes"); // para poder utilizar todos los botones personaje...
   console.log(btnPersonajes)
 }
 
 mostrarPeliculas(peliculas);
-
-
 
 // * Funciones Ordenar:
 // Por Año
@@ -251,7 +271,7 @@ ordenarPorAlfabeto.addEventListener("change", () => {
 // * Función para buscar películas
 btnBuscar.addEventListener("click", () => {
   const peliculasEncontradas = buscarTermino(inputBuscar.value);
-  resultados=[...peliculasEncontradas];
+  resultados = [...peliculasEncontradas];
   mostrarPeliculas(resultados);
   // Vaciar el input para buscar nuevamente
   inputBuscar.value = "";
@@ -282,8 +302,17 @@ productores.forEach(productor => {
 // Agregar el desplazamiento por scroll
 botonFiltrar.addEventListener("click", () => {
   const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value);
-  resultados=[...resultadoFiltro];
+  resultados = [...resultadoFiltro];
   mostrarPeliculas(resultadoFiltro);
+})
+
+// * Función para limpiar filtros
+botonLimpiarFiltros.addEventListener("click", () => {
+  inputMinimo.value = "";
+  inputMaximo.value = "";
+  selectDirector.selectedIndex = 0;
+  selectProductor.selectedIndex = 0;
+  mostrarPeliculas(peliculas);
 })
 
 // * Función mostrar Overlay usando boton

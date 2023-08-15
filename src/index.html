@@ -4,28 +4,32 @@
 <head>
   <meta charset="utf-8">
   <title>Data Ghibli</title>
-  <!-- Favicon -->
+  <!-- ********************Favicon******************** -->
   <link rel="icon" type="image/png" href="favicon.png">
-  <!-- Ícono de buscar -->
+
+  <!-- ********************Ícono de buscar******************** -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <!-- Fuente títulos -->
+
+  <!-- ********************Fuente títulos******************** -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
-  <!-- Fuente principal -->
+
+  <!-- ********************Fuente principal******************** -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap"
     rel="stylesheet">
-  <!-- Importar CSS -->
+
+  <!-- ********************Importar CSS******************** -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <!-- TODO: Header -->
+  <!-- TODO: ******************** Header ******************** -->
   <header>
     <div class="contenedor-logo">
       <h1>Data Ghibli</h1>
@@ -39,8 +43,9 @@
       <input type="text" placeholder="Search movie here..." id="input-buscar">
     </div>
   </header>
+  <!-- TODO: ******************** Fin Header ******************** -->
 
-  <!-- TODO: Hero -->
+  <!-- TODO: ******************* Hero ******************* -->
   <section class="hero">
     <article class="texto-hero">
       <h2>«It's wonderful when you can bring sparkle into people's lives, especially under difficult circumstances.»
@@ -60,16 +65,17 @@
       </div>
     </article>
   </section>
+  <!-- TODO: ******************* Fin Hero ******************* -->
 
-  <!-- TODO: Main -->
+  <!-- TODO: ******************** Main ******************** -->
   <main>
-    <!-- * Sidebar -->
+    <!-- ******************** Sidebar ******************** -->
     <aside class="sidebar">
       <h2>Filter Movies</h2>
 
       <article>
         <p id="peliculas-encontradas">No results found</p>
-        <button class="btn-limpiar-filtros" id="btn-borrar-filtros">Clear Filters</button>
+        <button class="btn-limpiar-filtros" id="btn-limpiar-filtros">Clear Filters</button>
       </article>
 
       <form class="campo rango-años">
@@ -101,10 +107,11 @@
         <button class="btn" id="btn-filtrar">Filter</button>
       </div>
     </aside>
+    <!-- ******************** Fin Sidebar ******************** -->
 
-    <!-- ? Sección de tarjetas -->
+    <!-- ******************** Sección de tarjetas ******************** -->
     <section class="seccion-tarjetas">
-      <!-- Ordenar por -->
+      <!-- ? ******************** Ordenar por ******************** -->
       <article class="contenedor-ordenar">
         <form class="ordenar">
           <label for="">Sort by:</label>
@@ -123,10 +130,11 @@
           </select>
         </div>
       </article>
+      <!-- ? ******************** Fin Ordenar por ******************** -->
 
       <!-- ? Contenedor tarjetas películas -->
-        <div id="contenedor-del-contenedor-tarjetas">
-          <article class="contenedor-tarjeta">
+        <article id="contenedor-del-contenedor-tarjetas">
+          <div class="contenedor-tarjeta">
             <!-- ! Tarjeta película -->
             <div class="tarjeta-pelicula"> <!-- ! Tarjeta película -->
               <div class="contenedor-img">
@@ -274,7 +282,9 @@
         </div>
       </article>
     </section>
+    <!-- ******************** Fin Sección de tarjetas ******************** -->
   </main>
+  <!-- TODO: ******************** Fin Main ******************** -->
 
   <!-- TODO: Footer -->
   <footer>

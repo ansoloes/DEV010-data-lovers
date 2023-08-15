@@ -30,6 +30,7 @@ export function obtenerDirectores() {
   } )
   return directoresFiltrados;
 }
+
 // TODO: Función obtener PeliculasPorId
 export function obtenerPeliculaPorId() {
   const peliculaPorId = data.films.find( (pelicula) => pelicula.id === peliculaPorId );
