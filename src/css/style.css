@@ -262,6 +262,24 @@ main {
     text-align: center;
 }
 
+/* No se encontraron películas */
+.no-se-encontraron-peliculas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60rem;
+}
+
+.no-se-encontraron-peliculas img {
+    width: 40%;
+}
+
+.no-se-encontraron-peliculas h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
 /* Tarjetas */
 .contenedor-tarjeta {
     padding: 2.4rem;
