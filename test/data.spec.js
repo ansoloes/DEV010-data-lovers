@@ -1,27 +1,25 @@
 import { obtenerPeliculas } from '../src/data.js';
-// Datos de prueba: simular objeto con data
-//Data películas:
+import { ghibli } from "./mock-ghibli.js";
+// TODO: Datos de prueba: simular objeto con data
+//*Data películas:
+//
+const DATA_PRUEBA_PELICULAS = ghibli
 
-//Data Personajes
+// TODO: Tests
+// Test para la función obtenerPeliculas
+describe("Función obtenerPeliculas()", () => {
+  it("Debería devolver un arreglo de películas", () => {
+    //* Configuración (Setup): Preparamos el entorno necesario para la prueba
+    //en este caso no es necesario pues esta función no tiene parámetros de input ()
 
-//Data Lugares
+    //* Acción (Action): Aquí realizamos la acción que queremos probar, 
+    //en este caso, llamamos a la función 
+    const resultadoObtenido = obtenerPeliculas(DATA_PRUEBA_PELICULAS);
 
-//Data Vehículos
-
-
-
-describe('obtenerPeliculas', () => {
-  // Es una función ?? 
-  it('is a function', () => {
-    expect(typeof obtenerPeliculas).toBe('function');
+    //* Verificación (Verification): Comparamos el resultado obtenido con el esperado
+    // Usamos "expect" para verificar si la función devuelve un arreglo de películas
+    expect(Array.isArray(resultadoObtenido)).toBe(true);
   });
-  // Devuelve un arreglo??
-  it('should return  `obtenerPeliculas`', () => {
-    expect(obtenerPeliculas()).toBe();
-  });
-  // El arreglo tiene el número de películas que pusimos??
-
-  // Los títulos coinciden con el contenido? 
-
-  // Si 
 });
+
+// 
