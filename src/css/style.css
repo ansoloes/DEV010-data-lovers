@@ -180,6 +180,8 @@ main {
     width: 30%;
     box-shadow: var(--sombra);
     height: 67rem;
+    position: sticky;
+    top: 2.4rem;
 }
 
 .sidebar h2 {
