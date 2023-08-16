@@ -126,7 +126,7 @@ export function ordenarPeliculasZA(peliculas) {
 
 // TODO: Función para calcular promedio Score
 export function calcularPromedioScore(peliculas){
-  const totalScore=peliculas.reduce((total, pelicula)=>total + parseFloat(pelicula.rt_score) ,0);
+  const totalScore = peliculas.reduce((total, pelicula)=>total + parseFloat(pelicula.rt_score) ,0);
   const promedioScore = totalScore/peliculas.length
   return promedioScore
 }

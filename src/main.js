@@ -12,7 +12,6 @@ const btnBuscar = document.querySelector("#buscar");
 const inputBuscar = document.querySelector("#input-buscar");
 
 // * Super contenedor tarjeta
-const seccionTarjetas = document.querySelector(".seccion-tarjetas")
 const contenedorDelContenedorDeTarjetas = document.querySelector("#contenedor-del-contenedor-tarjetas")
 
 // * Música
@@ -31,10 +30,8 @@ const botonLimpiarFiltros = document.querySelector("#btn-limpiar-filtros");
 
 // * Ordenar
 const ordenarPorAño = document.querySelector("#ordenar-fecha");
-const ordenarPorAlfabeto = document.querySelector("#ordenar-alfabeticamente")
-
-// * Resultados 
-let resultados = [...obtenerPeliculas()]
+const ordenarPorAlfabeto = document.querySelector("#ordenar-alfabeticamente");
+const botonPromedio = document.querySelector("#calculo-promedio");
 
 // * Sección personajes
 const tarjetaPelicula = document.querySelector(".tarjeta-pelicula");
@@ -44,6 +41,9 @@ const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
 // ! FUNCIONES
 // * Función total de películas
 const peliculas = obtenerPeliculas();
+
+// * Resultados 
+let resultados = [...obtenerPeliculas()]
 
 //* Función total directores
 const directores = obtenerDirectores();
@@ -72,7 +72,7 @@ const mostrarPeliculas = (peliculas) => {
     contenedorDelContenedorDeTarjetas.innerHTML = ""
     // Article no se encontraron películas
     const noSeEncontraronPeliculas = document.createElement("article");
-    noSeEncontraronPeliculas.classList = "no-se-encontraron-peliculas";
+    noSeEncontraronPeliculas.classList.add("no-se-encontraron-peliculas");
 
     // Imagen del indicativo
     const imagenSonrisaTotoro = document.createElement("img");
@@ -87,7 +87,7 @@ const mostrarPeliculas = (peliculas) => {
     noSeEncontraronPeliculas.appendChild(textoNoSeEncontraronPeliculas);
 
     // Añadiendo el Article a la sección
-    seccionTarjetas.appendChild(noSeEncontraronPeliculas);
+    contenedorDelContenedorDeTarjetas.appendChild(noSeEncontraronPeliculas);
 
   } else {
     contenedorDelContenedorDeTarjetas.innerHTML = "";
@@ -230,12 +230,45 @@ const mostrarPeliculas = (peliculas) => {
   obtenerBotonesPersonajes()
 }
 
+// * Función para obtener botón de personajes
 function obtenerBotonesPersonajes (){
   const btnPersonajes = document.querySelectorAll(".btn-personajes"); // para poder utilizar todos los botones personaje...
   console.log(btnPersonajes)
 }
 
 mostrarPeliculas(peliculas);
+
+// * Función de Calcular Promedio
+const promedioPeliculas = calcularPromedioScore(resultados);
+
+
+botonPromedio.addEventListener("click", () => {
+  const dialogPromedio = document.createElement("dialog");
+  const tituloPromedio = document.createElement("h2");
+  tituloPromedio.textContent = "Average Movie Rating"
+  dialogPromedio.appendChild(tituloPromedio)
+
+  const parrafoPromedio = document.createElement("p");
+  parrafoPromedio.textContent = "The average rating per film is " + promedioPeliculas;
+  dialogPromedio.appendChild(parrafoPromedio);
+
+  const botonContenedor = document.createElement("div");
+  botonContenedor.classList.add("contenedor-btn");
+
+  const botonPromedio = document.createElement("button");
+  botonPromedio.classList.add("btn");
+  botonPromedio.textContent = "Close";
+
+  botonContenedor.appendChild(botonPromedio);
+  dialogPromedio.appendChild(botonContenedor);
+
+  contenedorDelContenedorDeTarjetas.appendChild(dialogPromedio);
+  dialogPromedio.showModal();
+
+  botonPromedio.addEventListener("click", () => {
+    dialogPromedio.close();
+  })
+})
 
 // * Funciones Ordenar:
 // Por Año
@@ -302,6 +335,7 @@ productores.forEach(productor => {
 // Agregar el desplazamiento por scroll
 botonFiltrar.addEventListener("click", () => {
   const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value);
+  
   resultados = [...resultadoFiltro];
   mostrarPeliculas(resultadoFiltro);
   // console.log(calcularPromedioScore(resultados)) // ? esto fue para probar el cálculo de promedios
@@ -427,5 +461,4 @@ const mostrarPersonajes = (peliculaId) => {
 // * Botón limpiar filtros 
 //-> hacer que los input vuelvan a 0
 //-> Usar función mostrarPeliculas() con toda la data
-
 

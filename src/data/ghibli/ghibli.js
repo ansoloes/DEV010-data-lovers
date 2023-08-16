@@ -7,14 +7,14 @@ export default {
       "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
       "director": "Hayao Miyazaki",
       "producer": "Isao Takahata",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDFhZmY2NTgtMzljYy00MTlhLTgyMjItNTEwZWJkYThhYzkyXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg",
       "release_date": "1986",
       "rt_score": "95",
       "people": [
         {
           "id": "fe93adf2-2f3a-4ec4-9f68-5422f1b87c01",
           "name": "Pazu",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg",
+          "img": "https://i.pinimg.com/564x/9a/63/fc/9a63fca8ceec694114686943f4c48408.jpg",
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -24,7 +24,7 @@ export default {
         {
           "id": "598f7048-74ff-41e0-92ef-87dc1ad980a9",
           "name": "Lusheeta Toel Ul Laputa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg",
+          "img": "https://i.pinimg.com/564x/07/9f/01/079f01efab39a90a2d6f34cb6c7be7d5.jpg",
           "gender": "Female",
           "age": "13",
           "eye_color": "Black",
@@ -34,7 +34,7 @@ export default {
         {
           "id": "3bc0b41e-3569-4d20-ae73-2da329bf0786",
           "name": "Dola",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png",
+          "img": "https://i.pinimg.com/564x/4d/fd/bb/4dfdbb1f2daa307d72aac6da8e7341ea.jpg",
           "gender": "Female",
           "age": "60",
           "eye_color": "Black",
@@ -44,7 +44,7 @@ export default {
         {
           "id": "abe886e7-30c8-4c19-aaa5-d666e60d14de",
           "name": "Romska Palo Ul Laputa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg",
+          "img": "https://i.pinimg.com/564x/7f/ee/23/7fee23454fb6f7c72259d7348275f376.jpg",
           "gender": "Male",
           "age": "33",
           "eye_color": "Black",
@@ -54,7 +54,7 @@ export default {
         {
           "id": "e08880d0-6938-44f3-b179-81947e7873fc",
           "name": "Uncle Pom",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png",
+          "img": "https://i.pinimg.com/564x/57/55/db/5755dba75ef96e501843512acac33c72.jpg",
           "gender": "Male",
           "age": "Unspecified/Elderly",
           "eye_color": "Black",
@@ -209,14 +209,14 @@ export default {
       "description": "Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.",
       "director": "Hayao Miyazaki",
       "producer": "Hayao Miyazaki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg",
+      "poster": "https://i.pinimg.com/564x/99/b2/7f/99b27f8df6d64aa1e0c3f1ef80d08c4f.jpg",
       "release_date": "1988",
       "rt_score": "93",
       "people": [
         {
           "id": "986faac6-67e3-4fb8-a9ee-bad077c2e7fe",
           "name": "Satsuki Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg",
+          "img": "https://i.pinimg.com/564x/a5/b8/d1/a5b8d13d3c11d0f1ceb6a46bd2355079.jpg",
           "gender": "Female",
           "age": "11",
           "eye_color": "Dark Brown/Black",
@@ -226,7 +226,7 @@ export default {
         {
           "id": "d5df3c04-f355-4038-833c-83bd3502b6b9",
           "name": "Mei Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/God_Jul_Mei_%C3%B6nskar_fr%C3%A5n_Tomten.jpg",
+          "img": "https://i.pinimg.com/564x/92/57/d3/9257d37c10e511574e465acda78372bd.jpg",
           "gender": "Female",
           "age": "4",
           "eye_color": "Brown",
@@ -236,7 +236,7 @@ export default {
         {
           "id": "3031caa8-eb1a-41c6-ab93-dd091b541e11",
           "name": "Tatsuo Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d6/Tatsuo_Kusakabe.jpg",
+          "img": "https://i.pinimg.com/564x/78/0d/eb/780deb1ae21ddacc9dd1451b17345c1a.jpg",
           "gender": "Male",
           "age": "37",
           "eye_color": "Brown",
@@ -246,7 +246,7 @@ export default {
         {
           "id": "87b68b97-3774-495b-bf80-495a5f3e672d",
           "name": "Yasuko Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7b/Yasuko_Kusakabe.png",
+          "img": "https://i.pinimg.com/564x/8d/ac/6b/8dac6ba9de3b195dc9529982f61923c0.jpg",
           "gender": "Female",
           "age": "36",
           "eye_color": "Brown",
@@ -256,7 +256,7 @@ export default {
         {
           "id": "08ffbce4-7f94-476a-95bc-76d3c3969c19",
           "name": "Granny",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Granny.png",
+          "img": "https://i.pinimg.com/564x/cb/1c/35/cb1c355aab6147d33b713614950efb76.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -266,7 +266,7 @@ export default {
         {
           "id": "0f8ef701-b4c7-4f15-bd15-368c7fe38d0a",
           "name": "Kanta Ogaki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Kanta.jpg",
+          "img": "https://i.pinimg.com/564x/d8/e1/f7/d8e1f784d09e5d01c4c9e836ba6914dd.jpg",
           "gender": "Male",
           "age": "11",
           "eye_color": "Brown",
@@ -276,7 +276,7 @@ export default {
         {
           "id": "d39deecb-2bd0-4770-8b45-485f26e1381f",
           "name": "Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/df/Totoro_in_the_rain.png",
+          "img": "https://i.pinimg.com/564x/ee/5e/3b/ee5e3b4fa159e76ca45a22bbac5658dd.jpg",
           "gender": "Male",
           "age": "1300",
           "eye_color": "Grey",
@@ -286,7 +286,7 @@ export default {
         {
           "id": "591524bc-04fe-4e60-8d61-2425e42ffb2a",
           "name": "Chu Totoro",
-          "img": "https://www.ghibli.jp/gallery/thumb-totoro019.png",
+          "img": "https://i.pinimg.com/564x/95/6e/6a/956e6a0c5169831684ad284035d021fd.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://i.pinimg.com/564x/41/dd/5d/41dd5df4a1cbf3edbc9bfa6ed50f0304.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -306,7 +306,7 @@ export default {
         {
           "id": "f467e18e-3694-409f-bdb3-be891ade1106",
           "name": "Catbus",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/30/Catbus.jpg",
+          "img": "https://i.pinimg.com/564x/0a/72/ce/0a72ced0b0da234e8b53c8fa38df2837.jpg",
           "gender": "Male",
           "age": "NA",
           "eye_color": "Yellow",
@@ -318,7 +318,7 @@ export default {
         {
           "id": "660c8c91-bd92-43db-b475-b2df6ca96fec",
           "name": "Kusakabe's House",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f3/Kusakabe_Family_House.jpg",
+          "img": "https://i.pinimg.com/564x/3b/fb/d5/3bfbd5d25926a50abffa172186b8febf.jpg",
           "climate": "Mild",
           "terrain": "River",
           "surface_water": "40",
@@ -357,14 +357,14 @@ export default {
       "description": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
       "director": "Hayao Miyazaki",
       "producer": "Hayao Miyazaki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/4/48/Kiki%27s_Delivery_Service_%282%29.jpg",
+      "poster": "https://i.pinimg.com/564x/9d/5c/b0/9d5cb00ea0a430bb2c537b83f5df88cc.jpg",
       "release_date": "1989",
       "rt_score": "96",
       "people": [
         {
           "id": "4151abc6-1a9e-4e6a-5678-aac05ra641js",
           "name": "Kiki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/59/Kiki.jpg",
+          "img": "https://i.pinimg.com/564x/34/2a/9f/342a9fa4547c6fe7fa80138c4f65fe17.jpg",
           "gender": "Female",
           "age": "13",
           "eye_color": "Black",
@@ -374,7 +374,7 @@ export default {
         {
           "id": "7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
           "name": "Jiji",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b4/Jiji.jpg",
+          "img": "https://i.pinimg.com/564x/1a/91/8c/1a918c5f3280f57876e5347b4e565c6b.jpg",
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -384,7 +384,7 @@ export default {
         {
           "id": "6574cfr2-9w3d-2x1h-8531-gge23iu489ko",
           "name": "Ursula",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Ursula.jpg",
+          "img": "https://i.pinimg.com/564x/43/76/43/437643d8c21646baeadde2ab64b14592.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -394,7 +394,7 @@ export default {
         {
           "id": "4321dse3-6r6s-3r4d-5641-rdq19re765de",
           "name": "Tombo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6f/Tombo.jpg",
+          "img": "https://i.pinimg.com/564x/26/23/3e/26233e8678efcb44829db58e4b011b5e.jpg",
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -404,7 +404,7 @@ export default {
         {
           "id": "8252ebf6-1g8f-5t6u-1234-vvg45yd363dc",
           "name": "Osono",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3a/Osono.jpg",
+          "img": "https://i.pinimg.com/564x/c5/1e/c5/c51ec564aa9b32819c2c6ae6a1fbc76d.jpg",
           "gender": "Female",
           "age": "30",
           "eye_color": "Brown",
@@ -414,7 +414,7 @@ export default {
         {
           "id": "7654ght4-3r4t-1t5u-0987-hhj76gh432gr",
           "name": "Fukuo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/29/Fukuo.jpg",
+          "img": "https://i.pinimg.com/564x/ec/e7/38/ece738976df3748037f0ebcec516d49a.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -426,7 +426,7 @@ export default {
         {
           "id": "fb083a4e-77b2-4623-a2e0-6bbca5bfd5b2",
           "name": "Ursula's Log Cabin",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/Ursula%27s_Log_Cabin.jpg",
+          "img": "https://i.pinimg.com/564x/3a/36/12/3a3612c082b8cdf40577eb68bf903eff.jpg",
           "climate": "TODO",
           "terrain": "TODO",
           "surface_water": "40",
@@ -437,7 +437,7 @@ export default {
         {
           "id": "c57fb2cb-ea85-4d73-8808-cf5dcd28c22e",
           "name": "Koriko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/05/Koriko.jpg",
+          "img": "https://i.pinimg.com/564x/cf/29/e7/cf29e77135c900f045fedf55df99e82c.jpg",
           "climate": "Mild",
           "terrain": "Hill",
           "surface_water": "50",
@@ -448,7 +448,7 @@ export default {
         {
           "id": "62346d33-caa0-4c17-8016-0aca56f3066b",
           "name": "Karikiya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e3/Majo002.jpg",
+          "img": "https://i.pinimg.com/564x/6a/ba/98/6aba98872e0a1a08f1549d2e3f2cd0e8.jpg",
           "climate": "Mild",
           "terrain": "City",
           "surface_water": "30",
@@ -459,7 +459,7 @@ export default {
         {
           "id": "64a996aa-481e-4627-9624-ab23f59a05a9",
           "name": "Guchokipanya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0f/Gutiokipanja.jpg",
+          "img": "https://i.pinimg.com/564x/78/31/e8/7831e8f23b591935be60a8bbca59e3cf.jpg",
           "climate": "Continental",
           "terrain": "Hill",
           "surface_water": "50",
@@ -483,14 +483,14 @@ export default {
       "description": "In the latter part of World War II, a boy and his sister, orphaned when their mother is killed in the firebombing of Tokyo, are left to survive on their own in what remains of civilian life in Japan. The plot follows this boy and his sister as they do their best to survive in the Japanese countryside, battling hunger, prejudice, and pride in their own quiet, personal battle.",
       "director": "Isao Takahata",
       "producer": "Toru Hara",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg",
+      "poster": "https://i.pinimg.com/564x/c0/f5/d7/c0f5d7632d14c9c565344647b386e392.jpg",
       "release_date": "1988",
       "rt_score": "97",
       "people": [
         {
           "id": "8cb959a8-1959-42f3-bb33-07d7a2e6b830",
           "name": "Seita Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/21/Seita_Yokokawa.jpg",
+          "img": "https://i.pinimg.com/564x/12/76/5f/12765f2fb85f6e56ffbebbb7572546c7.jpg",
           "gender": "Male",
           "age": "14",
           "eye_color": "Black",
@@ -500,7 +500,7 @@ export default {
         {
           "id": "c344d561-6654-4aab-b0df-a1570e7e60cb",
           "name": "Setsuko Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a8/Setsuko_Yokokawa.jpg",
+          "img": "https://i.pinimg.com/564x/12/13/d1/1213d15c570b1249dcec6dcb9f2f209a.jpg",
           "gender": "Female",
           "age": "4",
           "eye_color": "Black",
@@ -510,7 +510,7 @@ export default {
         {
           "id": "227c01a6-4e29-4582-bc4b-35106a704ab0",
           "name": "Mrs. Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/39/SeitaMother.png",
+          "img": "https://i.pinimg.com/564x/56/51/4c/56514c27182f3ca5e70a38c55a080d23.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Black",
@@ -520,7 +520,7 @@ export default {
         {
           "id": "023306e3-9fc6-4d1d-b681-d4649dcbfff9",
           "name": "Kiyoshi Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f6/SeitaFather3.jpg",
+          "img": "https://i.pinimg.com/564x/b9/70/f5/b970f5f5c2dd8d0a3f2e1a818339108f.jpg",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -530,7 +530,7 @@ export default {
         {
           "id": "0e18b23d-1f21-4a83-a6de-f01147624875",
           "name": "Seita's Aunt",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/09/SeitaAunt.jpg",
+          "img": "https://i.pinimg.com/564x/7a/d8/65/7ad8650e5d5148d0eff1067d5964015d.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -547,14 +547,14 @@ export default {
       "description": "It’s 1982, and Taeko is 27 years old, unmarried, and has lived her whole life in Tokyo. She decides to visit her family in the countryside, and as the train travels through the night, memories flood back of her younger years: the first immature stirrings of romance, the onset of puberty, and the frustrations of math and boys. At the station she is met by young farmer Toshio, and the encounters with him begin to reconnect her to forgotten longings. In lyrical switches between the present and the past, Taeko contemplates the arc of her life, and wonders if she has been true to the dreams of her childhood self.",
       "director": "Isao Takahata",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg",
+      "poster": "https://i.pinimg.com/564x/83/85/63/838563c80ce64cafec81c737e34ab3ec.jpg",
       "release_date": "1991",
       "rt_score": "100",
       "people": [
         {
           "id": "d0bb7b5f-3bf0-46c8-959d-0299b3252bd8",
           "name": "Taeko Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d4/Taeko_Okajima.png",
+          "img": "https://i.pinimg.com/564x/2a/ea/95/2aea9595ccb23fcf5df2459dc05d069f.jpg",
           "gender": "Female",
           "age": "27",
           "eye_color": "Black",
@@ -564,7 +564,7 @@ export default {
         {
           "id": "3f78eba1-f9b0-489b-8686-f4508cdf049d",
           "name": "Toshio",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5d/Toshio.jpg",
+          "img": "https://i.pinimg.com/564x/32/81/02/32810204779605ee1f3cb610c8dd4bbd.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -574,7 +574,7 @@ export default {
         {
           "id": "52ed5cad-2464-481f-9786-8533b8de95ff",
           "name": "Mr. Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/58/Mr._Okajima.png",
+          "img": "https://i.pinimg.com/564x/7b/bc/bc/7bbcbc7d01388d38546a4b1cac8d6e2b.jpg",
           "gender": "Male",
           "age": "Middle age",
           "eye_color": "Black",
@@ -584,7 +584,7 @@ export default {
         {
           "id": "87e61451-3131-4d01-a3b3-558c9ee1c451",
           "name": "Mrs. Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/18/Mrs._Okajima_%282%29.png",
+          "img": "https://i.pinimg.com/564x/ba/3b/12/ba3b12d73f4c89cb9e997a5725ff8664.jpg",
           "gender": "Female",
           "age": "Middle age",
           "eye_color": "Black",
@@ -594,7 +594,7 @@ export default {
         {
           "id": "0174e644-eddd-4cb7-8503-e0c21291d782",
           "name": "Grandmother Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0f/Grandmother_Okajima_%282%29.jpg",
+          "img": "https://i.pinimg.com/564x/84/37/d4/8437d459244a0ccc92188517596dc49b.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -604,7 +604,7 @@ export default {
         {
           "id": "a88cb7a4-fe4a-4d50-8d8b-c32449e298ba",
           "name": "Nanako Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Nanako_Okajima.png",
+          "img": "https://i.pinimg.com/564x/f7/4b/e3/f74be3b94e4a059060a1fc84a3832d68.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -615,7 +615,7 @@ export default {
           "id": "c8f02850-0c1f-499c-8b5e-d8ad16f3ecc4",
           "name": "Yaeko Okajima",
           "gender": "Female",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a8/Yaeko_Okajima.jpg",
+          "img": "https://i.pinimg.com/564x/cf/33/cc/cf33cc0d75d649a451618a1d0aad49e0.jpg",
           "age": "16",
           "eye_color": "Black",
           "hair_color": "Grey",
@@ -624,7 +624,7 @@ export default {
         {
           "id": "6e960787-5a47-4178-a040-1ef5bf5e4a6c",
           "name": "Tani Tsuneko",
-          "img": "https://www.anime-planet.com/images/characters/tani-tsuneko-100171.jpg",
+          "img": "https://i.pinimg.com/564x/2b/92/13/2b92130a4715f0f8b759e9ee5e5886ef.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -634,7 +634,7 @@ export default {
         {
           "id": "cd86aeb2-4fd7-4119-8128-7060e0a68074",
           "name": "Aiko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5d/Aiko.jpg",
+          "img": "https://i.pinimg.com/564x/ee/d6/68/eed6685990e1901f0fc10483778c865d.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -644,7 +644,7 @@ export default {
         {
           "id": "3ab1e0de-4d41-4f67-b2d0-e16d0fef2e6c",
           "name": "Toko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/af/Toko.jpg",
+          "img": "https://i.pinimg.com/564x/20/09/e4/2009e43991f04d9604800ae7c89abc8c.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -683,14 +683,14 @@ export default {
       "description": "Porco Rosso, known in Japan as Crimson Pig (Kurenai no Buta) is the sixth animated film by Hayao Miyazaki and released in 1992. You're introduced to an Italian World War I fighter ace, now living as a freelance bounty hunter chasing 'air pirates' in the Adriatic Sea. He has been given a curse that changed his head to that of a pig. Once called Marco Pagot, he is now known to the world as 'Porco Rosso', Italian for 'Red Pig.'",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster" : "https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Porco_Rosso.jpg",
+      "poster" : "https://i.pinimg.com/564x/f3/6c/2f/f36c2fcb1d0ba036cb0da4c4592c01bb.jpg",
       "release_date": "1992",
       "rt_score": "94",
       "people": [
         {
           "id": "6523068d-f5a9-4150-bf5b-76abe6fb42c3",
           "name": "Porco Rosso",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/02/Porcellino%21.png",
+          "img": "https://i.pinimg.com/564x/52/ab/fa/52abfa6aee7fc5979c2cf3186a3e26c5.jpg",
           "gender": "Male",
           "age": "47",
           "eye_color": "Black",
@@ -700,7 +700,7 @@ export default {
         {
           "id": "eff43a47-e59c-41bd-bcc6-b1827d63bed5",
           "name": "Donald Curtis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/61/Donald_Curtis.jpg",
+          "img": "https://i.pinimg.com/564x/e8/0e/d3/e80ed3e6d54e11fbacd4b5b4d0012ca2.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Brown",
@@ -710,7 +710,7 @@ export default {
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/16/Fio_%282%29.jpg",
+          "img": "https://i.pinimg.com/564x/ef/5d/6e/ef5d6e72cdaf59de8710de6ffeabb7cb.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -720,7 +720,7 @@ export default {
         {
           "id": "127317b3-f6f8-4aea-b294-20452a3334f5",
           "name": "Gina",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/eb/Gina.jpg",
+          "img": "https://i.pinimg.com/564x/42/3d/78/423d78e6f323f165ae6aecf14b490a6f.jpg",
           "gender": "Female",
           "age": "circa 23-35",
           "eye_color": "Brown",
@@ -730,7 +730,7 @@ export default {
         {
           "id": "2ac81cc3-7292-40ab-9e8f-4a370a58e3c8",
           "name": "Mr. Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Mr_Piccolo.jpg",
+          "img": "https://i.pinimg.com/564x/dc/6a/7c/dc6a7c6ca2af054e7680cbdd489b60f7.jpg",
           "gender": "Male",
           "age": "Middle aged",
           "eye_color": "Brown",
@@ -740,7 +740,7 @@ export default {
         {
           "id": "a63c25f4-41a4-4f78-933f-3c14e2903a8f",
           "name": "Capo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/98/Aiuto_Gang_boss.jpg",
+          "img": "https://i.pinimg.com/564x/1d/e9/b6/1de9b671924d91f401c4902ff8da31a2.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -750,7 +750,7 @@ export default {
         {
           "id": "5fd7416f-d928-4ebc-a4fb-d9bbdf99b06a",
           "name": "Ferrari",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/be/Porco_Rosso_-_Ferrari.jpg",
+          "img": "https://i.pinimg.com/564x/ab/ca/bf/abcabf5e3337214475c63a84408334e1.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -762,7 +762,7 @@ export default {
         {
           "id": "34df8f25-8f80-4823-8f01-bf9852039987",
           "name": "Piccolo S.P.A.",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Piccolos_garage.jpg",
+          "img": "https://i.pinimg.com/564x/c1/0f/1c/c10f1c2068046b152a65620f13cbb6a4.jpg",
           "climate": "Continental",
           "terrain": "River",
           "surface_water": "40",
@@ -775,7 +775,7 @@ export default {
         {
           "id": "d8f893b5-1dd9-41a1-9918-0099c1aa2de8",
           "name": "Red Wing",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8f/Porco%27s_Plane.jpg",
+          "img": "https://i.pinimg.com/564x/9b/90/86/9b9086744997464ba69f027a7d9c6fc3.jpg",
           "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
           "vehicle_class": "Airplane",
           "length": "20",
@@ -787,7 +787,7 @@ export default {
         {
           "id": "7eb1b9cd-8153-4ef6-a0d4-1e9abd8d78da",
           "name": "Dabohaze",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/99/Aiuto_Gang.jpg",
+          "img": "https://i.pinimg.com/564x/e2/da/29/e2da291efe0a215ab8a5e07d325f9228.jpg",
           "description": "It's the Mamma Aiuto Gang's battle ship, They're an air pirate gang lead by Capo",
           "vehicle_class": "Battle ship",
           "length": "NA",
@@ -804,7 +804,7 @@ export default {
       "description": "As the human city development encroaches on the raccoon population's forest and meadow habitat, the raccoons find themselves faced with the very real possibility of extinction. In response, the raccoons engage in a desperate struggle to stop the construction and preserve their home.",
       "director": "Isao Takahata",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Pom_Poko.jpg",
+      "poster": "https://i.pinimg.com/564x/1f/8d/93/1f8d9340a70e98e3f445294b884f59f7.jpg",
       "release_date": "1994",
       "rt_score": "78",
       "people": [
@@ -878,14 +878,14 @@ export default {
       "description": "Shizuku lives a simple life, dominated by her love for stories and writing. One day she notices that all the library books she has have been previously checked out by the same person: 'Seiji Amasawa'. Curious as to who he is, Shizuku meets a boy her age whom she finds infuriating, but discovers to her shock that he is her 'Prince of Books'. As she grows closer to him, she realises that he merely read all those books to bring himself closer to her. The boy Seiji aspires to be a violin maker in Italy, and it is his dreams that make Shizuku realise that she has no clear path for her life. Knowing that her strength lies in writing, she tests her talents by writing a story about Baron, a cat statuette belonging to Seiji's grandfather.",
       "director": "Yoshifumi Kondō",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7b/Whisper_of_the_Heart.jpg",
+      "poster": "https://i.pinimg.com/564x/32/b9/86/32b986545abcfab864a4fcaad9d6a0da.jpg",
       "release_date": "1995",
       "rt_score": "91",
       "people": [
         {
           "id": "42a69bf6-b5e8-42b1-b05a-12c3d05e7c1e",
           "name": "Shizuku Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/67/Shizuku_Tsukishima.jpg",
+          "img": "https://i.pinimg.com/564x/e9/73/73/e97373baa4e48d6842253283f3d99de5.jpg",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -895,7 +895,7 @@ export default {
         {
           "id": "fc196c4f-0201-4ed2-9add-c6403f7c4d32",
           "name": "Baron Humbert von Gikkingen",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Humbert_von_Gikkingen.jpg",
+          "img": "https://i.pinimg.com/564x/9e/09/11/9e0911a5efaa8494d4c8a88cf9f6849d.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Green",
@@ -905,7 +905,7 @@ export default {
         {
           "id": "079db09e-0441-442b-8c17-af5cac8321c4",
           "name": "Seiji Amasawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Seiji_Amasawa.jpg",
+          "img": "https://i.pinimg.com/564x/fe/26/48/fe264883bb7fe38b00a54eb03e819280.jpg",
           "gender": "Male",
           "age": "15",
           "eye_color": "Black",
@@ -915,7 +915,7 @@ export default {
         {
           "id": "494bba43-9f61-4383-a597-5bae6ab26222",
           "name": "Yuko Harada",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/cb/Yuko_Harada.jpg",
+          "img": "https://i.pinimg.com/564x/c3/86/92/c38692f10c195fec6bd52fd1ecd294ce.jpg",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -925,7 +925,7 @@ export default {
         {
           "id": "e432a1fe-e937-4575-bade-d11e9f8a9433",
           "name": "Sugimura",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b7/Sugimura.jpg",
+          "img": "https://i.pinimg.com/564x/a7/69/f5/a769f516002d329ae0814fbb4033c275.jpg",
           "gender": "Male",
           "age": "14",
           "eye_color": "Black",
@@ -965,7 +965,7 @@ export default {
         {
           "id": "e40b4241-612b-402f-8e6c-067c44e9c618",
           "name": "Shiho Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/02/Shiho_Tsukishima.jpg",
+          "img": "https://i.pinimg.com/564x/f2/44/b5/f244b5efac9257556fcad60d0886283b.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -994,14 +994,14 @@ export default {
       "description": "Ashitaka, a prince of the disappearing Ainu tribe, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg",
+      "poster": "https://i.pinimg.com/564x/9f/dc/2d/9fdc2da3e286acb2c1ad7734ff11fc59.jpg",
       "release_date": "1997",
       "rt_score": "92",
       "people": [
         {
           "id": "ba924631-068e-4436-b6de-f3283fa848f0",
           "name": "Ashitaka",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/49/Ashitaka.jpg",
+          "img": "https://i.pinimg.com/564x/88/52/8e/88528e892b8ba3546b038cb9d7889c4f.jpg",
           "gender": "Male",
           "age": "17",
           "eye_color": "Brown",
@@ -1011,7 +1011,7 @@ export default {
         {
           "id": "ebe40383-aad2-4208-90ab-698f00c581ab",
           "name": "San",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3f/San.jpg",
+          "img": "https://i.pinimg.com/564x/63/10/2b/63102b15fdcd2b6838f659b7f366906d.jpg",
           "gender": "Female",
           "age": "16",
           "eye_color": "Brown",
@@ -1021,7 +1021,7 @@ export default {
         {
           "id": "34277bec-7401-43fa-a00a-5aee64b45b08",
           "name": "Eboshi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9f/Eboshi.png",
+          "img": "https://i.pinimg.com/564x/77/29/46/7729461d62f555bb9babc512e816d9df.jpghttps://static.wikia.nocookie.net/studio-ghibli/images/9/9f/Eboshi.png",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Hazel",
@@ -1031,7 +1031,7 @@ export default {
         {
           "id": "91939012-90b9-46e5-a649-96b898073c82",
           "name": "Jigo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/79/Jigo_%282%29.jpg",
+          "img": "https://i.pinimg.com/564x/88/4c/dd/884cdd8d4012dab225eefae0633d82b3.jpg",
           "gender": "Male",
           "age": "Middle age",
           "eye_color": "Black",
@@ -1081,7 +1081,7 @@ export default {
         {
           "id": "ca568e87-4ce2-4afa-a6c5-51f4ae80a60b",
           "name": "Shishigami",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b7/Forest_Spirit.jpg",
+          "img": "https://i.pinimg.com/564x/c0/2b/0c/c02b0c9a95f05b7e0547c7a2ad89e459.jpg",
           "age": "400",
           "gender": "Male",
           "eye_color": "Red",
@@ -1091,7 +1091,7 @@ export default {
         {
           "id": "e9356bb5-4d4a-4c93-aadc-c83e514bffe3",
           "name": "Moro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5e/Moro.png",
+          "img": "https://i.pinimg.com/564x/97/ca/15/97ca15d66acf48d91ac6ba090687d63f.jpg",
           "gender": "Female",
           "age": "300",
           "eye_color": "Brown",
@@ -1138,7 +1138,7 @@ export default {
       "description": "The Yamadas are a typical middle class Japanese family in urban Tokyo and this film shows us a variety of episodes of their lives. With tales that range from the humourous to the heartbreaking, we see this family cope with life's little conflicts, problems and joys in their own way.",
       "director": "Isao Takahata",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbors_the_Yamadas.jpg",
+      "poster": "https://i.pinimg.com/564x/00/da/5b/00da5b889e4be25df1004b11e866dec1.jpg",
       "release_date": "1999",
       "rt_score": "75",
       "people": [
@@ -1202,14 +1202,14 @@ export default {
       "description": "Spirited Away is an Oscar winning Japanese animated film about a ten year old girl who wanders away from her parents along a path that leads to a world ruled by strange and unusual monster-like animals. Her parents have been changed into pigs along with others inside a bathhouse full of these creatures. Will she ever see the world how it once was?",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Spirited_Away.png",
+      "poster": "https://i.pinimg.com/564x/1d/07/1d/1d071d75e588f1a299e75c9643e7179a.jpg",
       "release_date": "2001",
       "rt_score": "97",
       "people": [
         {
           "id": "134a568b-ac18-4696-a53e-4f0757d1c037",
           "name": "Chihiro Ogino/Sen",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8e/Chihiro_Ogino.jpg",
+          "img": "https://i.pinimg.com/564x/1d/87/22/1d872204c01eb784e0c51376e72effb6.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -1219,7 +1219,7 @@ export default {
         {
           "id": "a1143897-679f-4c16-8b20-538976c144d6",
           "name": "Nigihayami Kohakunushi/Haku",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/89/Haku-2.png",
+          "img": "https://i.pinimg.com/564x/57/98/24/579824738228a28b57fff81e9933d4cf.jpg",
           "gender": "Male",
           "age": "12 (in appearance)",
           "eye_color": "Green",
@@ -1229,7 +1229,7 @@ export default {
         {
           "id": "177722d8-6fb0-4811-ad83-4d9c272eaebe",
           "name": "Yubaba",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f8/Yubaba-0.jpg",
+          "img": "https://i.pinimg.com/564x/2a/89/0e/2a890e4d69f16b9e135134861e0d8325.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Dark brown",
@@ -1239,7 +1239,7 @@ export default {
         {
           "id": "5fbcf921-a560-400e-bc15-c8fb4ef05909",
           "name": "Kamajī",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/78/Kamaji.jpg",
+          "img": "https://i.pinimg.com/564x/be/8a/f0/be8af07dbda3862000b785d4477be4df.jpg",
           "gender": "Male",
           "age": "At least 40 years",
           "eye_color": "NA",
@@ -1249,7 +1249,7 @@ export default {
         {
           "id": "969850ec-4ab6-4170-ab6b-ae6ac42e1e9a",
           "name": "No-Face",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9d/No-Face_infobox.png",
+          "img": "https://i.pinimg.com/564x/fc/fa/b0/fcfab09cb43ff88eb9990ded5084f8dd.jpg",
           "gender": "Unknown (Possible Male)",
           "age": "unknown",
           "eye_color": "NA",
@@ -1259,7 +1259,7 @@ export default {
         {
           "id": "cf0a2a1b-8b65-4794-98ae-bd89de49fa62",
           "name": "Lin",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/35/Lin-HBO_Max.png",
+          "img": "https://i.pinimg.com/564x/24/78/5c/24785c7e3fd4f571e158daa8e1cfb14b.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Brown",
@@ -1269,7 +1269,7 @@ export default {
         {
           "id": "d2feee01-5531-4385-aa0a-1e608aaf0747",
           "name": "Boh",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7e/Boh_winks.jpg",
+          "img": "https://i.pinimg.com/564x/a6/f2/9a/a6f29ac4c6d1627efc4f3a0730a4e17a.jpg",
           "gender": "Male",
           "age": "Child",
           "eye_color": "Black",
@@ -1279,7 +1279,7 @@ export default {
         {
           "id": "d9aceca5-beb9-4b2a-85ba-fc17d33750f8",
           "name": "Zeniba",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d8/Zeniba.png",
+          "img": "https://i.pinimg.com/564x/9d/d0/8e/9dd08ef812147e07117e105cb670ebcd.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Dark brown",
@@ -1289,7 +1289,7 @@ export default {
         {
           "id": "0588017a-8113-43cd-9025-518c9c0d5111",
           "name": "Akio Ogino",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/47/Akio_Ogino.jpg",
+          "img": "https://i.pinimg.com/564x/9f/44/2f/9f442f6a2d989340bf923763738079c6.jpg",
           "gender": "Male",
           "age": "38",
           "eye_color": "Black",
@@ -1299,7 +1299,7 @@ export default {
         {
           "id": "2e7bb7bf-4149-4df5-b6e4-76064021651c",
           "name": "Yūko Ogino",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Ichiyuko_Ogino.png",
+          "img": "https://i.pinimg.com/564x/e6/18/11/e6181176689fc13a1a0c82557633be73.jpg",
           "gender": "Female",
           "age": "35",
           "eye_color": "Dark brown",
@@ -1311,7 +1311,7 @@ export default {
         {
           "id": "a072ec53-0467-4fac-864f-df234f9c4315",
           "name": "Zeniba's Cottage",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/ec/Zeniba%27s_Cottage.png",
+          "img": "https://i.pinimg.com/564x/fd/52/13/fd52135cae9d17b44e3697b873a268bd.jpg",
           "climate": "TODO",
           "terrain": "TODO",
           "surface_water": "40",
@@ -1322,7 +1322,7 @@ export default {
         {
           "id": "37d13a96-a03a-451d-8871-80be0495486e",
           "name": "Bathhouse",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/80/Chihiro_sees_the_Bathhouse.png",
+          "img": "https://i.pinimg.com/564x/a1/4c/03/a14c0385280d8e1c22388f477ac4d2fe.jpg",
           "climate": "Continental",
           "terrain": "River",
           "surface_water": "70",
@@ -1339,14 +1339,24 @@ export default {
       "description": "Haru, a schoolgirl bored by her ordinary routine, saves the life of an unusual cat and suddenly her world is transformed beyond anything she ever imagined. The Cat King rewards her good deed with a flurry of presents, including a very shocking proposal of marriage to his son! Haru embarks on an unexpected journey to the Kingdom of Cats where her eyes are opened to a whole other world.",
       "director": "Hiroyuki Morita",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Cat_Returns.jpg",
+      "poster": "https://i.pinimg.com/564x/f0/99/f4/f099f4ac11384a89a443b6ec517ee7bb.jpg",
       "release_date": "2002",
       "rt_score": "89",
       "people": [
         {
+          "id": "a3d8e70f-46a0-4e5a-b850-db01620d6b92",
+          "name": "Haru Yoshioka",
+          "img": "https://i.pinimg.com/564x/29/1d/2d/291d2d0f9f006e1647b96ed81bdf96d7.jpg",
+          "gender": "Female",
+          "age": "17",
+          "eye_color": "Brown",
+          "hair_color": "Brown",
+          "specie": "Human"
+        },
+        {
           "id": "6b3facea-ea33-47b1-96ce-3fc737b119b8",
           "name": "Renaldo Moon aka Moon aka Muta",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e7/Muta.png",
+          "img": "https://i.pinimg.com/564x/ed/25/cf/ed25cf5f25214fd8cbed1f6ee2f99030.jpg",
           "gender": "Male",
           "age": "NA",
           "eye_color": "White",
@@ -1356,7 +1366,7 @@ export default {
         {
           "id": "3042818d-a8bb-4cba-8180-c19249822d57",
           "name": "Cat King",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/34/The_Cat_King.jpg",
+          "img": "https://i.pinimg.com/564x/61/e1/8c/61e18c546b2337b91f0fc905fc44f14e.jpg",
           "gender": "Male",
           "age": "87",
           "eye_color": "Emerald",
@@ -1366,22 +1376,12 @@ export default {
         {
           "id": "58d1973f-f247-47d7-9358-e56cb0d2b5a6",
           "name": "Yuki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/eb/New_queen%2C_Yuki.JPG",
+          "img": "https://i.pinimg.com/564x/ef/5b/7f/ef5b7fa92764af013e7798f07fa0b645.jpg",
           "gender": "Female",
           "age": "NA",
           "eye_color": "Blue",
           "hair_color": "White",
           "specie": "Cat"
-        },
-        {
-          "id": "a3d8e70f-46a0-4e5a-b850-db01620d6b92",
-          "name": "Haru Yoshioka",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/27/Haru_Yoshioka.jpg",
-          "gender": "Female",
-          "age": "17",
-          "eye_color": "Brown",
-          "hair_color": "Brown",
-          "specie": "Human"
         },
         {
           "id": "466bc926-2024-4653-ac63-fe52f2dc8c7b",
@@ -1470,14 +1470,14 @@ export default {
       "description": "When Sophie, a shy young woman, is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking home.",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/0/08/Howl%27s_Moving_Castle.jpg",
+      "poster": "https://i.pinimg.com/564x/69/cc/f4/69ccf4b3cb15a77b297c67a191dcb16d.jpg",
       "release_date": "2004",
       "rt_score": "87",
       "people": [
         {
           "id": "fa9b410f-cad4-457d-ac71-86b0afa6cf0a",
           "name": "Howl Jenkins Pendragon",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/fe/Howl_Jenkins_Pendragon.jpg",
+          "img": "https://i.pinimg.com/564x/b0/fb/16/b0fb16511bce545ae7abd2add6a2d8c2.jpg",
           "gender": "Male",
           "age": "27",
           "eye_color": "Bright blue",
@@ -1487,7 +1487,7 @@ export default {
         {
           "id": "cbbe548f-dfb4-4d53-81d3-06c203dbb2ff",
           "name": "Sophie Hatter",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f4/Sophie_short_hair.jpg",
+          "img": "https://i.pinimg.com/564x/3e/f2/1f/3ef21f3ba1fccc1f86ce2b923b8fa64d.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Brown",
@@ -1497,7 +1497,7 @@ export default {
         {
           "id": "1287b275-6c32-4113-947f-519316d4a6be",
           "name": "Witch of the Waste",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e1/Howls-moving-castle-disneyscreencaps.com-10507.jpg",
+          "img": "https://i.pinimg.com/736x/27/82/17/278217ee7105b160670d298f07c5acb4.jpg",
           "gender": "Female",
           "age": "59",
           "eye_color": "Brown",
@@ -1507,7 +1507,7 @@ export default {
         {
           "id": "b73f58ab-454a-42d6-9812-63e8f235a388",
           "name": "Calcifer",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/2a/Calcifer.png",
+          "img": "https://i.pinimg.com/564x/99/24/4f/99244f70937fa2416180a61c201fe5ce.jpg",
           "gender": "Male",
           "age": "NA",
           "eye_color": "Dark Brown",
@@ -1517,7 +1517,7 @@ export default {
         {
           "id": "d03ca1e2-16ab-45d1-9b81-c2b0f7b35de1",
           "name": "Markl",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5d/Markl.jpg",
+          "img": "https://i.pinimg.com/564x/1f/68/3e/1f683edb9d0b6a9a0beb05ed511a3c8e.jpg",
           "gender": "Male",
           "age": "10",
           "eye_color": "Dark Brown",
@@ -1527,7 +1527,7 @@ export default {
         {
           "id": "45237428-93bf-4dd6-97ce-f10647300429",
           "name": "Prince Justin or Turnip Head",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Prince_Justin.png",
+          "img": "https://i.pinimg.com/564x/2e/27/4c/2e274ce5102c3cf28d7c0242acde55a9.jpg",
           "gender": "Male",
           "age": "20-30",
           "eye_color": "Grey",
@@ -1537,7 +1537,7 @@ export default {
         {
           "id": "8f66024e-c84f-445a-9ab5-0b31a6ae354d",
           "name": "Madame Suliman",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/64/Madame_Suliman.png",
+          "img": "https://i.pinimg.com/564x/5a/ea/34/5aea342a51abdba6e5c5308fdeecaf76.jpg",
           "gender": "Female",
           "age": "50",
           "eye_color": "Grey",
@@ -1547,7 +1547,7 @@ export default {
         {
           "id": "ccc705e4-aa2a-4929-b0dc-4b8a09fd290d",
           "name": "Heen",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a7/Heen.png",
+          "img": "https://i.pinimg.com/564x/e2/72/44/e272442c23edcc3eb1bfd9ec13b7955b.jpg",
           "gender": "Male",
           "age": "NA",
           "eye_color": "Brown",
@@ -1557,7 +1557,7 @@ export default {
         {
           "id": "3148150f-6ccb-4383-8af5-0c40f03c825e",
           "name": "Lettie Hatter",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1c/Lettie_Hatter.png",
+          "img": "https://i.pinimg.com/564x/4b/08/fe/4b08fedb83ed0d6eabcc2da2dd33ff33.jpg",
           "gender": "Female",
           "age": "16",
           "eye_color": "Blue",
@@ -1567,7 +1567,7 @@ export default {
         {
           "id": "06610030-0560-47ac-bc18-be80d85c4dad",
           "name": "Fanny Hatter/Honey",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Honey.png",
+          "img": "https://i.pinimg.com/564x/bf/3d/de/bf3dde86983848438ab695a61be3a11b.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Grey",
@@ -1579,7 +1579,7 @@ export default {
         {
           "id": "b6bac992-a858-4d57-8477-9652d73caaa1",
           "name": "Ingary",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/48/Ingary.png",
+          "img": "https://i.pinimg.com/564x/f8/88/dd/f888dd64748c935bee90125f5d05cc83.jpg",
           "climate": "Mild",
           "terrain": "Hill",
           "surface_water": "30",
@@ -1592,7 +1592,7 @@ export default {
         {
           "id": "2354305f-dccd-4c44-a79e-cc60ba7376e6",
           "name": "Howl's castle",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e6/Howls_Castle.jpg",
+          "img": "https://i.pinimg.com/564x/29/89/61/298961de92096bdb6025f8eab3867836.jpg",
           "description": "Wizard Howl's home. It's scale changes from scene to scene.",
           "vehicle_class": "Moving castle",
           "length": "unknown",
@@ -1715,7 +1715,7 @@ export default {
       "description": "The son of a sailor, 5-year old Sosuke lives a quiet life on an oceanside cliff with his mother Lisa. One fateful day, he finds a beautiful goldfish trapped in a bottle on the beach and upon rescuing her, names her Ponyo. But she is no ordinary goldfish. The daughter of a masterful wizard and a sea goddess, Ponyo uses her father's magic to transform herself into a young girl and quickly falls in love with Sosuke, but the use of such powerful sorcery causes a dangerous imbalance in the world. As the moon steadily draws nearer to the earth and Ponyo's father sends the ocean's mighty waves to find his daughter, the two children embark on an adventure of a lifetime to save the world and fulfill Ponyo's dreams of becoming human.",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/5/50/Ponyo_on_the_Cliff_by_the_Sea.jpg",
+      "poster": "https://i.pinimg.com/564x/4e/3d/80/4e3d805bb3c46870f79e6b9e4a345b5b.jpg",
       "release_date": "2008",
       "rt_score": "92",
       "people": [
@@ -1865,7 +1865,7 @@ export default {
       "description": "14-year-old Arrietty and the rest of the Clock family live in peaceful anonymity as they make their own home from items 'borrowed' from the house's human inhabitants. However, life changes for the Clocks when a human boy discovers Arrietty.",
       "director": "Hiromasa Yonebayashi",
       "producer": "Toshio Suzuki",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDY3ZGI0ZDAtMThlNy00MzAxLTg4YjAtNjkwYTkxNmQ4MjdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "poster": "https://i.pinimg.com/564x/42/4e/71/424e71ca18258ac3d341f893af430402.jpg",
       "release_date": "2010",
       "rt_score": "95",
       "people": [
@@ -1982,7 +1982,7 @@ export default {
       "description": "The story is set in 1963 in Yokohama. Kokuriko Manor sits on a hill overlooking the harbour. A 16 year-old girl, Umi, lives in that house. Every morning she raises a signal flag facing the sea. The flag means “I pray for safe voyages”. A 17 year-old boy, Shun, always sees this flag from the sea as he rides a tugboat to school. Gradually the pair are drawn to each other but they are faced with a sudden trial. Even so, they keep going without running from facing the hardships of reality.",
       "director": "Gorō Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/b/bb/From_Up_on_Poppy_Hill.jpg",
+      "poster": "https://i.pinimg.com/564x/cd/e3/c4/cde3c4f8d33269f3861bd3df39d41c30.jpg",
       "release_date": "2011",
       "rt_score": "83",
       "people": [
@@ -2088,7 +2088,7 @@ export default {
       "description": "A lifelong love of flight inspires Japanese aviation engineer Jiro Horikoshi, whose storied career includes the creation of the A-6M World War II fighter plane.",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/2/2d/The_Wind_Rises.jpg",
+      "poster": "https://i.pinimg.com/564x/87/96/47/879647f33d63d4308b0fe588a5f5ae77.jpg",
       "release_date": "2013",
       "rt_score": "89",
       "people": [
@@ -2207,7 +2207,7 @@ export default {
       "description": "A bamboo cutter named Sanuki no Miyatsuko discovers a miniature girl inside a glowing bamboo shoot. Believing her to be a divine presence, he and his wife decide to raise her as their own, calling her 'Princess'.",
       "director": "Isao Takahata",
       "producer": "Yoshiaki Nishimura",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Tale_of_the_Princess_Kaguya.jpg",
+      "poster": "https://i.pinimg.com/564x/82/20/0c/82200c61718caa3583e86458ea6f0654.jpg",
       "release_date": "2013",
       "rt_score": "100",
       "people": [
@@ -2313,7 +2313,7 @@ export default {
       "description": "The film follows Anna Sasaki living with her relatives in the seaside town. Anna comes across a nearby abandoned mansion, where she meets Marnie, a mysterious girl who asks her to promise to keep their secrets from everyone. As the summer progresses, Anna spends more time with Marnie, and eventually Anna learns the truth about her family and foster care.",
       "director": "Hiromasa Yonebayashi",
       "producer": "Yoshiaki Nishimura",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/7/7a/When_Marnie_Was_There.jpg",
+      "poster": "https://i.pinimg.com/564x/4a/0a/63/4a0a63f91d590ea81f461e49da9e5d25.jpg",
       "release_date": "2014",
       "rt_score": "92",
       "people": [
@@ -2433,3 +2433,4 @@ export default {
     }
   ]
 }
+
