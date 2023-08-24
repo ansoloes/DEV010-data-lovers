@@ -6,24 +6,27 @@
 import data from "./data/ghibli/ghibli.js"
 
 // TODO: Función para obtener películas
-export function obtenerPeliculas() {
+export function obtenerPeliculas(data) {
+  // if (data.length===0){
+  //   return TypeError
+  // }
   return data.films;
 }
 
 // TODO: Función para obtener personajes
-export function obtenerPersonajes() {
+export function obtenerPersonajes(data) {
   const personajes = data.films.map( (pelicula) => pelicula.people );
   return personajes;
 }
 
 // TODO: Función para obtener lugares
-export function obtenerLugares() {
+export function obtenerLugares(data) {
   const lugares = data.films.map( (pelicula) => pelicula.locations );
   return lugares;
 }
 
 // TODO: Función para obtener directores
-export function obtenerDirectores() {
+export function obtenerDirectores(data) {
   const directores = data.films.map( (pelicula) => pelicula.director );
   const directoresFiltrados = directores.filter((director, indice) => {
     return directores.indexOf(director) === indice;
@@ -32,13 +35,13 @@ export function obtenerDirectores() {
 }
 
 // TODO: Función obtener PeliculasPorId
-export function obtenerPeliculaPorId() {
-  const peliculaPorId = data.films.find( (pelicula) => pelicula.id === peliculaPorId );
-  return peliculaPorId;
+export function obtenerPeliculaPorId(data, idPelicula) {
+  const peliculasPorId = data.films.find( (pelicula) => pelicula.id === idPelicula );
+  return peliculasPorId;
 }
 
 // TODO: Función para obtener productores
-export function obtenerProductores() {
+export function obtenerProductores(data) {
   const productores = data.films.map( (pelicula) => pelicula.producer );
   const productoresFiltrados = productores.filter( (productor, indice) => {
     return productores.indexOf(productor) === indice;
@@ -67,8 +70,8 @@ export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
 }
 
 // TODO: Función para usar todos los filtros
-export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor){
-  let peliculasFiltradas = obtenerPeliculas()
+export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor, data){
+  let peliculasFiltradas = data
   // Por año
   if (anhoMinimo && anhoMaximo) {
     peliculasFiltradas = filtrarPeliculasPorAnho(anhoMinimo, anhoMaximo, peliculasFiltradas);
@@ -85,9 +88,9 @@ export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor){
 }
 
 //Función para barra de búsqueda
-export function buscarTermino(termino){
+export function buscarTermino(termino,data){
   //termino tipo titulo
-  const peliculasEncontradas = obtenerPeliculas().filter(pelicula =>
+  const peliculasEncontradas = data.filter(pelicula =>
     pelicula.title.toLowerCase().includes( termino.toLowerCase() )
   );
   //* Buscar por términos adicionales (ej. personajes) (OPCIONAL)
