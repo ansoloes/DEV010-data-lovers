@@ -4,8 +4,8 @@
  */
 
 // ! IMPORTACIONES
-import { obtenerPeliculas,obtenerPeliculaPorId, obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAscendente, ordenarPeliculasPorAñoDescendente, ordenarPeliculasAZ, ordenarPeliculasZA,calcularPromedioScore } from "./data.js";
-
+import { obtenerPeliculas,obtenerPeliculaPorId,obtenerDirectores, obtenerProductores, aplicarFiltros, buscarTermino, ordenarPeliculasPorAñoAscendente, ordenarPeliculasPorAñoDescendente, ordenarPeliculasAZ, ordenarPeliculasZA,calcularPromedioScore } from "./data.js";
+import data from "./data/ghibli/ghibli.js"
 // ! REFERENCIAS AL DOM
 // * Sección buscar
 const btnBuscar = document.querySelector("#buscar");
@@ -40,16 +40,16 @@ const contenedorTarjeta = document.querySelector(".contenedor-tarjeta");
 
 // ! FUNCIONES
 // * Función total de películas
-const peliculas = obtenerPeliculas();
+const peliculas = obtenerPeliculas(data);
 
 // * Resultados 
-let resultados = [...obtenerPeliculas()]
+let resultados = [...obtenerPeliculas(data)]
 
 //* Función total directores
-const directores = obtenerDirectores();
+const directores = obtenerDirectores(data);
 
 // * Función total productores
-const productores = obtenerProductores();
+const productores = obtenerProductores(data);
 
 // * Función reproducir música
 botonReproducir.addEventListener("click", () => {
@@ -238,11 +238,28 @@ function obtenerBotonesPersonajes (){
 
 mostrarPeliculas(peliculas);
 
+//! probando otras cosas de botones:
+document.addEventListener('click', function(event) {
+  const elementoClickeado = event.target;
+  console.log("Clickeaste en:", elementoClickeado);
+
+  // Verificar si el elemento clicado es un botón con clase 'btn-personajes'
+  if (event.target.classList.contains('btn-personajes')) {
+ 
+    // cambiaPagina(arrayTarjetas);
+    // Obtener el valor del atributo data-id del botón clicado
+    const dataIdValue = event.target.getAttribute('data-id');
+    const tarjetaPelicula = event.target.closest('.tarjeta-pelicula');
+    tarjetaPelicula.classList.toggle("active");
+    // inicializarCarrusel()
+    mostrarPersonajes(dataIdValue, tarjetaPelicula);
+  }
+  // }
+});
+
 // * Función de Calcular Promedio
-const promedioPeliculas = calcularPromedioScore(resultados);
-
-
 botonPromedio.addEventListener("click", () => {
+  const promedioPeliculas = calcularPromedioScore(resultados);
   const dialogPromedio = document.createElement("dialog");
   const tituloPromedio = document.createElement("h2");
   tituloPromedio.textContent = "Average Movie Rating"
@@ -251,7 +268,6 @@ botonPromedio.addEventListener("click", () => {
   const parrafoPromedio = document.createElement("p");
   parrafoPromedio.textContent = "The average rating per film is " + promedioPeliculas;
   dialogPromedio.appendChild(parrafoPromedio);
-
   const botonContenedor = document.createElement("div");
   botonContenedor.classList.add("contenedor-btn");
 
@@ -334,11 +350,10 @@ productores.forEach(productor => {
 // * Función filtros
 // Agregar el desplazamiento por scroll
 botonFiltrar.addEventListener("click", () => {
-  const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value);
+  const resultadoFiltro = aplicarFiltros(inputMinimo.value,inputMaximo.value, selectDirector.value, selectProductor.value, resultados);
   
   resultados = [...resultadoFiltro];
-  mostrarPeliculas(resultadoFiltro);
-  // console.log(calcularPromedioScore(resultados)) // ? esto fue para probar el cálculo de promedios
+  mostrarPeliculas(resultados);
 })
 
 // * Función para limpiar filtros
@@ -368,82 +383,105 @@ contenedorTarjeta.addEventListener("click", (event) => {
 // ! Sección POPout!
 // * Función mostrar personajes
 
-const mostrarPersonajes = (peliculaId) => {
-  const pelicula = obtenerPeliculaPorId(peliculaId)
+const mostrarPersonajes = (peliculaId, tarjetaPelicula) => {
+
+  const pelicula = obtenerPeliculaPorId(data, peliculaId)
   //* Agregar elementos HTML
-  //div contenedor de tarjetas de personajes
-  const contenedorPersonajes = document.createElement("div");
-  contenedorPersonajes.classList.add("overlay-contenedor-personajes");
+  // Crear el contenedor de overlay
+  const overlayContenedor = document.createElement("article");
+  overlayContenedor.classList.add("overlay-contenedor-personajes");
+
+  // Agregar botón de anterior
+  const botonAnterior = document.createElement("i");
+  botonAnterior.classList.add("fa-solid", "fa-angle-left");
+  botonAnterior.id = "boton-anterior";
+  overlayContenedor.appendChild(botonAnterior);
+
+  // Crear el carrusel de personajes
+  const carruselPersonajes = document.createElement("div");
+  carruselPersonajes.classList.add("carrusel-personajes");
+  overlayContenedor.appendChild(carruselPersonajes);
+
   
-  pelicula.people.forEach(personaje =>{
-    // Div tarjeta de personaje
+  pelicula.people.forEach(personaje => {
+    // Crear la tarjeta de personaje
     const tarjetaPersonaje = document.createElement("div");
     tarjetaPersonaje.classList.add("tarjeta-personaje");
-
-    // Div contenedor de la imagen del personaje
-    const contenedorImgPersonaje = document.createElement("div");
-    contenedorImgPersonaje.classList.add("contenedor-img-personaje");
-    tarjetaPersonaje.appendChild(contenedorImgPersonaje);
-
-    // Imagen del personaje
+  
+    // Crear el contenedor de la imagen
+    const contenedorImg = document.createElement("div");
+    contenedorImg.classList.add("contenedor-img-personaje");
+  
+    // Crear la imagen
     const imgPersonaje = document.createElement("img");
-    imgPersonaje.src = personaje.image;
+    imgPersonaje.src = personaje.img;
     imgPersonaje.alt = personaje.name;
-    contenedorImgPersonaje.appendChild(imgPersonaje);
-
-    // Div contenedor de la información del personaje
+  
+    // Agregar la imagen al contenedor de imagen
+    contenedorImg.appendChild(imgPersonaje);
+  
+    // Crear el contenedor de información del personaje
     const contenedorInfoPersonaje = document.createElement("div");
     contenedorInfoPersonaje.classList.add("contenedor-info-personaje");
-    tarjetaPersonaje.appendChild(contenedorInfoPersonaje);
-
-    // Div contenedor del nombre del personaje
+  
+    // Crear el contenedor del nombre
     const contenedorNombre = document.createElement("div");
     contenedorNombre.classList.add("contenedor-nombre");
-    contenedorInfoPersonaje.appendChild(contenedorNombre);
-
-    // Nombre del personaje
+  
+    // Crear el elemento h3 del nombre
     const nombrePersonaje = document.createElement("h3");
     nombrePersonaje.id = "nombre";
     nombrePersonaje.textContent = personaje.name;
+  
+    // Agregar el nombre al contenedor del nombre
     contenedorNombre.appendChild(nombrePersonaje);
-
-    // Div contenedor de la información del personaje
+  
+    // Crear el contenedor de información del personaje
     const infoPersonaje = document.createElement("div");
     infoPersonaje.classList.add("info-personaje");
-    contenedorInfoPersonaje.appendChild(infoPersonaje);
-
-    // Crear elementos de información del personaje 
+  
+    // Crear y configurar los elementos de información
     const infoElements = [
       { label: "Gender", value: personaje.gender },
       { label: "Age", value: personaje.age },
       { label: "Eye color", value: personaje.eye_color },
       { label: "Hair color", value: personaje.hair_color },
-      { label: "Species", value: personaje.species }
+      { label: "Species", value: personaje.specie }
     ];
-
-    // Agregar información del personaje al div infoPersonaje
+  
     infoElements.forEach(info => {
       const infoDiv = document.createElement("div");
       infoDiv.classList.add("info");
-
+  
       const infoSpan = document.createElement("span");
       infoSpan.textContent = info.label;
-
+  
       const infoP = document.createElement("p");
       infoP.textContent = info.value;
-
+  
       infoDiv.appendChild(infoSpan);
       infoDiv.appendChild(infoP);
       infoPersonaje.appendChild(infoDiv);
-      contenedorPersonajes.appendChild(tarjetaPersonaje);
-    }); 
-    contenedorPersonajes.classList.add("active");
-  })
-
-
-  // Mostrar la tarjeta de personaje en el overlay
-  // Puedes adjuntar tarjetaPersonaje al elemento correspondiente en el DOM
-  // por ejemplo, contenedorTarjeta.appendChild(tarjetaPersonaje);
+    });
+  
+    // Agregar los elementos creados a la tarjeta de personaje
+    tarjetaPersonaje.appendChild(contenedorImg);
+    tarjetaPersonaje.appendChild(contenedorInfoPersonaje);
+    contenedorInfoPersonaje.appendChild(contenedorNombre);
+    contenedorInfoPersonaje.appendChild(infoPersonaje);
+  
+    // Agregar la tarjeta de personaje al carrusel
+    carruselPersonajes.appendChild(tarjetaPersonaje);
+  });
+  
+  // Agregar botón de siguiente
+  const botonSiguiente = document.createElement("i");
+  botonSiguiente.classList.add("fa-solid", "fa-angle-right");
+  botonSiguiente.id = "boton-siguiente";
+  overlayContenedor.appendChild(botonSiguiente);
+  
+  // Agregar elementos al contenedor de tarjetas
+  tarjetaPelicula.appendChild(overlayContenedor);
 };
 
 // para eso debo hacer una función (dataPersonajes())
@@ -457,8 +495,57 @@ const mostrarPersonajes = (peliculaId) => {
 // * FUnción Generar Vehículos:
 
 // * Función Carrucel 
+// CARRUSEL
+// function inicializarCarrusel() {
+//   const carruselPersonajes = document.querySelector(".carrusel-personajes");
+//   console.log(carruselPersonajes)
+//   const botonSiguiente = document.getElementById("boton-siguiente");
+//   console.log(botonSiguiente)
+//   const botonAnterior = document.getElementById("boton-anterior");
+//   console.log(botonAnterior)
+//   // Agregar listener al botón Siguiente
+//   botonSiguiente.addEventListener("click", function () {
+//     const tarjetasPersonajes = carruselPersonajes.querySelectorAll(
+//       ".tarjeta-personaje"
+//     );
+//     const arrayTarjetas = [...tarjetasPersonajes];
 
-// * Botón limpiar filtros 
-//-> hacer que los input vuelvan a 0
-//-> Usar función mostrarPeliculas() con toda la data
+//     const siguiente = arrayTarjetas.shift();
+//     arrayTarjetas.push(siguiente);
 
+//     arrayTarjetas.forEach((x) => {
+//       carruselPersonajes.appendChild(x);
+//     });
+
+//     cambiaPagina(arrayTarjetas);
+//   });
+
+//   botonAnterior.addEventListener("click", function () {
+//     const tarjetasPersonajes = carruselPersonajes.querySelectorAll(
+//       ".tarjeta-personaje"
+//     );
+//     const arrayTarjetas = [...tarjetasPersonajes];
+
+//     const atras = arrayTarjetas.pop();
+//     arrayTarjetas.unshift(atras);
+
+//     arrayTarjetas.forEach((x) => {
+//       carruselPersonajes.appendChild(x);
+//     });
+
+//     cambiaPagina(arrayTarjetas);
+//   });
+
+//   // Función para cambiar la página del carrusel
+//   function cambiaPagina(array) {
+//     const posicionActual = 0;
+//     const siguientePos = 1;
+
+//     for (let i = 0; i < array.length; i++) {
+//       array[i].style.display = "none";
+//     }
+
+//     array[posicionActual].style.display = "flex";
+//     array[siguientePos].style.display = "flex";
+//   }
+// }

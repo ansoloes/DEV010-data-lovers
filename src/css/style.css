@@ -408,59 +408,97 @@ footer img {
     z-index: 999;
     align-items: center;
     box-shadow: var(--sombra);
-}
+    padding: 0, 2.4rem;
+  }
 
-.tarjeta-pelicula.active .overlay-contenedor-personajes {
+  .tarjeta-pelicula.active .overlay-contenedor-personajes {
     display: flex;
     transition: transform 0.3s ease;
-}
+  }
 
-.carrusel-personajes{
+  .overlay-contenedor-personajes i{
+    height: 4.8rem;
+    width: 4.8rem;
+    background-color: var(--salmon);
+    color: #F2F2F2;
+    opacity: 0.3 ;
+    text-align: center;
+    line-height: 4.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    box-shadow: var(--sombra);
+    z-index: 999;
+    transform:translateY(-10%);
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.overlay-contenedor-personajes i:hover{
+  opacity:0.9;
+  
+}
+.overlay-contenedor-personajes i:first-child{
+    left: -1.2rem;
+}
+.overlay-contenedor-personajes i:last-child{
+    right: -1.2rem;
+}
+  .carrusel-personajes{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    overflow-x: auto;
-}
-
-.tarjeta-personaje {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    scroll-snap-align: start;
+    }
+  .tarjeta-personaje {
     display: flex;
+    flex-direction: row;
     flex: 0 0 50%;
+    align-items: center;
     background-color: var(--indigo-claro);
     height: 100%;
-}
-
-/* img tarjeta*/
+    width: 100%;
+    position: relative;
+  }
+  /* img tarjeta*/
 .tarjeta-personaje .contenedor-img-personaje{
     width: 50%;
     height: 100%;
     display: flex;
     position: relative;
+    background-color: red;
+
 }
 
-.tarjeta-personaje img{
+  .tarjeta-personaje img{
     width: 100%;
     height: 100%;
     object-fit:cover ;
-}
-
-/* nombre tarjeta personaje */
-.tarjeta-personaje h3 {
+  }
+  /* nombre tarjeta personaje */
+  .tarjeta-personaje h3 {
     font-size: 2.4rem;
     font-family: var(--titulos);
     color: var(--purpura-oscuro);
 }
-
+/* categorías o títulos */
+.tarjeta-personaje .span{
+    font-weight: 700;
+}
 .tarjeta-personaje .contenedor-nombre{
     height: 20%;
     display: flex;
     justify-content: left;
     align-items:center;
 }
-/* categorías o títulos */
-.tarjeta-personaje .span{
-    font-weight: 700;
-    color: var(--rojo);
-}
+
 /* tarjeta inferior: donde esta la info, no el nombre */
 .tarjeta-personaje .info-personaje{
     display: grid;
