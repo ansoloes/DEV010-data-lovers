@@ -1,3 +1,4 @@
+//mock-ghibli.js
 export default {
   "studio": "Studio Ghibli Inc.",
   "films": [{
