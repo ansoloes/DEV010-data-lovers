@@ -47,7 +47,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
     font-family: var(--principal);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.5;
     background-image: url(../img/background.jpg);
     background-size: cover;
@@ -473,8 +473,7 @@ footer img {
     height: 100%;
     display: flex;
     position: relative;
-    background-color: red;
-
+    background-color: transparent;
 }
 
   .tarjeta-personaje img{
@@ -505,6 +504,66 @@ footer img {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
 }
+
 .tarjeta-personaje .contenedor-info-personaje{
     padding: 1.5rem;
+}
+
+@media (max-width: 1286px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .sidebar {
+        width: 25%;
+    }
+
+    .seccion-tarjetas {
+        width: 73%;
+    }
+}
+
+@media (max-width: 1150px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+    }
+
+    .sidebar {
+        width: 70%;
+        position: static;
+    }
+
+    .seccion-tarjetas {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1150px) {
+    body {
+        background-position: right;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 951px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto-hero {
+        width: 75%;
+    }
 }
