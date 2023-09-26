@@ -444,6 +444,10 @@ footer img {
 .overlay-contenedor-personajes i:last-child{
     right: -1.2rem;
 }
+.overlay-contenedor-personajes #boton-salir{
+    top: 1.2rem;
+    right: -1.2rem;
+}
   .carrusel-personajes{
     display: flex;
     flex-wrap: wrap;
@@ -473,7 +477,6 @@ footer img {
     height: 100%;
     display: flex;
     position: relative;
-    background-color: red;
 
 }
 
