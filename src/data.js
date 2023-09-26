@@ -27,31 +27,47 @@ export function obtenerLugares(data) {
 
 // TODO: Función para obtener directores
 export function obtenerDirectores(data) {
-  const directores = data.films.map( (pelicula) => pelicula.director );
+  if (!data || !data.films || !Array.isArray(data.films)) {
+    return []; 
+  }
+  const directores = data.films.map((pelicula) => pelicula.director);
   const directoresFiltrados = directores.filter((director, indice) => {
     return directores.indexOf(director) === indice;
-  } )
+  });
   return directoresFiltrados;
 }
 
 // TODO: Función obtener PeliculasPorId
 export function obtenerPeliculaPorId(data, idPelicula) {
   const peliculasPorId = data.films.find( (pelicula) => pelicula.id === idPelicula );
+  if (peliculasPorId === undefined) {
+    return undefined; // Si no se encontró la película, devolver undefined
+  }
   return peliculasPorId;
 }
 
 // TODO: Función para obtener productores
 export function obtenerProductores(data) {
-  const productores = data.films.map( (pelicula) => pelicula.producer );
-  const productoresFiltrados = productores.filter( (productor, indice) => {
+  if (!data || !data.films || data.films.length === 0) {
+    return []; 
+  }
+
+  const productores = data.films.map((pelicula) => pelicula.producer);
+  const productoresFiltrados = productores.filter((productor, indice) => {
     return productores.indexOf(productor) === indice;
-  } )
+  });
   return productoresFiltrados;
 }
 
-// TODO: Función para encontrar películas por título
-export function obtenerPeliculasPorTitulo(titulo) {
-  return data.films.find( (pelicula) => pelicula.title === titulo );
+export function obtenerPeliculasPorTitulo(data, titulo) {
+  if (!data || !data.films || data.films.length === 0 || !titulo) {
+    return []; 
+  }
+  const peliculasEncontradas = data.films.filter((pelicula) =>
+    pelicula.title.toLowerCase().includes(titulo.toLowerCase())
+  );
+
+  return peliculasEncontradas;
 }
 
 // TODO: Función para filtrar películas por año
@@ -61,11 +77,17 @@ export function filtrarPeliculasPorAnho(anho1, anho2) {
 
 // TODO: Función para filtrar películas por director
 export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
+  if (director === '') {
+    return peliculasFiltradas; // Devolver todas las películas sin filtrar
+  }
   return peliculasFiltradas.filter( (pelicula) => pelicula.director === director )
 }
 
 // TODO: Función para filtrar peliculas por productor
 export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
+  if (productor === '') {
+    return peliculasFiltradas; // Devolver todas las películas sin filtrar
+  }
   return peliculasFiltradas.filter( (pelicula) => pelicula.producer === productor );
 }
 
@@ -88,22 +110,12 @@ export function aplicarFiltros(anhoMinimo, anhoMaximo, director, productor, data
 }
 
 //Función para barra de búsqueda
-export function buscarTermino(termino,data){
-  //termino tipo titulo
-  const peliculasEncontradas = data.filter(pelicula =>
-    pelicula.title.toLowerCase().includes( termino.toLowerCase() )
+export function buscarTermino(termino, data) {
+  // Por Termino tipo título
+  const peliculasEncontradas = data.films.filter((pelicula) =>
+    pelicula.title.toLowerCase().includes(termino.toLowerCase())
   );
-  //* Buscar por términos adicionales (ej. personajes) (OPCIONAL)
-  // // termino tipo nombre personaje
-  // const personajesEncontrados = obtenerPersonajes().filter(personaje =>
-  //   personaje.name.toLowerCase().includes(termino.toLowerCase())
-  // );
-  // resultados.push(personajesEncontrados);
-  // // termino tipo nombre lugares
-  // const lugaresEncontrados = obtenerLugares().filter(lugar =>
-  //   lugar.name.toLowerCase().includes(termino.toLowerCase())
-  // );
-  // resultados.push(lugaresEncontrados);
+
   return peliculasEncontradas;
 }
 
