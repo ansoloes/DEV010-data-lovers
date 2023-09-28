@@ -397,7 +397,7 @@ footer img {
 }
 
 /* Tarjetas Personajes */
-.overlay-contenedor-personajes {
+.overlay-contenedor-personajes, .overlay-contenedor-lugares-vehiculos {
     display: none;
     position: absolute;
     top: 0;
@@ -411,12 +411,17 @@ footer img {
     padding: 0, 2.4rem;
   }
 
-  .tarjeta-pelicula.active .overlay-contenedor-personajes {
+.tarjeta-pelicula.active-personajes .overlay-contenedor-personajes {
     display: flex;
     transition: transform 0.3s ease;
-  }
+}
 
-  .overlay-contenedor-personajes i{
+.tarjeta-pelicula.active-lugares .overlay-contenedor-lugares-vehiculos {
+    display: flex;
+    transition: transform 0.3s ease;
+}  
+
+.overlay-contenedor-personajes i,.overlay-contenedor-lugares-vehiculos i {
     height: 4.8rem;
     width: 4.8rem;
     background-color: var(--salmon);
@@ -434,21 +439,21 @@ footer img {
     white-space: nowrap;
     transition: 0.3s;
 }
-.overlay-contenedor-personajes i:hover{
+.overlay-contenedor-personajes i:hover, .overlay-contenedor-lugares-vehiculos i:hover{
   opacity:0.9;
   
 }
-.overlay-contenedor-personajes i:first-child{
+.overlay-contenedor-personajes i:first-child, .overlay-contenedor-lugares-vehiculos i:first-child{
     left: -1.2rem;
 }
-.overlay-contenedor-personajes i:last-child{
+.overlay-contenedor-personajes i:last-child, .overlay-contenedor-lugares-vehiculos i:last-child{
     right: -1.2rem;
 }
-.overlay-contenedor-personajes #boton-salir{
+.overlay-contenedor-personajes #boton-salir, .overlay-contenedor-lugares-vehiculos #boton-salir{
     top: 1.2rem;
     right: -1.2rem;
 }
-  .carrusel-personajes{
+.carrusel-personajes, .carrusel-lugares-vehiculos{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -461,7 +466,7 @@ footer img {
     flex-direction: row;
     scroll-snap-align: start;
     }
-  .tarjeta-personaje {
+.tarjeta-personaje, .tarjeta-lugares-vehiculos {
     display: flex;
     flex-direction: row;
     flex: 0 0 50%;
@@ -472,7 +477,7 @@ footer img {
     position: relative;
   }
   /* img tarjeta*/
-.tarjeta-personaje .contenedor-img-personaje{
+.tarjeta-personaje .contenedor-img-personaje, .tarjeta-lugares-vehiculos .contenedor-img{
     width: 50%;
     height: 100%;
     display: flex;
@@ -480,22 +485,22 @@ footer img {
     background-color: transparent;
 }
 
-  .tarjeta-personaje img{
+  .tarjeta-personaje img, .tarjeta-lugares-vehiculos img{
     width: 100%;
     height: 100%;
     object-fit:cover ;
   }
   /* nombre tarjeta personaje */
-  .tarjeta-personaje h3 {
+  .tarjeta-personaje h3, .tarjeta-lugares-vehiculos h3 {
     font-size: 2.4rem;
     font-family: var(--titulos);
     color: var(--purpura-oscuro);
 }
 /* categorías o títulos */
-.tarjeta-personaje .span{
+.tarjeta-personaje .span, .tarjeta-lugares-vehiculos .span{
     font-weight: 700;
 }
-.tarjeta-personaje .contenedor-nombre{
+.tarjeta-personaje .contenedor-nombre, .tarjeta-lugares-vehiculos .contenedor-nombre {
     height: 20%;
     display: flex;
     justify-content: left;
@@ -503,15 +508,27 @@ footer img {
 }
 
 /* tarjeta inferior: donde esta la info, no el nombre */
-.tarjeta-personaje .info-personaje{
+.tarjeta-personaje .info-personaje, .tarjeta-lugares-vehiculos .info-location, .tarjeta-lugares-vehiculos .info-vehicle{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
 }
 
-.tarjeta-personaje .contenedor-info-personaje{
+.tarjeta-personaje .contenedor-info-personaje, .tarjeta-lugares-vehiculos .contenedor-info-lugares-vehiculos{
     padding: 1.5rem;
+
 }
+
+
+.tarjeta-lugares-vehiculos .contenedor-categoria{
+    padding: 2.4rem 0rem;
+  }
+.tarjeta-lugares-vehiculos .contenedor-categoria h3{
+color: var(--rojo);
+font-size: 3.6rem;
+}
+
+
 
 @media (max-width: 1286px) {
     header {
@@ -560,7 +577,7 @@ footer img {
     }
 }
 
-@media (max-width: 951px) {
+@media (max-width: 950px) {
     .hero {
         display: flex;
         justify-content: center;
