@@ -7,9 +7,6 @@ import data from "./data/ghibli/ghibli.js"
 
 // TODO: Función para obtener películas
 export function obtenerPeliculas(data) {
-  // if (data.length===0){
-  //   return TypeError
-  // }
   return data.films;
 }
 
@@ -78,7 +75,7 @@ export function filtrarPeliculasPorAnho(anho1, anho2) {
 // TODO: Función para filtrar películas por director
 export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
   if (director === '') {
-    return peliculasFiltradas; // Devolver todas las películas sin filtrar
+    return peliculasFiltradas; 
   }
   return peliculasFiltradas.filter( (pelicula) => pelicula.director === director )
 }
@@ -86,7 +83,7 @@ export function filtrarPeliculasPorDirector(director, peliculasFiltradas) {
 // TODO: Función para filtrar peliculas por productor
 export function filtrarPeliculasPorProductor(productor, peliculasFiltradas) {
   if (productor === '') {
-    return peliculasFiltradas; // Devolver todas las películas sin filtrar
+    return peliculasFiltradas; 
   }
   return peliculasFiltradas.filter( (pelicula) => pelicula.producer === productor );
 }

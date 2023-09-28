@@ -211,6 +211,7 @@ const mostrarPeliculas = (peliculas) => {
       // Boton Lugares
       const botonLugares = document.createElement("button");
       botonLugares.classList.add("btn");
+      botonLugares.classList.add("btn-lugares");
       botonLugares.textContent = "Locations & Vehicles";
       botonLugares.id="btn-lugares";
       botonLugares.setAttribute("data-id", pelicula.id) // para tener contexto y poder generar los personajes
@@ -245,18 +246,23 @@ document.addEventListener('click', function(event) {
   const elementoClickeado = event.target;
   console.log("Clickeaste en:", elementoClickeado);
 
-  // Verificar si el elemento clicado es un botón con clase 'btn-personajes'
+  // Ver si el elemento es un botón con clase 'btn-personajes'
   if (event.target.classList.contains('btn-personajes')) {
- 
-    // cambiaPagina(arrayTarjetas);
-    // Obtener el valor del atributo data-id del botón clicado
+    // Obtener el valor del atributo data-id del botón
     const dataIdValue = event.target.getAttribute('data-id');
     const tarjetaPelicula = event.target.closest('.tarjeta-pelicula');
-    tarjetaPelicula.classList.toggle("active");
+    tarjetaPelicula.classList.toggle("active-personajes");
     // inicializarCarrusel()
     mostrarPersonajes(dataIdValue, tarjetaPelicula);
   }
-  //verificar si el elemento clicado es un botón "boton-anterior"
+  //ver si el elemento es un botón "boton-lugares"
+  else if (event.target.classList.contains('btn-lugares')) {
+
+    const dataIdValue = event.target.getAttribute('data-id');
+    const tarjetaPelicula = event.target.closest('.tarjeta-pelicula');
+    tarjetaPelicula.classList.toggle("active-lugares");
+    mostrarLugaresVehiculos(dataIdValue, tarjetaPelicula);
+  }
 });
 
 // * Función de Calcular Promedio
@@ -545,10 +551,9 @@ const mostrarPersonajes = (peliculaId, tarjetaPelicula) => {
       array[siguientePos].style.display = "flex";
     }
   });
-  botonSalir.addEventListener("click", (event) => {
-    if (event.target.classList.contains('fa-circle-xmark')) {
-      tarjetaPelicula.classList.remove("active");
-    }
+
+  botonSalir.addEventListener("click", () => {
+    tarjetaPelicula.classList.remove("active-personajes");
   })
 };
 
@@ -559,241 +564,233 @@ const mostrarPersonajes = (peliculaId, tarjetaPelicula) => {
 // si utilizamos la información (ID de película) sería facil! //* Implementadisimo y funcional!
 
 // * Función generar Lugares y vehículos
-// const mostrarLugaresVehiculos = (peliculaId, tarjetaPelicula) => {
-//   const pelicula = obtenerPeliculaPorId(peliculaId); // Obtener la película por su ID
+const mostrarLugaresVehiculos = (peliculaID, tarjetaPelicula) =>{
+  // primero debemos generar el pool de info para ponerla en display
+  const pelicula = obtenerPeliculaPorId(data,peliculaID);
+  // el ID está en el botón
+  //Luego creamos el Overlay
+  const overlayContenedor = document.createElement("article");
+  overlayContenedor.classList.add("overlay-contenedor-lugares-vehiculos");
+  
+  // botón anterior
+  const botonAnterior = document.createElement("i");
+  botonAnterior.classList.add("fa-solid", "fa-angle-left");
+  botonAnterior.id = "boton-anterior";
+  overlayContenedor.appendChild(botonAnterior);
 
-//   const overlayContenedor = document.createElement("article");
-//   overlayContenedor.classList.add("overlay-contenedor-lugares-vehiculos");
+  // Div Carrusel
+  const carruselLugaresVehiculos = document.createElement("div");
+  carruselLugaresVehiculos.classList.add("carrusel-lugares-vehiculos");
+  overlayContenedor.appendChild(carruselLugaresVehiculos);
 
-//   const botonAnterior = document.createElement("i");
-//   botonAnterior.classList.add("fa-solid", "fa-angle-left");
-//   botonAnterior.textContent = "anterior";
-//   overlayContenedor.appendChild(botonAnterior);
+  //Para Lugares hacemos una función que revise cada lugar y le de estructura
+  pelicula.locations.forEach(location=>{
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "tarjeta-lugares-vehiculos";
+  
+    const contenedorImg = document.createElement("div");
+    contenedorImg.className = "contenedor-img";
+  
+    const imagen = document.createElement("img");
+    imagen.src = location.img;
+    imagen.alt = location.name;
+  
+    contenedorImg.appendChild(imagen);
+    tarjeta.appendChild(contenedorImg);
+  
+    const contenedorInfo = document.createElement("div");
+    contenedorInfo.className = "contenedor-info-lugares-vehiculos";
+  
+    const contenedorCategoria = document.createElement("div");
+    contenedorCategoria.className = "contenedor-categoria";
+  
+    const categoria = document.createElement("h3");
+    categoria.className = "categoria";
+    categoria.textContent = "Location";
+  
+    contenedorCategoria.appendChild(categoria);
+    contenedorInfo.appendChild(contenedorCategoria);
+  
+    const contenedorNombre = document.createElement("div");
+    contenedorNombre.className = "contenedor-nombre";
+  
+    const nombre = document.createElement("h3");
+    nombre.className = "nombre";
+    nombre.textContent = location.name;
+  
+    contenedorNombre.appendChild(nombre);
+    contenedorInfo.appendChild(contenedorNombre);
+  
+    const infoLocation = document.createElement("div");
+    infoLocation.className = "info-location";
+  
+    const propiedades = ["Climate", "Terrain", "Surface Water", "Residents"];
+  
+    propiedades.forEach((propiedad) => {
+      const info = document.createElement("div");
+      info.className = "info";
+  
+      const span = document.createElement("span");
+      span.textContent = propiedad;
+  
+      const p = document.createElement("p");
+      p.textContent = location[propiedad.toLowerCase()];
+  
+      info.appendChild(span);
+      info.appendChild(p);
+      infoLocation.appendChild(info);
+    });
+  
+    contenedorInfo.appendChild(infoLocation);
+    tarjeta.appendChild(contenedorInfo);
+  
+    carruselLugaresVehiculos.appendChild(tarjeta);
+  });
 
-//   const carruselLugaresVehiculos = document.createElement("div");
-//   carruselLugaresVehiculos.classList.add("carrusel-lugares-vehiculos");
-//   overlayContenedor.appendChild(carruselLugaresVehiculos);
+  //Para Vehiculos usamos otra función que se ajuste al contenido de los Vehiculos
+  pelicula.vehicles.forEach((vehicle) => {
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "tarjeta-lugares-vehiculos";
+  
+    const contenedorImg = document.createElement("div");
+    contenedorImg.className = "contenedor-img";
+  
+    const imagen = document.createElement("img");
+    imagen.src = vehicle.img;
+    imagen.alt = vehicle.name;
+  
+    contenedorImg.appendChild(imagen);
+    tarjeta.appendChild(contenedorImg);
+  
+    const contenedorInfo = document.createElement("div");
+    contenedorInfo.className = "contenedor-info-lugares-vehiculos";
+  
+    const contenedorCategoria = document.createElement("div");
+    contenedorCategoria.className = "contenedor-categoria";
+  
+    const categoria = document.createElement("h3");
+    categoria.className = "categoria";
+    categoria.textContent = "Vehicles";
+  
+    contenedorCategoria.appendChild(categoria);
+    contenedorInfo.appendChild(contenedorCategoria);
+  
+    const contenedorNombre = document.createElement("div");
+    contenedorNombre.className = "contenedor-nombre";
+  
+    const nombre = document.createElement("h3");
+    nombre.className = "nombre";
+    nombre.textContent = vehicle.name;
+  
+    contenedorNombre.appendChild(nombre);
+    contenedorInfo.appendChild(contenedorNombre);
+  
+    const descripcion = document.createElement("p");
+    descripcion.textContent = vehicle.description;
+  
+    contenedorInfo.appendChild(descripcion);
+  
+    const propiedades = ["Vehicle Class", "Length", "Pilot"];
+  
+    propiedades.forEach((propiedad) => {
+      const info = document.createElement("div");
+      info.className = "info";
+  
+      const span = document.createElement("span");
+      span.textContent = propiedad;
+  
+      let valor = vehicle[propiedad.toLowerCase()];
+      if (propiedad === "Pilot") {
+        valor = vehicle.pilot.name;
+      }
+  
+      const p = document.createElement("p");
+      p.textContent = valor;
+  
+      info.appendChild(span);
+      info.appendChild(p);
+      contenedorInfo.appendChild(info);
+    });
+  
+    tarjeta.appendChild(contenedorInfo);
+  
+    carruselLugaresVehiculos.appendChild(tarjeta);
+  });
 
-//   pelicula.locations.forEach((location, index) => {
-//     // Crear la tarjeta de location/vehicle
-//     const tarjetaLocationVehicle = document.createElement("div");
-//     tarjetaLocationVehicle.classList.add("tarjeta-location-vehicle");
+  //botón salir 
+  const botonSalir = document.createElement("i");
+  botonSalir.classList.add("fa-solid", "fa-circle-xmark");
+  botonSalir.id= "boton-salir";
+  overlayContenedor.appendChild(botonSalir);
 
-//     // Crear el contenedor de la imagen
-//     const contenedorImg = document.createElement("div");
-//     contenedorImg.classList.add("contenedor-img-lugares-vehiculos");
+  //botón  siguiente
+  const botonSiguiente = document.createElement("i");
+  botonSiguiente.classList.add("fa-solid", "fa-angle-right");
+  botonSiguiente.id = "boton-siguiente";
+  overlayContenedor.appendChild(botonSiguiente);
 
-//     // Crear la imagen
-//     const imgLocationVehicle = document.createElement("img");
-//     imgLocationVehicle.src = location.img; // Asegúrate de tener la propiedad 'img' en tu objeto de location/vehicle
-//     imgLocationVehicle.alt = location.name;
+  // Agregar elementos a tarjeta peliculas
+  tarjetaPelicula.appendChild(overlayContenedor);
 
-//     // Agregar la imagen al contenedor de imagen
-//     contenedorImg.appendChild(imgLocationVehicle);
+  // event listeners -> Siguiente
+  botonSiguiente.addEventListener("click", function () {
+    const tarjetas = carruselLugaresVehiculos.querySelectorAll(
+      ".tarjeta-lugares-vehiculos"
+    );
+    const arrayTarjetas = [...tarjetas];
+  
+    const siguiente = arrayTarjetas.shift();
+    arrayTarjetas.push(siguiente);
+  
+    arrayTarjetas.forEach((x) => {
+      carruselLugaresVehiculos.appendChild(x);
+    });
+  
+    cambiaPagina(arrayTarjetas);
+    // Función para cambiar la página del carrusel
+    function cambiaPagina(array) {
+      const posicionActual = 0;
+      const siguientePos = 1;
+  
+      for (let i = 0; i < array.length; i++) {
+        array[i].style.display = "none";
+      }
+  
+      array[posicionActual].style.display = "flex";
+      array[siguientePos].style.display = "flex";
+    }
+  });
 
-//     // Crear el contenedor de información de location/vehicle
-//     const contenedorInfoLocationVehicle = document.createElement("div");
-//     contenedorInfoLocationVehicle.classList.add(
-//       "contenedor-info-lugares-vehiculos"
-//     );
+  botonAnterior.addEventListener("click", function () {
+    const tarjetas = carruselLugaresVehiculos.querySelectorAll(
+      ".tarjeta-lugares-vehiculos"
+    );
+    const arrayTarjetas = [...tarjetas];
 
-//     // Crear el contenedor de la categoría
-//     const contenedorCategoria = document.createElement("div");
-//     contenedorCategoria.classList.add("contenedor-categoria");
+    const atras = arrayTarjetas.pop();
+    arrayTarjetas.unshift(atras);
 
-//     // Crear el elemento h2 de la categoría
-//     const categoriaLocationVehicle = document.createElement("h2");
-//     categoriaLocationVehicle.textContent = "Categoria"; // Aquí deberías obtener la categoría correspondiente a la location/vehicle
-//     // Puedes usar location.category, por ejemplo, si tienes esa propiedad.
+    arrayTarjetas.forEach((x) => {
+      carruselLugaresVehiculos.appendChild(x);
+    });
 
-//     // Agregar la categoría al contenedor de la categoría
-//     contenedorCategoria.appendChild(categoriaLocationVehicle);
+    cambiaPagina(arrayTarjetas);
+    cambiaPagina(arrayTarjetas);
+    // Función para cambiar la página del carrusel
+    function cambiaPagina(array) {
+      const posicionActual = 0;
+      const siguientePos = 1;
 
-//     // Crear el contenedor del nombre de location/vehicle
-//     const contenedorNombreLocationVehicle = document.createElement("div");
-//     contenedorNombreLocationVehicle.classList.add(
-//       "contenedor-nombre-lugares-vehiculos"
-//     );
+      for (let i = 0; i < array.length; i++) {
+        array[i].style.display = "none";
+      }
 
-//     // Crear el elemento h2 del nombre
-//     const nombreLocationVehicle = document.createElement("h2");
-//     nombreLocationVehicle.textContent = location.name; // Asegúrate de tener la propiedad 'name' en tu objeto de location/vehicle
+      array[posicionActual].style.display = "flex";
+      array[siguientePos].style.display = "flex";
+    }
+  });
+  botonSalir.addEventListener("click", () => {
+    tarjetaPelicula.classList.remove("active-lugares");
+  })
 
-//     // Agregar el nombre al contenedor del nombre
-//     contenedorNombreLocationVehicle.appendChild(nombreLocationVehicle);
-
-//     // Crear el contenedor de información de location/vehicle
-//     const infoLocationVehicle = document.createElement("div");
-//     infoLocationVehicle.classList.add("info-lugares-vehiculos");
-
-//     // Crear y configurar los elementos de información
-//     const infoElements = [
-//       { label: "Info 1", value: location.info1 },
-//       { label: "Info 2", value: location.info2 },
-//       { label: "Info 3", value: location.info3 },
-//       // Agrega más propiedades de información según tu estructura de datos
-//     ];
-
-//     infoElements.forEach((info) => {
-//       const infoLi = document.createElement("li");
-//       infoLi.classList.add("info");
-
-//       const infoSpan = document.createElement("span");
-//       infoSpan.textContent = info.label;
-
-//       const infoP = document.createElement("p");
-//       infoP.textContent = info.value;
-
-//       infoLi.appendChild(infoSpan);
-//       infoLi.appendChild(infoP);
-//       infoLocationVehicle.appendChild(infoLi);
-//     });
-
-//     // Agregar los elementos creados a la tarjeta de location/vehicle
-//     tarjetaLocationVehicle.appendChild(contenedorImg);
-//     tarjetaLocationVehicle.appendChild(contenedorInfoLocationVehicle);
-//     contenedorInfoLocationVehicle.appendChild(contenedorCategoria);
-//     contenedorInfoLocationVehicle.appendChild(contenedorNombreLocationVehicle);
-//     contenedorInfoLocationVehicle.appendChild(infoLocationVehicle);
-
-//     // Inicialmente, ocultar todas las tarjetas de location/vehicle excepto la primera
-//     if (index !== 0) {
-//       tarjetaLocationVehicle.style.display = "none";
-//     }
-
-//     // Agregar la tarjeta de location/vehicle al carrusel
-//     carruselLugaresVehiculos.appendChild(tarjetaLocationVehicle);
-//   });
-
-//   // Agregar botón de siguiente
-//   const botonSiguiente = document.createElement("i");
-//   botonSiguiente.classList.add("fa-solid", "fa-angle-right");
-//   botonSiguiente.textContent = "siguiente";
-//   overlayContenedor.appendChild(botonSiguiente);
-
-//   // Agregar botón para salir del overlay
-//   const botonSalir = document.createElement("i");
-//   botonSalir.classList.add("fa-solid", "fa-circle-xmark");
-//   botonSalir.textContent = "cerrar";
-//   overlayContenedor.appendChild(botonSalir);
-
-//   // Agregar elementos al contenedor de tarjetas
-//   tarjetaPelicula.appendChild(overlayContenedor);
-
-//   botonSiguiente.addEventListener("click", () => {
-//     const tarjetasLocationVehicle = carruselLugaresVehiculos.querySelectorAll(
-//       ".tarjeta-location-vehicle"
-//     );
-//     const arrayTarjetas = [...tarjetasLocationVehicle];
-
-//     const siguiente = arrayTarjetas.shift();
-//     arrayTarjetas.push(siguiente);
-
-//     arrayTarjetas.forEach((x) => {
-//       carruselLugaresVehiculos.appendChild(x);
-//     });
-
-//     cambiaPagina(arrayTarjetas);
-
-//     function cambiaPagina(array) {
-//       const posicionActual = 0;
-//       const siguientePos = 1;
-
-//       for (let i = 0; i < array.length; i++) {
-//         array[i].style.display = "none";
-//       }
-
-//       array[posicionActual].style.display = "block";
-//       array[siguientePos].style.display = "block";
-//     }
-//   });
-
-//   botonAnterior.addEventListener("click", () => {
-//     const tarjetasLocationVehicle = carruselLugaresVehiculos.querySelectorAll(
-//       ".tarjeta-location-vehicle"
-//     );
-//     const arrayTarjetas = [...tarjetasLocationVehicle];
-
-//     const atras = arrayTarjetas.pop();
-//     arrayTarjetas.unshift(atras);
-
-//     arrayTarjetas.forEach((x) => {
-//       carruselLugaresVehiculos.appendChild(x);
-//     });
-
-//     cambiaPagina(arrayTarjetas);
-//     cambiaPagina(arrayTarjetas);
-
-//     function cambiaPagina(array) {
-//       const posicionActual = 0;
-//       const siguientePos = 1;
-
-//       for (let i = 0; i < array.length; i++) {
-//         array[i].style.display = "none";
-//       }
-
-//       array[posicionActual].style.display = "block";
-//       array[siguientePos].style.display = "block";
-//     }
-//   });
-
-//   botonSalir.addEventListener("click", () => {
-//     tarjetaPelicula.classList.remove("active");
-//   });
-// };
-
-
-// ! Este código terminó comentado pues se agregó a la función de mostrar personajes
-// function inicializarCarrusel() {
-//   const carruselPersonajes = document.querySelector(".carrusel-personajes");
-//   console.log(carruselPersonajes)
-//   const botonSiguiente = document.getElementById("boton-siguiente");
-//   console.log(botonSiguiente)
-//   const botonAnterior = document.getElementById("boton-anterior");
-//   console.log(botonAnterior)
-//   // Agregar listener al botón Siguiente
-//   botonSiguiente.addEventListener("click", function () {
-//     const tarjetasPersonajes = carruselPersonajes.querySelectorAll(
-//       ".tarjeta-personaje"
-//     );
-//     const arrayTarjetas = [...tarjetasPersonajes];
-
-//     const siguiente = arrayTarjetas.shift();
-//     arrayTarjetas.push(siguiente);
-
-//     arrayTarjetas.forEach((x) => {
-//       carruselPersonajes.appendChild(x);
-//     });
-
-//     cambiaPagina(arrayTarjetas);
-//   });
-
-//   botonAnterior.addEventListener("click", function () {
-//     const tarjetasPersonajes = carruselPersonajes.querySelectorAll(
-//       ".tarjeta-personaje"
-//     );
-//     const arrayTarjetas = [...tarjetasPersonajes];
-
-//     const atras = arrayTarjetas.pop();
-//     arrayTarjetas.unshift(atras);
-
-//     arrayTarjetas.forEach((x) => {
-//       carruselPersonajes.appendChild(x);
-//     });
-
-//     cambiaPagina(arrayTarjetas);
-//   });
-
-//   // Función para cambiar la página del carrusel
-//   function cambiaPagina(array) {
-//     const posicionActual = 0;
-//     const siguientePos = 1;
-
-//     for (let i = 0; i < array.length; i++) {
-//       array[i].style.display = "none";
-//     }
-
-//     array[posicionActual].style.display = "flex";
-//     array[siguientePos].style.display = "flex";
-//   }
-// }
+}
